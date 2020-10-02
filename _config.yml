@@ -1,0 +1,130 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: My GH-Pages blog
+email: ahm@disroot.com
+timezone: Asia/Dhaka
+description: >- # this means to ignore newlines until "baseurl:"
+  Evidence of my terrible writing skills.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: https://ahmubashshir.github.io # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: ahmubashshir
+github_username:  ahmubashshir
+
+# Build settings
+markdown: kramdown
+remote_theme: "ahmubashshir/so-simple-theme@devel"
+skin: "/assets/css/skins/dark.css"
+paginate: 10  # amount of posts to show per page
+paginate_path: "/posts/:num/"
+permalink: post/:year/:month/:day/:title
+category_archive_path: "/categories/#"
+tag_archive_path: "/tags/#"
+search_full_content: false
+mathjax:
+  enable: true
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-paginate
+
+collections:
+  recipes:
+    output: true
+    permalink: /:collection/:path/
+
+defaults:
+  # Post defaults
+  - scope:
+      path: "_posts"
+      type: posts
+    values:
+      layout: post
+      comments: true
+      share: true
+  # Recipe defaults
+  - scope:
+      path: "_recipes"
+      type: recipes
+    values:
+      layout: post
+      comments: true
+      share: true
+
+
+feed:
+  path: atom.xml
+
+disqus:
+  shortname: ahmubashshir-github-io
+
+liquid:
+  error_mode: strict
+
+google_fonts:
+  - name: "Comfortaa"
+    weights: "400,400i,700,700i"
+  - name: "Ubuntu Mono"
+    weights: "400,400i,700,700i"
+author:
+  name: Mubashshir
+  picture: https://www.gravatar.com/avatar/0c741be6074cce563d08dd9bb07a8770
+  email: ahm@disroot.org
+  twitter: ahmubashshir
+  links:
+    - title: Mail
+      url: mailto:ahm@disroot.org
+      icon: https://upload.wikimedia.org/wikipedia/commons/e/ee/%28at%29.svg
+    - title: Twitter
+      url: https://twitter.com/ahmubashshir
+      icon: https://simpleicons.org/icons/twitter.svg
+      color: "#1DA1F2"
+    - title: Reddit
+      url: https://reddit.com/u/ahmubashshir
+      icon: https://simpleicons.org/icons/reddit.svg
+      color: "#FF4500"
+    - title: Telegram
+      url: https://t.me/ahmubashshir
+      icon: https://simpleicons.org/icons/telegram.svg
+      color: "#2CA5E0"
+    - title: Matrix
+      url: https://matrix.to/#/@ahm:feneas.org
+      icon: https://simpleicons.org/icons/matrix.svg
+      color: \#000000
+    - title: Discord
+      url: https://discord.com/users/ahmubashshir#3527
+      icon: https://simpleicons.org/icons/discord.svg
+      color: "#7289DA"
+
+footer_links:
+  - title: GitHub
+    url: https://github.com/ahmubashshir
+    icon: fab fa-github-square
+  - title: Feed
+    url: atom.xml
+    icon: fas fa-rss-square
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
