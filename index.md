@@ -19,6 +19,10 @@ comments: false
 
 [![Mubashshir's github stats](https://github-readme-stats.vercel.app/api?theme=dark&username=ahmubashshir&count_private=true&show_icons=true "Mubashshir's github stats")](https://github.com/anuraghazra/github-readme-stats)
 
+### My weekly wakatime stats
+![Coding stats](https://wakatime.com/share/@ahmubashshir/58e5afe2-6230-43f5-bd96-f62985847d95.svg "Coding stats")
+![Languages](https://wakatime.com/share/@ahmubashshir/ca398f7a-2f46-42cd-897a-0cf5634985dd.svg "Languages")
+
 [kitsu]: https://kitsu.io/users/ahmubashshir
 [anilist]: https://anilist.co/user/ahmubashshir
 [mal]: https://myanimelist.net/profile/ahmubashshir
