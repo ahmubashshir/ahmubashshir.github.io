@@ -21,9 +21,9 @@ comments: false
 
 ### My weekly wakatime stats
 <figure>
-<embed src="https://wakatime.com/share/@ahmubashshir/399b4703-73b8-4027-a30f-edb0fe3ceed0.svg" />
-<embed src="https://wakatime.com/share/@ahmubashshir/56951cbd-806f-4e52-9591-904b974b690f.svg" />
-<embed src="https://wakatime.com/share/@ahmubashshir/25c8307c-1925-493f-abc2-2d7a6e73af2c.svg" />
+<embed src="https://wakatime.com/share/@ahmubashshir/e73f0cd1-b894-40f5-a417-765f7f3719c2.svg" />
+<embed src="https://wakatime.com/share/@ahmubashshir/c0501f9f-37c1-4f80-bc74-1a0eb75e8747.svg" />
+<embed src="https://wakatime.com/share/@ahmubashshir/177868a3-8b2c-48ab-886c-e8a8209f8ed2.svg" />
 </figure>
 
 [kitsu]: https://kitsu.io/users/ahmubashshir
