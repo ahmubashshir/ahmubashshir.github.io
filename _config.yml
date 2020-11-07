@@ -66,11 +66,6 @@ disqus:
 liquid:
   error_mode: strict
 
-google_fonts:
-  - name: "Comfortaa"
-    weights: "400,400i,700,700i"
-  - name: "Ubuntu Mono"
-    weights: "400,400i,700,700i"
 author:
   name: Mubashshir
   picture: https://www.gravatar.com/avatar/0c741be6074cce563d08dd9bb07a8770
