@@ -89,7 +89,7 @@ comments: false
 
 ### Statistics:
 <div align="center">
-	<img src="https://github-readme-stats.vercel.app/api?theme=dark&amp;title_color=2EB398&amp;bg_color=1B2224&amp;text_color=C6CDCB&amp;username=ahmubashshir&amp;count_private=true&amp;show_icons=true" />
+	<img src="https://github-readme-stats.vercel.app/api?theme=dark&amp;title_color=2EB398&amp;bg_color=1B2224&amp;text_color=C6CDCB&amp;username=ahmubashshir&amp;count_private=true&amp;show_icons=true" style="width: 100%" />
 </div>
 <br />
 <br />
