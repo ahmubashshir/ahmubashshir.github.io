@@ -73,28 +73,14 @@ author:
   twitter: ahmubashshir
   links:
     - title: Mail
-      url: mailto:ahm@disroot.org
-      icon: https://upload.wikimedia.org/wikipedia/commons/e/ee/%28at%29.svg
-    - title: Twitter
-      url: https://twitter.com/ahmubashshir
-      icon: https://simpleicons.org/icons/twitter.svg
-      color: "#1DA1F2"
+      url: mailto:ahmubashshir@gmail.com
+      icon: fas fa-at
     - title: Reddit
       url: https://reddit.com/u/ahmubashshir
-      icon: https://simpleicons.org/icons/reddit.svg
-      color: "#FF4500"
+      icon: fab fa-reddit
     - title: Telegram
       url: https://t.me/ahmubashshir
-      icon: https://simpleicons.org/icons/telegram.svg
-      color: "#2CA5E0"
-    - title: Matrix
-      url: https://matrix.to/#/@ahm:feneas.org
-      icon: https://simpleicons.org/icons/matrix.svg
-      color: \#000000
-    - title: Discord
-      url: https://discord.com/users/ahmubashshir#3527
-      icon: https://simpleicons.org/icons/discord.svg
-      color: "#7289DA"
+      icon: fab fa-telegram
 
 footer_links:
   - title: GitHub
