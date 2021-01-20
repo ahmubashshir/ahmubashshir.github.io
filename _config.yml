@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: My GH-Pages blog
-email: ahm@disroot.com
+email: ahmubashshir@gmail.com
 timezone: Asia/Dhaka
 description: >- # this means to ignore newlines until "baseurl:"
   Evidence of my terrible writing skills.
@@ -22,6 +22,9 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: https://ahmubashshir.github.io # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: ahmubashshir
 github_username:  ahmubashshir
+
+webmaster_verifications:
+  google: "1AayfMJ_TLCrPwoK12kv_LhdWrH1tARYKK6oHPBjOh0"
 
 # Build settings
 markdown: kramdown
