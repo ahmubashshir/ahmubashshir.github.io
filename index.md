@@ -1,6 +1,6 @@
 ---
 title: About Me
-layout: post
+layout: tag
 comments: false
 ---
 ### Hi, I'm Mubashshir!
