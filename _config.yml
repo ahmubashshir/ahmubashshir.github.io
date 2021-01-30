@@ -68,8 +68,8 @@ feed:
   path: atom.xml
 
 gitalk:
-  id: ENV_GITALK_ID
-  secret: ENV_GITALK_SECRET
+  id: 8379bce1804e725f41c0
+  secret: 4a59c2fe3fad40e5bc99d583c83dedf09409720e
   name: ahmubashshir.github.io
   owner: ahmubashshir
   admins:
