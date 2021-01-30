@@ -32,7 +32,7 @@ webmaster_verifications:
 
 # Build settings
 markdown: kramdown
-remote_theme: "ahmubashshir/so-simple-theme@devel"
+remote_theme: "ahmubashshir/so-simple-theme@gitalk"
 skin: "/assets/css/skins/dark.css"
 paginate: 10  # amount of posts to show per page
 paginate_path: "/posts/:num/"
@@ -67,8 +67,14 @@ defaults:
 feed:
   path: atom.xml
 
-disqus:
-  shortname: ahmubashshir-github-io
+gitalk:
+  id: ENV_GITALK_ID
+  secret: ENV_GITALK_SECRET
+  name: ahmubashshir.github.io
+  owner: ahmubashshir
+  admins:
+  - ahmubashshir
+  distractionFree: true
 
 liquid:
   error_mode: strict
