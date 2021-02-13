@@ -71,7 +71,7 @@ feed:
 utterances:
   repo: ahmubashshir/ahmubashshir.github.io
   term: pathname
-  theme: github-dark
+  theme: photon-dark
 
 liquid:
   error_mode: strict
