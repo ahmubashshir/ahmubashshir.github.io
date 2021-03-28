@@ -102,7 +102,7 @@ footer_links:
 
 footer_scripts:
   - /assets/js/main.min.js
-  - https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/js/all.js
+  - https://use.fontawesome.com/releases/v5.0.12/js/all.js
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
