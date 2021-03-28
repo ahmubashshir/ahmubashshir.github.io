@@ -25,7 +25,7 @@ github_username:  ahmubashshir
 twitter:
   username: ahmubashshir
   card: summary
-logo: /favicon.png
+logo: /favicon.webp
 
 webmaster_verifications:
   google: "1AayfMJ_TLCrPwoK12kv_LhdWrH1tARYKK6oHPBjOh0"
@@ -41,7 +41,7 @@ category_archive_path: "/categories/#"
 tag_archive_path: "/tags/#"
 search_full_content: false
 mathjax:
-  enable: true
+  enable: false
 
 plugins:
   - jekyll-seo-tag
