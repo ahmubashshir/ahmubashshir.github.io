@@ -35,8 +35,8 @@ markdown: kramdown
 remote_theme: "ahmubashshir/so-simple-theme@devel"
 skin: "/assets/css/skins/dark.css"
 paginate: 10  # amount of posts to show per page
-paginate_path: "/posts/:num/"
-permalink: post/:year/:month/:day/:title
+paginate_path: "/:num"
+permalink: /:year/:month/:day/:title
 category_archive_path: "/categories/#"
 tag_archive_path: "/tags/#"
 search_full_content: false

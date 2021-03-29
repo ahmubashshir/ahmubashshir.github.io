@@ -1,17 +1,14 @@
 # Sample site navigation bar links
 
-- title: Home
-  url: /
-- title: Posts
-  url: /posts
 - title: Tags
-  url: /tags/
+  url: /tags
 - title: Categories
-  url: /categories/
+  url: /categories
 - title: Archives
-  url: /archives/
+  url: /archives
 - title: Search
-  url: /search/
-
+  url: /search
+- title: About
+  url: /about
 # - title: External Page
 #   url: https://the-page.com/you-want-to-link-to.html
