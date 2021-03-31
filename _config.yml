@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: My GH-Pages blog
+title: GH-Pages blog of @ahmubashshir
 email: ahmubashshir@gmail.com
 timezone: Asia/Dhaka
 description: >- # this means to ignore newlines until "baseurl:"
@@ -25,7 +25,7 @@ github_username:  ahmubashshir
 twitter:
   username: ahmubashshir
   card: summary
-logo: /favicon.webp
+logo: /assets/image/apple-touch-icon.png
 
 webmaster_verifications:
   google: "1AayfMJ_TLCrPwoK12kv_LhdWrH1tARYKK6oHPBjOh0"
@@ -99,10 +99,8 @@ footer_links:
   - title: Feed
     url: atom.xml
     icon: fas fa-rss-square
-
-footer_scripts:
-  - /assets/js/main.min.js
-  - https://use.fontawesome.com/releases/v5.0.12/js/all.js
+misc:
+  favicon-version: 8jl4JnrGke
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
