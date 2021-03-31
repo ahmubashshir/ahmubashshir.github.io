@@ -136,8 +136,8 @@ icons:
 	<embed src="https://wakatime.com/share/@ahmubashshir/75a81e4b-3ff1-4c9c-9264-954d0239b89e.svg" />
 </figure>
 
-### Page Statistics:
-<img src="https://pagespeed-insights.herokuapp.com/?url=https://ahmubashshir.github.io/about" />
+### Site Statistics:
+<img src="https://pagespeed-insights.herokuapp.com/?url=https://ahmubashshir.github.io" />
 <!--
 vim: ts=2:et:ft=markdown:
 -->
