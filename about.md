@@ -124,21 +124,21 @@ icons:
 </div>
 <br />
 
-### Statistics:
-<div align="center">
-	<img src="https://github-readme-stats.vercel.app/api?theme=dark&amp;title_color=2EB398&amp;bg_color=1B2224&amp;text_color=C6CDCB&amp;username=ahmubashshir&amp;count_private=true&amp;show_icons=true" style="width: 100%" />
-</div>
+### Githhub Statistics:
+<img src="https://github-readme-stats.vercel.app/api?theme=dark&amp;title_color=2EB398&amp;bg_color=1B2224&amp;text_color=C6CDCB&amp;username=ahmubashshir&amp;count_private=true&amp;show_icons=true" />
 <br />
 <br />
 
-### My weekly wakatime stats
+### Wakatime Statistics:
 <figure>
 	<embed src="https://wakatime.com/share/@ahmubashshir/a5b2051a-c47f-4048-b66f-f92395c0eec2.svg" />
 	<embed src="https://wakatime.com/share/@ahmubashshir/81737ad2-cea9-4af0-be8a-997e71b04068.svg" />
 	<embed src="https://wakatime.com/share/@ahmubashshir/75a81e4b-3ff1-4c9c-9264-954d0239b89e.svg" />
 </figure>
 
+### Page Statistics:
+<img src="https://pagespeed-insights.herokuapp.com/?url=https://ahmubashshir.github.io/about" />
 <!--
 vim: ts=2:et:ft=markdown:
-	-->
+-->
 
