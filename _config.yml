@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: GH-Pages blog of @ahmubashshir
+title: @ahmubashshir's blog
 email: ahmubashshir@gmail.com
 timezone: Asia/Dhaka
 description: >- # this means to ignore newlines until "baseurl:"
