@@ -99,6 +99,9 @@ footer_links:
   - title: Feed
     url: atom.xml
     icon: fas fa-rss-square
+  - title: Status
+    url: https://stats.uptimerobot.com/gM3v9IlZMz
+    icon: fas fa-server
 misc:
   favicon-version: 8jl4JnrGke
 # Exclude from processing.
