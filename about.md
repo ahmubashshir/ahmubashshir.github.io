@@ -46,6 +46,9 @@ icons:
 - 🐧Linux Enthusiast
 - ⚡ Fun fact: I use tabs over spaces
 <br />
+<figure>
+	<embed src="https://lastfm-recently-played.vercel.app/api?user=ahmubashshir&amp;count=4&amp;width=600" width="100%" />
+</figure>
 
 ### My Skill Set
 
@@ -124,10 +127,10 @@ icons:
 </div>
 <br />
 
-### Githhub Statistics:
-<img src="https://github-readme-stats.vercel.app/api?theme=dark&amp;title_color=2EB398&amp;bg_color=1B2224&amp;text_color=C6CDCB&amp;username=ahmubashshir&amp;count_private=true&amp;show_icons=true" />
-<br />
-<br />
+### Github Statistics:
+<figure>
+	<embed src="https://github-readme-stats.vercel.app/api?theme=dark&amp;title_color=2EB398&amp;bg_color=1B2224&amp;text_color=C6CDCB&amp;username=ahmubashshir&amp;count_private=true&amp;show_icons=true" width="100%" />
+</figure>
 
 ### Wakatime Statistics:
 <figure>
