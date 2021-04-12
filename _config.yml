@@ -99,6 +99,9 @@ footer_links:
   - title: Feed
     url: atom.xml
     icon: fas fa-rss-square
+  - title: Quotes
+    url: quotes
+    icon: fas fa-quote-left
   - title: Status
     url: https://stats.uptimerobot.com/gM3v9IlZMz
     icon: fas fa-server
