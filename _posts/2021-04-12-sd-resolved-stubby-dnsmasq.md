@@ -11,7 +11,7 @@ tags: dns stubby systemd-resolved
 
 1. stubby config: `/etc/stubby/stubby.yml`
 	1. প্রথমে নিজের ইচ্ছা মত আপস্ট্রিম ডিএনএস সার্ভার কনফিগার করেন।[^1]
-	2. এরপরে `listen_addresses` কীর ডিফল্ট এর বদলে নিচের কনফিগ সেট করেন।
+	2. এরপরে `listen_addresses` কীর ডিফল্ট এর বদলে নিচের কনফিগ সেট করেন। [^2]
 ```yaml
  listen_addresses:
  - 127.0.0.1@53000
@@ -20,7 +20,7 @@ tags: dns stubby systemd-resolved
 	
 	3. `sudo systemctl enable --now stubby`
 2. dnsmasq config: /etc/dnsmasq.conf
-	1. dnsmasq কনফিগ ফাইলের ডিফল্ট সেটিং চেঞ্জ না করে ফাইলের একবারে শেষে নিচের কনফিগ লিখে সেভ করেন।
+	1. dnsmasq কনফিগ ফাইলের ডিফল্ট সেটিং চেঞ্জ না করে ফাইলের একবারে শেষে নিচের কনফিগ লিখে সেভ করেন। [^3]
 ```
 no-resolv
 proxy-dnssec
@@ -41,3 +41,5 @@ DNS=127.0.0.1
 কাজ শেষ।
 
 [^1]: https://wiki.archlinux.org/index.php/Stubby#Select_resolver
+[^2]: https://wiki.archlinux.org/index.php/Stubby#Change_port
+[^3]: https://wiki.archlinux.org/index.php/Stubby#dnsmasq
