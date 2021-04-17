@@ -13,3 +13,6 @@ permalink: /quotes
 
 > Intelligence is the ability to avoid doing work, yet getting the work done.  
 > \- Linus Torvalds
+
+> Everything we hear is an opinion, not a fact. Everything we see is a perspective, not the truth.  
+> \- Marcus Aurelius
