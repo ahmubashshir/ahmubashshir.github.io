@@ -16,3 +16,6 @@ permalink: /quotes
 
 > Everything we hear is an opinion, not a fact. Everything we see is a perspective, not the truth.  
 > \- Marcus Aurelius
+
+> Any fool can write code that a computer can understand. Good programmers write code that humans can understand.
+> \- Martin Fowler
