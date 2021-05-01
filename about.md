@@ -129,7 +129,7 @@ icons:
 
 ### Crypto Wallets:
 
- Crypto | Wallet
+ Crypto | Address
  :---: | :---
  ETH | 0x3d2821834B7B032185BDEcC21621D9Bd65611fCB
  XMR | 48UDoxGhkXy6nMF5tKwyQsCieRWjiZuchUR4nCDgpzHX8v-<br />kfiGCNioBdk6DetcyCJbh1j32bpz3ZnDjDzqWUHmtdPx3iTRU
