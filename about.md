@@ -127,6 +127,10 @@ icons:
 </div>
 <br />
 
+### Crypto Wallets:
+ * ETH: 0x3d2821834B7B032185BDEcC21621D9Bd65611fCB
+ * XMR: 48UDoxGhkXy6nMF5tKwyQsCieRWjiZuchUR4nCDgpzHX8vkfiGCNioBdk6DetcyCJbh1j32bpz3ZnDjDzqWUHmtdPx3iTRU
+
 ### Github Statistics:
 <figure>
 	<embed src="https://github-readme-stats.vercel.app/api?theme=dark&amp;title_color=2EB398&amp;bg_color=1B2224&amp;text_color=C6CDCB&amp;username=ahmubashshir&amp;count_private=true&amp;show_icons=true" width="100%" />
