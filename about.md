@@ -74,55 +74,55 @@ icons:
 
 <div align="center">
 	<!-- github -->
-	<a style=" text-decoration: none;" href="https://github.com/ahmubashshir" target="_blank">
-		<img alt="github" src="https://img.shields.io/badge/github-%23{{ page.icons.github.color }}.svg?&amp;style=for-the-badge&amp;logo=data:image/svg%2bxml;base64,{{ page.icons.github.data }}&amp;logoColor=white" style="margin-bottom: 5px;"/>
+	<a style="text-decoration: none;" href="https://github.com/ahmubashshir" target="_blank">
+		<img height="28" width="92" alt="github" src="https://img.shields.io/badge/github-%23{{ page.icons.github.color }}.svg?&amp;style=for-the-badge&amp;logo=data:image/svg%2bxml;base64,{{ page.icons.github.data }}&amp;logoColor=white" style="margin-bottom: 5px;"/>
 	</a>
 	<!-- stackoverflow -->
-	<a style=" text-decoration: none;" href="https://stackoverflow.com/users/9123082" target="_blank">
-		<img alt="stackoverflow" src="https://img.shields.io/badge/stackoverflow-%23{{ page.icons.stackoverflow.color }}.svg?&amp;style=for-the-badge&amp;logo=data:image/svg%2bxml;base64,{{ page.icons.stackoverflow.data }}&amp;logoColor=white" style="margin-bottom: 5px;"/>
+	<a style="text-decoration: none;" href="https://stackoverflow.com/users/9123082" target="_blank">
+		<img height="28" width="158.5"  alt="stackoverflow" src="https://img.shields.io/badge/stackoverflow-%23{{ page.icons.stackoverflow.color }}.svg?&amp;style=for-the-badge&amp;logo=data:image/svg%2bxml;base64,{{ page.icons.stackoverflow.data }}&amp;logoColor=white" style="margin-bottom: 5px;"/>
 	</a>
 	<!-- pgp -->
-	<a style=" text-decoration: none;" href="https://keys.openpgp.org/vks/v1/by-fingerprint/916961EE198832DD70B628B356DB0538F60D951C" target="_blank">
-		<img alt="pgp public key" src="https://img.shields.io/badge/pgp-%23{{ page.icons.gpg.color }}.svg?&style=for-the-badge&logo=data:image/svg%2bxml;base64,{{ page.icons.gpg.data }}&logoColor=white" style="margin-bottom: 5px;"/>
+	<a style="text-decoration: none;" href="https://keys.openpgp.org/vks/v1/by-fingerprint/916961EE198832DD70B628B356DB0538F60D951C" target="_blank">
+		<img height="28" width="65.5" alt="pgp public key" src="https://img.shields.io/badge/pgp-%23{{ page.icons.gpg.color }}.svg?&style=for-the-badge&logo=data:image/svg%2bxml;base64,{{ page.icons.gpg.data }}&logoColor=white" style="margin-bottom: 5px;"/>
 	</a>
 	<br/>
 	<!-- twitter -->
-	<a style=" text-decoration: none;" href="https://twitter.com/ahmubashshir" target="_blank">
-		<img alt="twitter" src="https://img.shields.io/badge/twitter-%23{{ page.icons.twitter.color }}.svg?&amp;style=for-the-badge&amp;logo=data:image/svg%2bxml;base64,{{ page.icons.twitter.data }}&amp;logoColor=white" style="margin-bottom: 5px;"/>
+	<a style="text-decoration: none;" href="https://twitter.com/ahmubashshir" target="_blank">
+		<img height="28" width="99.5" alt="twitter" src="https://img.shields.io/badge/twitter-%23{{ page.icons.twitter.color }}.svg?&amp;style=for-the-badge&amp;logo=data:image/svg%2bxml;base64,{{ page.icons.twitter.data }}&amp;logoColor=white" style="margin-bottom: 5px;"/>
 	</a>
 	<!-- reddit -->
-	<a style=" text-decoration: none;" href="https://reddit.com/u/ahmubashshir" target="_blank">
-		<img alt="reddit" src="https://img.shields.io/badge/reddit-%23{{ page.icons.reddit.color }}.svg?&amp;style=for-the-badge&amp;logo=data:image/svg%2bxml;base64,{{ page.icons.reddit.data }}&amp;logoColor=white" style="margin-bottom: 5px;"/>
+	<a style="text-decoration: none;" href="https://reddit.com/u/ahmubashshir" target="_blank">
+		<img height="28" width="90" alt="reddit" src="https://img.shields.io/badge/reddit-%23{{ page.icons.reddit.color }}.svg?&amp;style=for-the-badge&amp;logo=data:image/svg%2bxml;base64,{{ page.icons.reddit.data }}&amp;logoColor=white" style="margin-bottom: 5px;"/>
 	</a>
 	<br/>
 	<!-- telegram -->
-	<a style=" text-decoration: none;" href="https://t.me/ahmubashshir" target="_blank">
-		<img alt="telegram" src="https://img.shields.io/badge/telegram-%23{{ page.icons.telegram.color }}.svg?&amp;style=for-the-badge&amp;logo=data:image/svg%2bxml;base64,{{ page.icons.telegram.data }}&amp;logoColor=white" style="margin-bottom: 5px;"/>
+	<a style="text-decoration: none;" href="https://t.me/ahmubashshir" target="_blank">
+		<img height="28" width="111" alt="telegram" src="https://img.shields.io/badge/telegram-%23{{ page.icons.telegram.color }}.svg?&amp;style=for-the-badge&amp;logo=data:image/svg%2bxml;base64,{{ page.icons.telegram.data }}&amp;logoColor=white" style="margin-bottom: 5px;"/>
 	</a>
 	<!-- discord -->
-	<a style=" text-decoration: none;" href="https://discord.com/users/ahmubashshir#3527" target="_blank">
-		<img alt="discord" src="https://img.shields.io/badge/discord-%23{{ page.icons.discord.color }}.svg?&amp;style=for-the-badge&amp;logo=data:image/svg%2bxml;base64,{{ page.icons.discord.data }}&amp;logoColor=white" style="margin-bottom: 5px;"/>
+	<a style="text-decoration: none;" href="https://discord.com/users/ahmubashshir#3527" target="_blank">
+		<img height="28" width="101.5" alt="discord" src="https://img.shields.io/badge/discord-%23{{ page.icons.discord.color }}.svg?&amp;style=for-the-badge&amp;logo=data:image/svg%2bxml;base64,{{ page.icons.discord.data }}&amp;logoColor=white" style="margin-bottom: 5px;"/>
 	</a>
 	<!-- matrix -->
-	<a style=" text-decoration: none;" href="https://matrix.to/#/@ahm:feneas.org" target="_blank">
-		<img alt="matrix" src="https://img.shields.io/badge/matrix-%23{{ page.icons.matrix.color }}.svg?&amp;style=for-the-badge&amp;logo=data:image/svg%2bxml;base64,{{ page.icons.matrix.data }}&amp;logoColor=white" style="margin-bottom: 5px;"/>
+	<a style="text-decoration: none;" href="https://matrix.to/#/@ahm:feneas.org" target="_blank">
+		<img height="28" width="92" alt="matrix" src="https://img.shields.io/badge/matrix-%23{{ page.icons.matrix.color }}.svg?&amp;style=for-the-badge&amp;logo=data:image/svg%2bxml;base64,{{ page.icons.matrix.data }}&amp;logoColor=white" style="margin-bottom: 5px;"/>
 	</a>
 	<br/>
 	<!-- trakt -->
-	<a style=" text-decoration: none;" href="https://trakt.tv/users/ahmubashshir" target="_blank">
-		<img alt="trakt" src="https://img.shields.io/badge/trakt-%23{{ page.icons.trakt.color }}.svg?&amp;style=for-the-badge&amp;logo=data:image/svg%2bxml;base64,{{ page.icons.trakt.data }}&amp;logoColor=white" style="margin-bottom: 5px;"/>
+	<a style="text-decoration: none;" href="https://trakt.tv/users/ahmubashshir" target="_blank">
+		<img height="28" width="82.5" alt="trakt" src="https://img.shields.io/badge/trakt-%23{{ page.icons.trakt.color }}.svg?&amp;style=for-the-badge&amp;logo=data:image/svg%2bxml;base64,{{ page.icons.trakt.data }}&amp;logoColor=white" style="margin-bottom: 5px;"/>
 	</a>
 	<!-- anilist -->
-	<a style=" text-decoration: none;" href="https://anilist.co/user/ahmubashshir" target="_blank">
-		<img alt="anilist" src="https://img.shields.io/badge/anilist-%23{{ page.icons.anilist.color }}.svg?&amp;style=for-the-badge&amp;logo=data:image/svg%2bxml;base64,{{ page.icons.anilist.data }}&amp;logoColor=white" style="margin-bottom: 5px;"/>
+	<a style="text-decoration: none;" href="https://anilist.co/user/ahmubashshir" target="_blank">
+		<img height="28" width="95.5" alt="anilist" src="https://img.shields.io/badge/anilist-%23{{ page.icons.anilist.color }}.svg?&amp;style=for-the-badge&amp;logo=data:image/svg%2bxml;base64,{{ page.icons.anilist.data }}&amp;logoColor=white" style="margin-bottom: 5px;"/>
 	</a>
 	<!-- kitsu -->
-	<a style=" text-decoration: none;" href="https://kitsu.io/users/ahmubashshir" target="_blank">
-		<img alt="kitsu" src="https://img.shields.io/badge/kitsu-%23{{ page.icons.kitsu.color }}.svg?&amp;style=for-the-badge&amp;logo=data:image/svg%2bxml;base64,{{ page.icons.kitsu.data }}&amp;logoColor=white" style="margin-bottom: 5px;"/>
+	<a style="text-decoration: none;" href="https://kitsu.io/users/ahmubashshir" target="_blank">
+		<img height="28" width="80.5" alt="kitsu" src="https://img.shields.io/badge/kitsu-%23{{ page.icons.kitsu.color }}.svg?&amp;style=for-the-badge&amp;logo=data:image/svg%2bxml;base64,{{ page.icons.kitsu.data }}&amp;logoColor=white" style="margin-bottom: 5px;"/>
 	</a>
 	<!-- myanimelist -->
-	<a style=" text-decoration: none;" href="https://myanimelist.net/profile/ahmubashshir" target="_blank">
-		<img alt="myanimelist" src="https://img.shields.io/badge/myanimelist-%23{{ page.icons.myanimelist.color }}.svg?&amp;style=for-the-badge&amp;logo=data:image/svg%2bxml;base64,{{ page.icons.myanimelist.data }}&amp;logoColor=white" style="margin-bottom: 5px;"/>
+	<a style="text-decoration: none;" href="https://myanimelist.net/profile/ahmubashshir" target="_blank">
+		<img height="28" width="135.5" alt="myanimelist" src="https://img.shields.io/badge/myanimelist-%23{{ page.icons.myanimelist.color }}.svg?&amp;style=for-the-badge&amp;logo=data:image/svg%2bxml;base64,{{ page.icons.myanimelist.data }}&amp;logoColor=white" style="margin-bottom: 5px;"/>
 	</a>
 </div>
 <br />
