@@ -25,7 +25,7 @@ github_username:  ahmubashshir
 twitter:
   username: ahmubashshir
   card: summary
-logo: /assets/image/mstile-150x150.png
+logo: /assets/image/apple-touch-icon-144x144-precomposed.png
 
 webmaster_verifications:
   google: "1AayfMJ_TLCrPwoK12kv_LhdWrH1tARYKK6oHPBjOh0"
@@ -91,6 +91,10 @@ author:
     - title: Telegram
       url: https://t.me/ahmubashshir
       icon: fab fa-telegram
+footer_scripts:
+  - https://unpkg.com/jquery/dist/jquery.min.js
+  - /assets/js/main.min.js
+  - https://use.fontawesome.com/releases/v5.0.12/js/all.js
 
 footer_links:
   - title: GitHub
