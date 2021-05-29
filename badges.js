@@ -1,0 +1,36 @@
+const makeBadge = require( './node_modules/badge-maker/lib/make-badge' );
+const simpleIcons = require( 'simple-icons' );
+const badges = require( './_data/badges.json' );
+const fs = require( 'fs' );
+const path = require( 'path' );
+const dir = './assets/badges'
+fs.readdirSync( dir, ( err, files ) => {
+	if ( err ) throw err;
+	for ( const file of files ) {
+		if ( file.endsWith( '.svg' ) )
+			fs.unlink( path.join( dir, file ), () => {} );
+	}
+} );
+
+badges.forEach(
+	( badge, idx, arr ) => {
+		let logo = simpleIcons.get( badge.icon || badge.name ) || badge.icon;
+		let _badge = makeBadge( {
+			format: 'svg',
+			text: [ badge.text || '', badge.user || badge.name ],
+			template: "for-the-badge",
+			color: badge.color || logo.color,
+			logo: "data:image/svg+xml;base64," + Buffer.from(
+				logo.svg.replace( '<svg', '<svg fill="#fff"' ),
+				'utf-8'
+			).base64Slice()
+		} );
+		console.log( "built: " + badge.name + ".svg" )
+		fs.writeFile(
+			path.join( dir, badge.name + '.svg' ),
+			_badge,
+			'utf8',
+			() => {}
+		);
+	}
+)
