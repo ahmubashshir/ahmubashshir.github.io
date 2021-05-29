@@ -15,16 +15,17 @@ fs.readdirSync( dir, ( err, files ) => {
 badges.forEach(
 	( badge, idx, arr ) => {
 		let logo = simpleIcons.get( badge.icon || badge.name ) || badge.icon;
-		let _badge = makeBadge( {
+		let badgeData = {
 			format: 'svg',
-			text: [ badge.text || '', badge.user || badge.name ],
+			text: [ '', badge.name ],
 			template: "for-the-badge",
 			color: badge.color || logo.color,
 			logo: "data:image/svg+xml;base64," + Buffer.from(
 				logo.svg.replace( '<svg', '<svg fill="#fff"' ),
 				'utf-8'
 			).base64Slice()
-		} );
+		}
+		let _badge = makeBadge( badgeData );
 		console.log( "built: " + badge.name + ".svg" )
 		fs.writeFile(
 			path.join( dir, badge.name + '.svg' ),

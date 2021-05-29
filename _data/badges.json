@@ -47,5 +47,10 @@
   {
     "name": "twitter",
     "color": "1DA1F2"
+  },
+  {
+    "name": "irc",
+    "color": "00AC47",
+    "icon": "livechat"
   }
 ]

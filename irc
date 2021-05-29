@@ -1,0 +1,10 @@
+nick: ahmubashshir
+servers:
+	Libera	irc.libera.chat
+	Rizon	irc.rizon.net
+
+Instructions for irc newbies:
+	* Join aformentioned servers first.
+	* Then run '/msg ahmubashshir <message>' to send a pm.
+	* web client users will need to register their nick
+	* with NickServ first.
