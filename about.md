@@ -38,57 +38,57 @@ comments: false
 <div align="center">
 	<!-- github -->
 	<a rel="noreferrer" style="text-decoration: none;" href="https://github.com/ahmubashshir" target="_blank">
-		<img height="28" width="92" alt="github" src="/assets/badges/github.svg" style="margin-bottom: 5px;"/>
+		<img height="28" width="93" alt="github" src="/assets/badges/github.svg" style="margin-bottom: 5px;"/>
 	</a>
 	<!-- stackoverflow -->
 	<a rel="noreferrer" style="text-decoration: none;" href="https://stackoverflow.com/users/9123082" target="_blank">
-		<img height="28" width="158.5"  alt="stackoverflow" src="/assets/badges/stackoverflow.svg" style="margin-bottom: 5px;"/>
+		<img height="28" width="163"  alt="stackoverflow" src="/assets/badges/stackoverflow.svg" style="margin-bottom: 5px;"/>
 	</a>
 	<!-- pgp -->
 	<a rel="noreferrer" style="text-decoration: none;" href="https://keys.openpgp.org/vks/v1/by-fingerprint/916961EE198832DD70B628B356DB0538F60D951C" target="_blank">
-		<img height="28" width="65.5" alt="pgp public key" src="/assets/badges/pgp.svg" style="margin-bottom: 5px;"/>
+		<img height="28" width="65" alt="pgp public key" src="/assets/badges/pgp.svg" style="margin-bottom: 5px;"/>
 	</a>
 	<br/>
 	<!-- twitter -->
 	<a rel="noreferrer" style="text-decoration: none;" href="https://twitter.com/ahmubashshir" target="_blank">
-		<img height="28" width="99.5" alt="twitter" src="/assets/badges/twitter.svg" style="margin-bottom: 5px;"/>
+		<img height="28" width="103" alt="twitter" src="/assets/badges/twitter.svg" style="margin-bottom: 5px;"/>
 	</a>
 	<!-- reddit -->
 	<a rel="noreferrer" style="text-decoration: none;" href="https://reddit.com/u/ahmubashshir" target="_blank">
-		<img height="28" width="90" alt="reddit" src="/assets/badges/reddit.svg" style="margin-bottom: 5px;"/>
+		<img height="28" width="93" alt="reddit" src="/assets/badges/reddit.svg" style="margin-bottom: 5px;"/>
 	</a>
 	<br/>
 	<!-- telegram -->
 	<a rel="noreferrer" style="text-decoration: none;" href="https://t.me/ahmubashshir" target="_blank">
-		<img height="28" width="111" alt="telegram" src="/assets/badges/telegram.svg" style="margin-bottom: 5px;"/>
+		<img height="28" width="113" alt="telegram" src="/assets/badges/telegram.svg" style="margin-bottom: 5px;"/>
 	</a>
 	<!-- discord -->
 	<a rel="noreferrer" style="text-decoration: none;" href="https://discord.com/users/ahmubashshir#3527" target="_blank">
-		<img height="28" width="101.5" alt="discord" src="/assets/badges/discord.svg" style="margin-bottom: 5px;"/>
+		<img height="28" width="105" alt="discord" src="/assets/badges/discord.svg" style="margin-bottom: 5px;"/>
 	</a>
 	<!-- matrix -->
 	<a rel="noreferrer" style="text-decoration: none;" href="https://matrix.to/#/@ahm:feneas.org" target="_blank">
-		<img height="28" width="92" alt="matrix" src="/assets/badges/matrix.svg" style="margin-bottom: 5px;"/>
+		<img height="28" width="93" alt="matrix" src="/assets/badges/matrix.svg" style="margin-bottom: 5px;"/>
 	</a>
 	<a rel="noreferrer" style="text-decoration: none;" href="/irc" target="_blank">
-		<img height="28" width="92" alt="irc" src="/assets/badges/irc.svg" style="margin-bottom: 5px;"/>
+		<img height="28" width="63" alt="irc" src="/assets/badges/irc.svg" style="margin-bottom: 5px;"/>
 	</a>
 	<br/>
 	<!-- trakt -->
 	<a rel="noreferrer" style="text-decoration: none;" href="https://trakt.tv/users/ahmubashshir" target="_blank">
-		<img height="28" width="82.5" alt="trakt" src="/assets/badges/trakt.svg" style="margin-bottom: 5px;"/>
+		<img height="28" width="85" alt="trakt" src="/assets/badges/trakt.svg" style="margin-bottom: 5px;"/>
 	</a>
 	<!-- anilist -->
 	<a rel="noreferrer" style="text-decoration: none;" href="https://anilist.co/user/ahmubashshir" target="_blank">
-		<img height="28" width="95.5" alt="anilist" src="/assets/badges/anilist.svg" style="margin-bottom: 5px;"/>
+		<img height="28" width="97" alt="anilist" src="/assets/badges/anilist.svg" style="margin-bottom: 5px;"/>
 	</a>
 	<!-- kitsu -->
 	<a rel="noreferrer" style="text-decoration: none;" href="https://kitsu.io/users/ahmubashshir" target="_blank">
-		<img height="28" width="80.5" alt="kitsu" src="/assets/badges/kitsu.svg" style="margin-bottom: 5px;"/>
+		<img height="28" width="83" alt="kitsu" src="/assets/badges/kitsu.svg" style="margin-bottom: 5px;"/>
 	</a>
 	<!-- myanimelist -->
 	<a rel="noreferrer" style="text-decoration: none;" href="https://myanimelist.net/profile/ahmubashshir" target="_blank">
-		<img height="28" width="135.5" alt="myanimelist" src="/assets/badges/myanimelist.svg" style="margin-bottom: 5px;"/>
+		<img height="28" width="137" alt="myanimelist" src="/assets/badges/myanimelist.svg" style="margin-bottom: 5px;"/>
 	</a>
 </div>
 <br />
