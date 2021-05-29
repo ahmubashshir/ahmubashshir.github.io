@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "badge-maker": "^3",
+    "simple-icons": "^4"
+  },
+  "scripts": {
+    "start": "node badges.js"
+  }
+}
