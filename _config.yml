@@ -44,11 +44,11 @@ mathjax:
   enable: false
 
 plugins:
-  - jekyll-seo-tag
-  - jekyll-sitemap
-  - jekyll-feed
-  - jekyll-paginate
-  - jekyll-asciinema
+- jekyll-seo-tag
+- jekyll-sitemap
+- jekyll-feed
+- jekyll-paginate
+- jekyll-asciinema
 
 collections:
   recipes:
@@ -82,43 +82,42 @@ author:
   email: ahm@disroot.org
   twitter: ahmubashshir
   links:
-    - title: Mail
-      url: mailto:ahmubashshir@gmail.com
-      icon: fas fa-at
-    - title: Reddit
-      url: https://reddit.com/u/ahmubashshir
-      icon: fab fa-reddit
-    - title: Telegram
-      url: https://t.me/ahmubashshir
-      icon: fab fa-telegram
+  - title: Mail
+    url: mailto:ahmubashshir@gmail.com
+    icon: fas fa-at
+  - title: Reddit
+    url: https://reddit.com/u/ahmubashshir
+    icon: fab fa-reddit
+  - title: Telegram
+    url: https://t.me/ahmubashshir
+    icon: fab fa-telegram
 footer_scripts:
-  - https://unpkg.com/jquery/dist/jquery.min.js
-  - /assets/js/main.min.js
-  - https://use.fontawesome.com/releases/v5.0.12/js/all.js
+- https://unpkg.com/jquery/dist/jquery.min.js
+- /assets/js/main.min.js
+- https://use.fontawesome.com/releases/v5.0.12/js/all.js
 
 footer_links:
-  - title: GitHub
-    url: https://github.com/ahmubashshir
-    icon: fab fa-github-square
-  - title: Feed
-    url: atom.xml
-    icon: fas fa-rss-square
-  - title: Quotes
-    url: quotes
-    icon: fas fa-quote-left
-  - title: Status
-    url: https://stats.uptimerobot.com/gM3v9IlZMz
-    icon: fas fa-server
+- title: GitHub
+  url: https://github.com/ahmubashshir
+  icon: fab fa-github-square
+- title: Feed
+  url: atom.xml
+  icon: fas fa-rss-square
+- title: Quotes
+  url: quotes
+  icon: fas fa-quote-left
+- title: Status
+  url: https://stats.uptimerobot.com/gM3v9IlZMz
+  icon: fas fa-server
 misc:
   favicon-version: 8jl4JnrGke
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+- Gemfile
+- Gemfile.lock
+- package.json
+- package-lock.json
+- node_modules
+- vendor
