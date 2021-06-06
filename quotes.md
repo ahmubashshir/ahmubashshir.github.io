@@ -7,6 +7,9 @@ permalink: /quotes
 > বিশ্বাস বড়ই আজব জিনিস। বুঝে করলে অনেক শাঁস, নাইলে পুরাই বাঁশ।   
 > \- @fazlerabbi37
 
+> বুঝেও যে বলে বুঝিনি তারে বুঝায় কে?
+> আর না বুঝেও যে হ্যাঁ হ্যাঁ করে তারে ভুতে ধরছে।
+> \- @fazlerabbi37
 
 > When freedom is outlawed, only outlaws will be free.  
 > \- Tom Robbins
