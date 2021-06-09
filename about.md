@@ -70,7 +70,8 @@ comments: false
 	<a rel="noreferrer" style="text-decoration: none;" href="https://matrix.to/#/@ahm:feneas.org" target="_blank">
 		<img height="28" width="93" alt="matrix" src="/assets/badges/matrix.svg" style="margin-bottom: 5px;"/>
 	</a>
-	<a rel="noreferrer" style="text-decoration: none;" href="/irc" target="_blank">
+	<!-- irc -->
+	<a rel="noreferrer" style="text-decoration: none;" href="/irc.txt" target="_blank">
 		<img height="28" width="63" alt="irc" src="/assets/badges/irc.svg" style="margin-bottom: 5px;"/>
 	</a>
 	<br/>
