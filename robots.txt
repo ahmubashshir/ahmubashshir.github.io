@@ -2,7 +2,7 @@
 permalink: robots.txt
 ---
 Sitemap: {{ site.url }}/sitemap.xml
-{% if site.production != true %}Disallow: /{% else %}Disallow: /archives
+{% if jekyll.environment != "production" %}Disallow: /{% else %}Disallow: /archives
 Disallow: /assets
 Disallow: /categories
 Disallow: /search
