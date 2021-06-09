@@ -36,7 +36,7 @@ remote_theme: "ahmubashshir/so-simple-theme@devel"
 skin: "/assets/css/skins/dark.css"
 paginate: 10  # amount of posts to show per page
 paginate_path: "/:num"
-permalink: /:year/:month/:day/:title
+permalink: /:collection/:year/:month/:day/:title
 category_archive_path: "/categories/#"
 tag_archive_path: "/tags/#"
 search_full_content: false
@@ -51,19 +51,27 @@ plugins:
 - jekyll-asciinema
 
 collections:
-  recipes:
+  posts:
+    label: Posts
     output: true
-    permalink: /:collection/:path/
+  slides:
+    label: Slides
+    output: true
 
 defaults:
-  # Post defaults
   - scope:
-      path: "_posts"
+      path: _posts
       type: posts
     values:
       layout: post
       comments: true
       share: true
+  - scope:
+      path: _slides
+      type: slides
+    values:
+      layout: slide
+      permalink: /slide/:year/:month/:day/:title
 
 feed:
   path: atom.xml

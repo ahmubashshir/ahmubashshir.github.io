@@ -1,0 +1,10 @@
+---
+permalink: robots.txt
+---
+Sitemap: {{ site.url }}/sitemap.xml
+{% if site.production != true %}Disallow: /{% else %}Disallow: /archives
+Disallow: /assets
+Disallow: /categories
+Disallow: /search
+Disallow: /slides
+Disallow: /tags{% endif %}
