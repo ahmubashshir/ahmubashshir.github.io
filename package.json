@@ -1,9 +1,13 @@
 {
-  "dependencies": {
-    "badge-maker": "^3",
-    "simple-icons": "^4"
-  },
   "scripts": {
-    "start": "node badges.js"
+    "badge": "node badges.js",
+    "svg": "svgo -f assets/badges",
+    "build": "npm start",
+    "start": "npm run badge && npm run svg"
+  },
+  "devDependencies": {
+    "badge-maker": "^3",
+    "simple-icons": "^4",
+    "svgo": "^0.7.2"
   }
 }
