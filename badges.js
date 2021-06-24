@@ -1,6 +1,6 @@
 const makeBadge = require( './node_modules/badge-maker/lib/make-badge' );
 const simpleIcons = require( 'simple-icons' );
-const badges = require( './_data/badges.json' );
+const badges = require( './_data/badges' );
 const fs = require( 'fs' );
 const path = require( 'path' );
 const dir = './assets/badges'
@@ -17,8 +17,9 @@ badges.forEach(
 		let logo = simpleIcons.get( badge.icon || badge.name ) || badge.icon;
 		let badgeData = {
 			format: 'svg',
-			text: [ '', badge.name ],
-			template: "for-the-badge",
+			message: badge.name,
+			label: '',
+			style: "for-the-badge",
 			color: badge.color || logo.color,
 			logo: "data:image/svg+xml;base64," + Buffer.from(
 				logo.svg.replace( '<svg', '<svg fill="#fff"' ),
@@ -26,7 +27,7 @@ badges.forEach(
 			).base64Slice()
 		}
 		let _badge = makeBadge( badgeData );
-		console.log( "built: " + badge.name + ".svg" )
+		console.info( "badge: " + badge.name)
 		fs.writeFile(
 			path.join( dir, badge.name + '.svg' ),
 			_badge,
