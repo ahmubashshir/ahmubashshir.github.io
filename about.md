@@ -96,11 +96,8 @@ comments: false
 
 ### Crypto Wallets:
 
- Crypto | Address
- :---: | :---
- ETH | 0x3d2821834B7B032185BDEcC21621D9Bd65611fCB
- XMR | 48UDoxGhkXy6nMF5tKwyQsCieRWjiZuchUR4nCDgpzHX8v-<br />kfiGCNioBdk6DetcyCJbh1j32bpz3ZnDjDzqWUHmtdPx3iTRU
-
+ [![Donate with Ethereum](https://en.cryptobadges.io/badge/big/0x3d2821834B7B032185BDEcC21621D9Bd65611fCB)](https://en.cryptobadges.io/donate/0x3d2821834B7B032185BDEcC21621D9Bd65611fCB)
+ [![Donate with Monero](https://en.cryptobadges.io/badge/big/48UDoxGhkXy6nMF5tKwyQsCieRWjiZuchUR4nCDgpzHX8vkfiGCNioBdk6DetcyCJbh1j32bpz3ZnDjDzqWUHmtdPx3iTRU)](https://en.cryptobadges.io/donate/48UDoxGhkXy6nMF5tKwyQsCieRWjiZuchUR4nCDgpzHX8vkfiGCNioBdk6DetcyCJbh1j32bpz3ZnDjDzqWUHmtdPx3iTRU)
 ### Github Statistics:
 <figure>
 	<embed type="image/svg+xml" src="https://github-readme-stats.vercel.app/api?theme=dark&amp;title_color=2EB398&amp;bg_color=1B2224&amp;text_color=C6CDCB&amp;username=ahmubashshir&amp;count_private=true&amp;show_icons=true" />
