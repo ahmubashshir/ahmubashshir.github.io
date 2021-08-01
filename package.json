@@ -7,8 +7,9 @@
   },
   "devDependencies": {
     "badge-maker": "^3",
-    "js-yaml": ">=3.13.1",
-    "simple-icons": "^4",
-    "svgo": "^2.3.0"
+    "simple-icons": "^4"
+  },
+  "dependencies": {
+    "svgo": "^2.3.1"
   }
 }
