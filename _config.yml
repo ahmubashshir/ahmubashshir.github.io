@@ -49,6 +49,7 @@ plugins:
 - jekyll-feed
 - jekyll-paginate
 - jekyll-asciinema
+- jekyll-target-blank
 
 collections:
   posts:

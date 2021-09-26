@@ -6,6 +6,7 @@ group :jekyll_plugins do
   gem "jekyll-paginate"
   gem "jekyll-asciinema"
   gem "jekyll-gist"
+  gem "jekyll-target-blank"
 end
 #gem "jekyll"
 #gem "jekyll-gist"
