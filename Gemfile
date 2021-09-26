@@ -7,6 +7,7 @@ group :jekyll_plugins do
   gem "jekyll-asciinema"
   gem "jekyll-gist"
   gem "jekyll-target-blank"
+  gem "jemoji"
 end
 #gem "jekyll"
 #gem "jekyll-gist"

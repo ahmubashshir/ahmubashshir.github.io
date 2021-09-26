@@ -50,6 +50,7 @@ plugins:
 - jekyll-paginate
 - jekyll-asciinema
 - jekyll-target-blank
+- jemoji
 
 collections:
   posts:
