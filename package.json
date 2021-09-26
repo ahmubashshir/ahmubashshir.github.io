@@ -5,11 +5,9 @@
     "build": "npm start",
     "start": "npm run badge && npm run svg"
   },
-  "devDependencies": {
-    "badge-maker": "^3",
-    "simple-icons": "^4"
-  },
   "dependencies": {
-    "svgo": "^2.3.1"
+    "badge-maker": "^3.3.1",
+    "simple-icons": "^5.16.0",
+    "svgo": "^2.7.0"
   }
 }
