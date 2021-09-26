@@ -1,6 +1,8 @@
+!_*
 # Ignore docs files
 _gh_pages
 _site
+_posts/YYYY-MM-DD-jekyll-post.md
 .ruby-version
 vendor
 .sass-cache
