@@ -14,16 +14,20 @@ permalink: /quotes
 > মোটিভেশন আর মাস্টারবেশন একই জিনিস, দুইটার উত্তেজনাই থাকে অল্প সময়ের জন্য... কিন্তু ফলাফল শূন্য।  
 > \- asifur.mashfiq@gmail.com
 
+> Democracy is supposed to be 'of the people, by the people, for the people',
+nowadays democracy is 'of money, by actors, for power'  
+> \- [@fazlerabbi37]
+
 > When freedom is outlawed, only outlaws will be free.  
 > \- Tom Robbins
 
 > Intelligence is the ability to avoid doing work, yet getting the work done.  
-> \- Linus Torvalds
+> \- [@torvalds]
 
 > Everything we hear is an opinion, not a fact. Everything we see is a perspective, not the truth.  
 > \- Marcus Aurelius
 
-> Any fool can write code that a computer can understand. Good programmers write code that humans can understand.
+> Any fool can write code that a computer can understand. Good programmers write code that humans can understand.  
 > \- Martin Fowler
 
 > Dreams are like polite crypto miners, stealing your cpu cycles when you're idle.  
@@ -32,3 +36,4 @@ permalink: /quotes
 
 [@bdeshi]: https://github.com/bdeshi
 [@fazlerabbi37]: https://github.com/fazlerabbi37
+[@torvalds]: https://github.com/torvalds
