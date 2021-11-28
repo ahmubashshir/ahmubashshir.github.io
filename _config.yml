@@ -105,6 +105,7 @@ author:
 head_scripts:
 - https://unpkg.com/jquery@3.3.1/dist/jquery.min.js
 - https://use.fontawesome.com/releases/v5.0.12/js/all.js
+- https://unpkg.com/ackee-tracker-consent/dist/ackee-tracker-consent.min.js
 
 footer_scripts:
 - /assets/js/main.min.js
