@@ -102,7 +102,7 @@ author:
     url: https://t.me/ahmubashshir
     icon: fab fa-telegram
 footer_scripts:
-- https://unpkg.com/jquery/dist/jquery.min.js
+#- https://unpkg.com/jquery/dist/jquery.min.js
 - /assets/js/main.min.js
 - https://use.fontawesome.com/releases/v5.0.12/js/all.js
 
