@@ -4,33 +4,35 @@ layout: post
 comments: false
 permalink: /quotes
 ---
-> বিশ্বাস বড়ই আজব জিনিস। বুঝে করলে অনেক শাঁস, নাইলে পুরাই বাঁশ।   
+> বিশ্বাস বড়ই আজব জিনিস। বুঝে করলে অনেক শাঁস, নাইলে পুরাই বাঁশ।<br />
 > \- [@fazlerabbi37]
 
 > বুঝেও যে বলে বুঝিনি তারে বুঝায় কে?
-> আর না বুঝেও যে হ্যাঁ হ্যাঁ করে তারে ভুতে ধরছে।
+> আর না বুঝেও যে হ্যাঁ হ্যাঁ করে তারে ভুতে ধরছে।<br />
 > \- [@fazlerabbi37]
 
-> মোটিভেশন আর মাস্টারবেশন একই জিনিস, দুইটার উত্তেজনাই থাকে অল্প সময়ের জন্য... কিন্তু ফলাফল শূন্য।  
+> মোটিভেশন আর মাস্টারবেশন একই জিনিস, দুইটার উত্তেজনাই থাকে অল্প সময়ের জন্য... কিন্তু ফলাফল শূন্য।<br />
 > \- asifur.mashfiq@gmail.com
 
 > Democracy is supposed to be 'of the people, by the people, for the people',
-nowadays democracy is 'of money, by actors, for power'  
+> nowadays democracy is 'of money, by actors, for power'<br />
 > \- [@fazlerabbi37]
 
-> When freedom is outlawed, only outlaws will be free.  
+> When freedom is outlawed, only outlaws will be free.<br />
 > \- Tom Robbins
 
-> Intelligence is the ability to avoid doing work, yet getting the work done.  
+> Intelligence is the ability to avoid doing work, yet getting the work done.<br />
 > \- [@torvalds]
 
-> Everything we hear is an opinion, not a fact. Everything we see is a perspective, not the truth.  
+> Everything we hear is an opinion, not a fact. Everything we see is a perspective,
+> not the truth.<br />
 > \- Marcus Aurelius
 
-> Any fool can write code that a computer can understand. Good programmers write code that humans can understand.  
+> Any fool can write code that a computer can understand.
+> Good programmers write code that humans can understand.<br />
 > \- Martin Fowler
 
-> Dreams are like polite crypto miners, stealing your cpu cycles when you're idle.  
+> Dreams are like polite crypto miners, stealing your cpu cycles when you're idle.<br />
 > \- [@bdeshi]
 
 
