@@ -14,6 +14,13 @@ permalink: /quotes
 > মোটিভেশন আর মাস্টারবেশন একই জিনিস, দুইটার উত্তেজনাই থাকে অল্প সময়ের জন্য... কিন্তু ফলাফল শূন্য।<br />
 > \- asifur.mashfiq@gmail.com
 
+> এক বাঙ্গালী ১০০ মানুষের কাজ করতে পারে, তবে ১০০ বাঙ্গালী এক হয়ে এক সাথে কাজ করতে পারে না।<br />
+> \- [@tasauf1980]
+
+> জীবন চিকেন বানের মত, অনেক খানি প্যাডিং, সামান্য সার বস্তু।<br />
+> \- [@nr072]
+
+
 > Democracy is supposed to be 'of the people, by the people, for the people',
 > nowadays democracy is 'of money, by actors, for power'<br />
 > \- [@fazlerabbi37]
@@ -39,3 +46,5 @@ permalink: /quotes
 [@bdeshi]: https://github.com/bdeshi
 [@fazlerabbi37]: https://github.com/fazlerabbi37
 [@torvalds]: https://github.com/torvalds
+[@tasauf1980]: https://github.com/tasauf1980
+[@nr072]: https://github.com/nr072
