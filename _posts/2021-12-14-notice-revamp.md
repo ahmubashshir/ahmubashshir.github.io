@@ -12,6 +12,7 @@ tags: todo revamp
 
 কেউ প্লিজ ক্ষেইপা যাইয়েন না :P
 
-[@fahimscirex]: https://github.com/fahimscirex
+* Estimated date: after ~~2021/12/20~~ 2022/01/20, before ~~2021/12/25~~ 2022/01/30
+  * I Missed the deadline :3
 
-Estimated date: after 2021/12/20, before 2021/12/25
+[@fahimscirex]: https://github.com/fahimscirex
