@@ -21,7 +21,6 @@ jobs:
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: 'latest'
-
       - name: init cache(hugo)
         uses: actions/cache@v2
         with:
@@ -29,24 +28,26 @@ jobs:
           key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
           restore-keys: |
             ${{ runner.os }}-hugomod-
+      - name: prepare(node)
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - name: init cache(node)
+        uses: actions/cache@v2
+        with:
+          path: ./data/node_modules
+          key: ${{ runner.os }}-npm-${{ hashFiles('data/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-npm-
+      - name: init badge-maker(npm)
+        run: npm install --prefix data
 
       - name: build
         run: hugo --minify --enableGitInfo --logFile /dev/stderr
-
-#      - name: prepare(node)
-#        uses: actions/setup-node@v2
-#        with:
-#          node-version: '14'
-
-#      - name: Install dependencies
-#        run: "npm install"
-
-#      - name: build(badges)
-#        run: npm build
-
+      - name: build(badges)
+        run: npm start --prefix data
       - name: prepare archive
         run: tar --dereference --hard-dereference --directory public -cvf artifact.tar .
-
       - name: upload archive
         uses: actions/upload-artifact@main
         with:
