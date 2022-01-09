@@ -14,14 +14,14 @@ jobs:
           submodules: true
           fetch-depth: 0
 
-      - name: disable quotePath
+      - name: disable(git-config/core.quotePath)
         run: git config core.quotePath false
 
       - name: prepare(hugo)
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: 'latest'
-      - name: init cache(hugo)
+      - name: init-cache(hugo)
         uses: actions/cache@v2
         with:
           path: /tmp/hugo_cache
@@ -31,33 +31,36 @@ jobs:
       - name: prepare(node)
         uses: actions/setup-node@v2
         with:
-          node-version: '14'
-      - name: init cache(node)
+          node-version: '16'
+      - name: init-cache(node)
         uses: actions/cache@v2
         with:
           path: ./data/node_modules
           key: ${{ runner.os }}-npm-${{ hashFiles('data/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-npm-
-      - name: init badge-maker(npm)
+      - name: init-badgemaker(npm)
         run: npm install --prefix data
 
-      - name: build
+      - name: build(site)
         run: hugo --minify --enableGitInfo --logFile /dev/stderr
       - name: build(badges)
         run: npm start --prefix data
-      - name: prepare archive
-        run: tar --dereference --hard-dereference --directory public -cvf artifact.tar .
-      - name: upload archive
-        uses: actions/upload-artifact@main
+#      - name: prepare archive
+#        run: tar --dereference --hard-dereference --directory public -cvf artifact.tar .
+#      - name: upload archive
+#        uses: actions/upload-artifact@main
+#        with:
+#          name: github-pages
+#          path: ./artifact.tar
+#          if-no-files-found: warn
+      - name: deploy(site)
+        uses: peaceiris/actions-gh-pages@v3
+#        uses: actions/deploy-pages@v1-beta
         with:
-          name: github-pages
-          path: ./artifact.tar
-          if-no-files-found: warn
-      - name: deploy
-        uses: actions/deploy-pages@v1-beta
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          timeout: 600000
-          error_count: 10
-          reporting_interval: 1000
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          #token: ${{ secrets.GITHUB_TOKEN }}
+          #timeout: 600000
+          #error_count: 10
+          #reporting_interval: 1000
