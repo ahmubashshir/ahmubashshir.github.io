@@ -1,0 +1,62 @@
+name: Generate Static Site
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: true
+          fetch-depth: 0
+
+      - name: disable quotePath
+        run: git config core.quotePath false
+
+      - name: prepare(hugo)
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+
+      - name: init cache(hugo)
+        uses: actions/cache@v2
+        with:
+          path: /tmp/hugo_cache
+          key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
+          restore-keys: |
+            ${{ runner.os }}-hugomod-
+
+      - name: build
+        run: hugo --minify --enableGitInfo --logFile /dev/stderr
+
+#      - name: prepare(node)
+#        uses: actions/setup-node@v2
+#        with:
+#          node-version: '14'
+
+#      - name: Install dependencies
+#        run: "npm install"
+
+#      - name: build(badges)
+#        run: npm build
+
+      - name: prepare archive
+        run: tar --dereference --hard-dereference --directory public -cvf artifact.tar .
+
+      - name: upload archive
+        uses: actions/upload-artifact@main
+        with:
+          name: github-pages
+          path: ./artifact.tar
+          if-no-files-found: warn
+      - name: deploy
+        uses: actions/deploy-pages@v1-beta
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          timeout: 600000
+          error_count: 10
+          reporting_interval: 1000

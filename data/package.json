@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "badge": "node badges.js",
+    "svg": "svgo -f ../public/assets/badges",
+    "build": "npm start",
+    "start": "mkdir -p ../public/assets/badges && npm run badge && npm run svg"
+  },
+  "dependencies": {
+    "badge-maker": "^3.3.1",
+    "simple-icons": "^5.16.0",
+    "svgo": "^2.7.0"
+  }
+}

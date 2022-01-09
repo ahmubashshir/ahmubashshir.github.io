@@ -1,0 +1,29 @@
+[[main]]
+name = 'Archive'
+url = 'archives'
+weight = 2
+
+[[main]]
+name = 'Search'
+url = 'search'
+weight = 1
+
+[[main]]
+name = 'Tags'
+url = 'tags'
+weight = 3
+
+[[main]]
+name = 'Categories'
+url = 'categories'
+weight = 4
+
+[[main]]
+name = 'Series'
+url = 'series'
+weight = 5
+
+[[main]]
+name = 'About'
+url = 'about'
+weight = 6

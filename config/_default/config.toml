@@ -1,0 +1,66 @@
+baseURL = 'https://ahmubashshir.github.io/blog'
+description = 'Evidence of my terrible writing skills.'
+title = "Mubashshir"
+paginate = 6
+theme = 'github.com/adityatelange/hugo-PaperMod'
+copyright = 'GFDL'
+
+enableInlineShortcodes = true
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+enableEmoji = true
+enableGitInfo = true
+
+[minify]
+disableXML = false
+minifyOutput = true
+
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+section = ['HTML', 'RSS']
+
+[taxonomies]
+category = 'categories'
+tag = 'tags'
+series = 'series'
+
+[markup.highlight]
+anchorLineNos = true
+codeFences = true
+guessSyntax = true
+lineNos = true
+style = 'dracula'
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[privacy.vimeo]
+disabled = false
+simple = true
+[privacy.twitter]
+disabled = false
+enableDNT = true
+simple = true
+[privacy.instagram]
+disabled = false
+simple = true
+[privacy.youtube]
+disabled = false
+privacyEnhanced = true
+
+[services.instagram]
+disableInlineCSS = true
+[services.twitter]
+disableInlineCSS = true
+
+[permalinks]
+post = '/:section/:year/:month/:day/:filename'
+page = '/:filename'
+
+[[module.imports]]
+path = "cj.rs/gohugo-asciinema"
+
+[[module.imports]]
+path = 'github.com/adityatelange/hugo-PaperMod'

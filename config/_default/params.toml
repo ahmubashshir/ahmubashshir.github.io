@@ -1,0 +1,92 @@
+#env = 'production'
+description = 'Evidence of my terrible writing skills.'
+keywords = ['Blog', 'Linux', 'BTW', 'ahmubashshir']
+author = "Mubashshir"
+defaultTheme = 'dark'
+
+disableThemeToggle = false
+ShowFullTextinRSS = true
+ShowReadingTime = true
+ShowShareButtons = true
+ShowPostNavLinks = true
+ShowBreadCrumbs = true
+ShowCodeCopyButtons = true
+disableSpecial1stPost = true
+disableScrollToTop = false
+comments = true
+hidemeta = false
+hideSummary = false
+showtoc = true
+tocopen = false
+
+[label]
+text = "@ahmubashshir"
+logo = "/img/favicon-32x32.png"
+iconHeight = 32
+
+[homeInfoParams]
+Title = "Ahmad Hasan Mubashshir"
+Content = "Student, bookworm, Linux Enthusiast, Otaku ;)"
+
+[analytics.google]
+SiteVerificationTag = "1AayfMJ_TLCrPwoK12kv_LhdWrH1tARYKK6oHPBjOh0"
+
+[[socialIcons]]
+name = 'GitHub'
+url = 'https://github.com/ahmubashshir'
+[[socialIcons]]
+name = 'StackOverflow'
+url = 'https://stackoverflow.com/users/9123082'
+
+[[socialIcons]]
+name = 'Telegram'
+url = 'https://t.me/ahmubashshir'
+
+[[socialIcons]]
+name = 'Reddit'
+url = 'https://reddit.com/u/ahmubashshir'
+
+[[socialIcons]]
+name = 'Twitter'
+url = 'https://twitter.com/ahmubashshir'
+
+[[socialIcons]]
+name = 'Email'
+url = 'mailto:ahmubashshir@gmail.com'
+
+[[socialIcons]]
+name = 'RSS'
+url = 'index.xml'
+
+[[socialIcons]]
+name = 'Quotes'
+url = 'quotes'
+
+[editPost]
+URL = "https://github.com/ahmubashshir/ahmubashshir.github.io/tree/content/posts"
+Text = "Suggest Changes" # edit text
+appendFilePath = true # to append file path to Edit link
+
+[cover]
+hidden = true # hide everywhere but not in structured data
+hiddenInList = true # hide on list pages and home
+hiddenInSingle = true # hide on single page
+relative = false
+
+[assets]
+favicon = "/img/favicon.ico"
+favicon16x16 = "/img/favicon-16x16.png"
+favicon32x32 = "/img/favicon-32x32.png"
+apple_touch_icon = "/img/apple-touch-icon.png"
+safari_pinned_tab = "/img/safari-pinned-tab.svg"
+theme_color = "#ffffff"
+msapplication_TileColor = "#224679"
+
+[fuseOpts]
+isCaseSensitive = false
+shouldSort = true
+location = 0
+distance = 1000
+threshold = 0.4
+minMatchCharLength = 0
+keys = ["title", "permalink", "summary", "content"]
