@@ -27,7 +27,7 @@ badges.forEach(
 			).base64Slice()
 		}
 		let _badge = makeBadge( badgeData );
-		console.info( "badge: " + badge.name)
+		console.info( "badge: " + badge.name )
 		fs.writeFile(
 			path.join( dir, badge.name + '.svg' ),
 			_badge,

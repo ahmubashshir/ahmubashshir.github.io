@@ -25,6 +25,12 @@ permalink: /quotes
 > nowadays democracy is 'of money, by actors, for power'<br />
 > \- [@fazlerabbi37]
 
+> Nowadays for some people, privacy is the new religion, Edward Snowden is the prophet.<br />
+> \- [@fazlerabbi37]
+
+> Bringing knife to gun fight and sonic canon to kill flies both are ineffective.<br />
+> \- [@fazlerabbi37]
+
 > When freedom is outlawed, only outlaws will be free.<br />
 > \- Tom Robbins
 
