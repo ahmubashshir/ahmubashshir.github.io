@@ -85,12 +85,12 @@ favicon16x16 = "/assets/image/favicon-16x16.png"
 favicon32x32 = "/assets/image/favicon-32x32.png"
 apple_touch_icon = "/assets/image/apple-touch-icon.png"
 safari_pinned_tab = "/assets/image/safari-pinned-tab.svg"
-msTileColor = "#224679"
+msTileColor = "#1d1e20"
 vtag = '8jl4JnrGke'
 
 [pwa]
-color = "#ffffff"
-bgColor = "#ffffff"
+color = "#dadadb"
+bgColor = "#1d1e20"
 display = 'standalone'
 orientation = 'portrait-primary'
 
