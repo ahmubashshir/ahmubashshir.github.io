@@ -1,4 +1,4 @@
-#env = 'production'
+env = 'production'
 description = 'Evidence of my terrible writing skills.'
 keywords = ['Blog', 'Linux', 'BTW', 'ahmubashshir']
 author = "Mubashshir"
@@ -20,8 +20,8 @@ showtoc = true
 tocopen = false
 
 [label]
-text = "@ahmubashshir"
-logo = "/img/favicon-32x32.png"
+text = "‍"
+icon = "/assets/image/favicon-32x32.png"
 iconHeight = 32
 
 [homeInfoParams]
@@ -63,7 +63,7 @@ name = 'Quotes'
 url = 'quotes'
 
 [editPost]
-URL = "https://github.com/ahmubashshir/ahmubashshir.github.io/tree/content/posts"
+URL = "https://github.com/ahmubashshir/ahmubashshir.github.io/tree/master/content/posts"
 Text = "Suggest Changes" # edit text
 appendFilePath = true # to append file path to Edit link
 
@@ -74,13 +74,20 @@ hiddenInSingle = true # hide on single page
 relative = false
 
 [assets]
-favicon = "/img/favicon.ico"
-favicon16x16 = "/img/favicon-16x16.png"
-favicon32x32 = "/img/favicon-32x32.png"
-apple_touch_icon = "/img/apple-touch-icon.png"
-safari_pinned_tab = "/img/safari-pinned-tab.svg"
-theme_color = "#ffffff"
-msapplication_TileColor = "#224679"
+disableFingerprinting = true
+favicon = "/assets/image/favicon.ico"
+favicon16x16 = "/assets/image/favicon-16x16.png"
+favicon32x32 = "/assets/image/favicon-32x32.png"
+apple_touch_icon = "/assets/image/apple-touch-icon.png"
+safari_pinned_tab = "/assets/image/safari-pinned-tab.svg"
+msTileColor = "#224679"
+vtag = '8jl4JnrGke'
+
+[pwa]
+color = "#ffffff"
+bgColor = "#ffffff"
+display = 'standalone'
+orientation = 'portrait-primary'
 
 [fuseOpts]
 isCaseSensitive = false
