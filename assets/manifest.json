@@ -1,6 +1,8 @@
 {
     "name": "{{ $.Site.Title }}",
     "description": "{{ $.Site.Params.description }}",
+    "short_name": "{{ $.Site.Title }}",
+    "categories": {{ $.Site.Params.keywords | jsonify}},
     "start_url": "/",
     "scope": "/",
     "icons": [

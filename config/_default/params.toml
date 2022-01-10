@@ -1,6 +1,11 @@
 env = 'production'
 description = 'Evidence of my terrible writing skills.'
-keywords = ['Blog', 'Linux', 'BTW', 'ahmubashshir']
+keywords = [
+	'blog', 'linux',
+	'ahmubashshir',
+	'technology',
+	'nature photography'
+]
 author = "Mubashshir"
 defaultTheme = 'dark'
 
