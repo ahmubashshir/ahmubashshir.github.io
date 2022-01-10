@@ -5,6 +5,15 @@
     "categories": {{ $.Site.Params.keywords | jsonify}},
     "start_url": "/",
     "scope": "/",
+    "shortcuts": [
+        {{- range .Site.Menus.main }}
+        {
+            "name": "{{ .Name }}",
+            "description": "{{ .Title | default .Name }}",
+            "url": "{{ .URL | relLangURL }}",
+        },
+        {{- end }}
+    ],
     "icons": [
         {
             "src": "/assets/image/android-chrome-192x192.png?v={{ $.Site.Params.assets.vtag }}",
@@ -14,7 +23,8 @@
         {
             "src": "/assets/image/android-chrome-512x512.png?v={{ $.Site.Params.assets.vtag }}",
             "sizes": "512x512",
-            "type": "image/png"
+            "type": "image/png",
+            "purpose": "maskable"
         }
     ],
     "theme_color": "{{ $.Site.Params.pwa.color }}",
