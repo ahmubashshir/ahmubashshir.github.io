@@ -1,0 +1,22 @@
+{
+    "name": "{{ $.Site.Title }}",
+    "description": "{{ $.Site.Params.description }}",
+    "start_url": "/",
+    "scope": "/",
+    "icons": [
+        {
+            "src": "/assets/image/android-chrome-192x192.png?v={{ $.Site.Params.assets.vtag }}",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/image/android-chrome-512x512.png?v={{ $.Site.Params.assets.vtag }}",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "{{ $.Site.Params.pwa.color }}",
+    "orientation": "{{ $.Site.Params.pwa.orientation }}",
+    "background_color": "{{ $.Site.Params.pwa.bgColor }}",
+    "display": "{{ $.Site.Params.pwa.display }}"
+}

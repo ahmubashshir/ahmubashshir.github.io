@@ -1,0 +1,11 @@
+{{- if not ($.Page.Scratch.Get "galleryloaded") -}}
+  {{- $.Page.Scratch.Set "galleryloaded" 1 -}}
+  {{- $style := (slice (resources.Get "css/hugo-easy-gallery.css")) | resources.Concat "assets/css/gallery.css" | minify -}}
+  
+  {{- if not .Site.Params.assets.disableFingerprinting -}}
+    {{- $style := $style | fingerprint -}}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" as="style"/>
+  {{- else -}}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}" as="style">
+  {{- end -}}
+{{- end -}}

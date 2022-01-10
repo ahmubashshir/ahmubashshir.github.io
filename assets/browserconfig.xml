@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<browserconfig>
+  <msapplication>
+    <tile>
+      <square150x150logo src="/assets/image/mstile-150x150.png?v={{ $.Site.Params.assets.vtag }}"/>
+      <square310x310logo src="/assets/image/mstile-310x310.png?v={{ $.Site.Params.assets.vtag }}"/>
+      <TileColor>{{ $.Site.Params.assets.msTileColor }}</TileColor>
+    </tile>
+  </msapplication>
+</browserconfig>

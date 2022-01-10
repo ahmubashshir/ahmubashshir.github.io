@@ -1,5 +1,9 @@
-<link rel="manifest" href="/site.webmanifest">
-<meta name="msapplication-config" content="/browserconfig.xml">
+{{- $webmanTemplate := resources.Get "manifest.json" -}}
+{{- $webmanConfig := $webmanTemplate | resources.ExecuteAsTemplate "manifest.json" . | minify -}}
+<link rel="manifest" href="{{ $webmanConfig.RelPermalink }}">
+{{- $msappTemplate := resources.Get "browserconfig.xml" -}}
+{{- $msappConfig := $msappTemplate | resources.ExecuteAsTemplate "browserconfig.xml" . | minify -}}
+<meta name="msapplication-config" content="{{ $msappConfig.RelPermalink }}">
 <script src="https://unpkg.com/ackee-tracker-consent/dist/ackee-tracker-consent.min.js" crossorigin="anonymous">
 </script>
 <style>
