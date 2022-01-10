@@ -8,9 +8,8 @@ date: 2020-11-05
 ---
 
 সাজেকে বেড়ানোর দ্বিতীয় দিনে তোলা ছবি
-
-{{< load-photoswipe >}}
-{{< gallery caption-effect="fade">}}
+{{% photoswipe %}}
+{{< gallery caption-effect="fade" >}}
 {{< figure src="https://i.imgur.com/98yzwYq.jpg" caption="2020-11-05 06:07:47 1" >}}
 {{< figure src="https://i.imgur.com/suJat4t.jpg" caption="2020-11-05 06:07:49 1" >}}
 {{< figure src="https://i.imgur.com/oOCH1FP.jpg" caption="2020-11-05 06:07:50 1" >}}
