@@ -2,7 +2,7 @@ title = "@ahmubashshir's blog"
 paginate = 6
 copyright = 'GFDL'
 
-baseURL = 'https://ahmubashshir.github.io/blog'
+baseURL = 'https://ahmubashshir.github.io'
 theme = 'github.com/adityatelange/hugo-PaperMod'
 enableInlineShortcodes = true
 enableRobotsTXT = true
