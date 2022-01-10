@@ -1,10 +1,9 @@
-baseURL = 'https://ahmubashshir.github.io/blog'
-description = 'Evidence of my terrible writing skills.'
-title = "Mubashshir"
+title = "@ahmubashshir's blog"
 paginate = 6
-theme = 'github.com/adityatelange/hugo-PaperMod'
 copyright = 'GFDL'
 
+baseURL = 'https://ahmubashshir.github.io/blog'
+theme = 'github.com/adityatelange/hugo-PaperMod'
 enableInlineShortcodes = true
 enableRobotsTXT = true
 buildDrafts = false
