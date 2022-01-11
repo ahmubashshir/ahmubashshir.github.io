@@ -19,7 +19,7 @@ series:
 
 [@fahimscirex]: https://github.com/fahimscirex
 
-~~Estimated date: after 2021/12/20, before 2021/12/25~~
+~~Estimated date: after 2021/12/20, before 2021/12/25~~<br />
 Estimated date: after 2022/01/08, before 2022/01/15
 
 Update: মাইগ্রেট করা শেষ \[২০২২-০১-১১ তারিখে]
