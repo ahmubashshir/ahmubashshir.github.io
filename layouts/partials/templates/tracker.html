@@ -1,8 +1,14 @@
 {{-  with $.Site.Params.analytics.ackee -}}
 {{- if and (ne .endPoint "") (ne .siteID "") -}}
 {{- /* Include Ackee */ -}}
-<script src="https://unpkg.com/ackee-tracker-consent/dist/ackee-tracker-consent.min.js" crossorigin="anonymous">
-</script>
+{{- $tracker := resources.GetRemote "https://unpkg.com/ackee-tracker-consent/dist/ackee-tracker-consent.min.js" -}}
+{{- $tracker := slice $tracker | resources.Concat "assets/js/tracker.ackee.js" | minify -}}
+{{- if not $.Site.Params.assets.disableFingerprinting -}}
+{{- $tracker := $tracker | fingerprint -}}
+<script crossorigin="anonymous" src="{{ $tracker.RelPermalink }}" integrity="{{ $tracker.Data.Integrity }}"></script>
+{{- else }}
+<script crossorigin="anonymous" src="{{ $tracker.RelPermalink }}"></script>
+{{- end }}
 <style>
   #consent-axkeg5u7 {
     left: calc((100vw - 375px)/2) !important;
