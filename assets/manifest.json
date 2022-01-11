@@ -1,19 +1,10 @@
 {
+    "$schema": "https://json.schemastore.org/web-manifest-combined.json",
     "name": "{{ $.Site.Title }}",
     "description": "{{ $.Site.Params.description }}",
     "short_name": "{{ $.Site.Title }}",
-    "categories": {{ $.Site.Params.keywords | jsonify}},
     "start_url": "/",
     "scope": "/",
-    "shortcuts": [
-        {{- range .Site.Menus.main }}
-        {
-            "name": "{{ .Name }}",
-            "description": "{{ .Title | default .Name }}",
-            "url": "{{ .URL | relLangURL }}",
-        },
-        {{- end }}
-    ],
     "icons": [
         {
             "src": "/assets/image/android-chrome-192x192.png?v={{ $.Site.Params.assets.vtag }}",
@@ -24,11 +15,23 @@
             "src": "/assets/image/android-chrome-512x512.png?v={{ $.Site.Params.assets.vtag }}",
             "sizes": "512x512",
             "type": "image/png",
-            "purpose": "maskable"
+            "purpose": "any maskable"
         }
     ],
     "theme_color": "{{ $.Site.Params.pwa.color }}",
     "orientation": "{{ $.Site.Params.pwa.orientation }}",
     "background_color": "{{ $.Site.Params.pwa.bgColor }}",
-    "display": "{{ $.Site.Params.pwa.display }}"
+    "display": "{{ $.Site.Params.pwa.display }}",
+    "shortcuts": [
+        {{- range .Site.Menus.main }}
+        {
+            "name": "{{ .Name }}",
+            "description": "{{ .Title | default .Name }}",
+            "url": "{{ .URL | relLangURL }}",
+        },
+        {{- end }}
+    ],
+    "categories": [
+        {{- range $.Site.Params.keywords }}"{{ . }}",{{- end }}
+    ]
 }
