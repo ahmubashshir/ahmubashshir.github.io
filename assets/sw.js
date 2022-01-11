@@ -5,7 +5,7 @@ with a few additional edits borrowed from Filament Group's. (https://www.filamen
 */
 
 (function() {
-  const version = '{{ .GitInfo.Hash }}';
+  const version = '{{ .GitInfo.AbbreviatedHash }}';
   const cacheName = version + '::blog:';
 
   const staticCacheName = cacheName + 'static';
