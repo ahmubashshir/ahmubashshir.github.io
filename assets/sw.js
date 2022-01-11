@@ -1,439 +1,132 @@
-const CACHE_VERSION = '{{ .GitInfo.Hash }}';
+/*
+This is a modified version of Ethan Marcotte's service worker (https://ethanmarcotte.com/theworkerofservices.js),
+which is in turn a modified version of Jeremy Keith's service worker (https://adactio.com/serviceworker.js),
+with a few additional edits borrowed from Filament Group's. (https://www.filamentgroup.com/sw.js)
+*/
 
-const BASE_CACHE_FILES = [
+(function() {
+  const version = '{{ .GitInfo.Hash }}';
+  const cacheName = version + '::blog:';
+
+  const staticCacheName = cacheName + 'static';
+  const pagesCacheName = cacheName + 'pages';
+
+  const staticAssets = [
+    '/',
     '/assets/css/stylesheet.min.css',
     '/assets/js/highlight.min.js',
     '/assets/js/search.min.js',
-    '/index.json',
-    '/manifest.min.json',
     '/assets/image/favicon.ico',
     '/assets/image/favicon-16x16.png',
     '/assets/image/favicon-32x32.png',
     '/assets/image/apple-touch-icon.png',
-    '/assets/image/safari-pinned-tab.svg'
-];
+    '/assets/image/safari-pinned-tab.svg',
+    '/offline/',
+    '/404.html'
+  ];
 
-const OFFLINE_CACHE_FILES = [
-    '/assets/css/stylesheet.min.css',
-    '/offline/index.html',
-];
+  function updateStaticCache() {
+    // These items must be cached for the Service Worker to complete installation
+    return caches.open(staticCacheName)
+    .then(cache => {
+      return cache.addAll(staticAssets.map(url => new Request(url, {credentials: 'include'})));
+    });
+  }
 
-const NOT_FOUND_CACHE_FILES = [
-    '/assets/css/stylesheet.min.css',
-    '/404.html',
-];
+  function stashInCache(cacheName, request, response) {
+    caches.open(cacheName)
+    .then(cache => cache.put(request, response));
+  }
 
-const OFFLINE_PAGE = '/offline/index.html';
-const NOT_FOUND_PAGE = '/404.html';
+  // Limit the number of items in a specified cache.
+  function trimCache(cacheName, maxItems) {
+    caches.open(cacheName)
+    .then(cache => {
+      cache.keys()
+      .then(keys => {
+        if (keys.length > maxItems) {
+          cache.delete(keys[ 0 ])
+          .then(trimCache(cacheName, maxItems));
+        }
+      });
+    });
+  }
 
-const CACHE_VERSIONS = {
-	assets: 'assets-sha-' + CACHE_VERSION,
-	content: 'content-sha-' + CACHE_VERSION,
-	offline: 'offline-sha-' + CACHE_VERSION,
-	notFound: '404-sha-' + CACHE_VERSION,
-};
+  // Remove caches whose name is no longer valid
+  function clearOldCaches() {
+    return caches.keys()
+    .then(keys => {
+      return Promise.all(keys
+        .filter(key => key.indexOf(version) !== 0)
+        .map(key => caches.delete(key))
+       );
+    });
+  }
 
-// Define MAX_TTL's in SECONDS for specific file extensions
-const MAX_TTL = {
-	'/': 3600,
-	html: 3600,
-	json: 86400,
-	js: 86400,
-	css: 86400,
-};
+  // Events!
+  self.addEventListener('message', event => {
+    if (event.data.command === 'trimCaches') {
+      trimCache(pagesCacheName, 35);
+    }
+  });
 
-const CACHE_BLACKLIST = [
-    ( str ) => {
-		return str.startsWith( 'https://ahm-ackee.netlify.app' );
-	},
-    ( str ) => {
-		return str.startsWith( 'https://api.github.com' );
-	},
-];
+  self.addEventListener('install', event => {
+    event.waitUntil(updateStaticCache()
+      .then(() => self.skipWaiting())
+     );
+  });
 
-const SUPPORTED_METHODS = [
-    'GET',
-];
+  self.addEventListener('activate', event => {
+    event.waitUntil(clearOldCaches()
+      .then(() => self.clients.claim())
+     );
+  });
 
-/**
- * isBlackListed
- * @param {string} url
- * @returns {boolean}
- */
-function isBlacklisted( url ) {
-	return CACHE_BLACKLIST.some( ( rule ) => {
-		if ( typeof rule === 'function' ) {
-			return rule( url ) === true;
-		}
-		return false;
-	} );
-}
+  self.addEventListener('message', event => {
+    if (event.data.command === 'trimCaches') {
+      trimCache(pagesCacheName, 35);
+    }
+  });
 
-/**
- * getFileExtension
- * @param {string} url
- * @returns {string}
- */
-function getFileExtension( url ) {
-	let extension = url.split( '.' ).reverse()[ 0 ].split( '?' )[ 0 ];
-	return ( extension.endsWith( '/' ) ) ? '/' : extension;
-}
+  self.addEventListener('fetch', event => {
+    const request = event.request;
+    const url = new URL(request.url);
 
-/**
- * getTTL
- * @param {string} url
- */
-function getTTL( url ) {
-	if ( typeof url === 'string' ) {
-		let extension = getFileExtension( url );
-		if ( typeof MAX_TTL[ extension ] === 'number' ) {
-			return MAX_TTL[ extension ];
-		} else {
-			return null;
-		}
-	} else {
-		return null;
-	}
-}
+    if (url.href.indexOf('{{ $.Site.BaseURL }}') !== 0) {
+      return;
+    }
 
-/**
- * installServiceWorker
- * @returns {Promise}
- */
-function installServiceWorker() {
-	return Promise.all(
-        [
-            caches.open( CACHE_VERSIONS.assets )
-                .then(
-					( cache ) => {
-						return cache.addAll( BASE_CACHE_FILES );
-					}
-				),
-            caches.open( CACHE_VERSIONS.offline )
-                .then(
-					( cache ) => {
-						return cache.addAll( OFFLINE_CACHE_FILES );
-					}
-				),
-            caches.open( CACHE_VERSIONS.notFound )
-                .then(
-					( cache ) => {
-						return cache.addAll( NOT_FOUND_CACHE_FILES );
-					}
-				)
-        ]
-		)
-		.then( () => {
-			return self.skipWaiting();
-		} );
-}
+    // Ignore non-GET requests
+    if (request.method !== 'GET') {
+      return;
+    }
 
-/**
- * cleanupLegacyCache
- * @returns {Promise}
- */
-function cleanupLegacyCache() {
+    // Ignore query-stringâ€™d requests
+    if (url.href.indexOf('?') !== -1) {
+      return;
+    }
 
-	let currentCaches = Object.keys( CACHE_VERSIONS )
-		.map(
-			( key ) => {
-				return CACHE_VERSIONS[ key ];
-			}
-		);
+    // Try the network first, fall back to the cache, finally the offline page (for HTML requests)
+    event.respondWith(
+      fetch(request)
+      .then(response => {
+        // NETWORK
+        // Stash a copy of this page in the pages cache
+        const copy = response.clone();
+        stashInCache(staticCacheName, request, copy);
+        return response;
+      })
+      .catch(() => {
+        // CACHE or FALLBACK
+        if (request.headers.get('Accept').indexOf('text/html') !== -1) {
+          return caches.match(request)
+            .then(response => response || caches.match('/offline/'));
+        } else {
+          return caches.match(request).then(response => response);
+        }
+      })
+    );
+    return;
 
-	return new Promise(
-		( resolve, reject ) => {
-
-			caches.keys()
-				.then(
-					( keys ) => {
-						return legacyKeys = keys.filter(
-							( key ) => {
-								return !~currentCaches.indexOf( key );
-							}
-						);
-					}
-				)
-				.then(
-					( legacy ) => {
-						if ( legacy.length ) {
-							Promise.all(
-									legacy.map(
-										( legacyKey ) => {
-											return caches.delete( legacyKey )
-										}
-									)
-								)
-								.then(
-									() => {
-										resolve()
-									}
-								)
-								.catch(
-									( err ) => {
-										reject( err );
-									}
-								);
-						} else {
-							resolve();
-						}
-					}
-				)
-				.catch(
-					() => {
-						reject();
-					}
-				);
-
-		}
-	);
-}
-
-function precacheUrl( url ) {
-	if ( !isBlacklisted( url ) ) {
-		caches.open( CACHE_VERSIONS.content )
-			.then( ( cache ) => {
-				cache.match( url )
-					.then( ( response ) => {
-						if ( !response ) {
-							return fetch( url )
-						} else {
-							// already in cache, nothing to do.
-							return null
-						}
-					} )
-					.then( ( response ) => {
-						if ( response ) {
-							return cache.put( url, response.clone() );
-						} else {
-							return null;
-						}
-					} );
-			} )
-	}
-}
-
-
-
-self.addEventListener(
-	'install', event => {
-		event.waitUntil(
-			Promise.all( [
-                installServiceWorker(),
-                self.skipWaiting(),
-            ] )
-		);
-	}
-);
-
-// The activate handler takes care of cleaning up old caches.
-self.addEventListener(
-	'activate', event => {
-		event.waitUntil(
-			Promise.all(
-                [
-                    cleanupLegacyCache(),
-                    self.clients.claim(),
-                    self.skipWaiting(),
-                ]
-			)
-			.catch(
-				( err ) => {
-					event.skipWaiting();
-				}
-			)
-		);
-	}
-);
-
-self.addEventListener(
-	'fetch', event => {
-
-		event.respondWith(
-			caches.open( CACHE_VERSIONS.content )
-			.then(
-				( cache ) => {
-
-					return cache.match( event.request )
-						.then(
-							( response ) => {
-
-								if ( response ) {
-
-									let headers = response.headers
-										.entries();
-									let date = null;
-
-									for ( let pair of headers ) {
-										if ( pair[ 0 ] === 'date' ) {
-											date = new Date( pair[ 1 ] );
-										}
-									}
-
-									if ( date ) {
-										let age = parseInt( ( new Date()
-											.getTime() - date
-											.getTime() ) / 1000 );
-										let ttl = getTTL( event.request
-											.url );
-
-										if ( ttl && age > ttl ) {
-
-											return new Promise(
-													( resolve ) => {
-
-														return fetch(
-																event
-																.request
-																.clone()
-															)
-															.then(
-																(
-																	updatedResponse ) => {
-																	if (
-																		updatedResponse ) {
-																		cache
-																			.put(
-																				event
-																				.request,
-																				updatedResponse
-																				.clone()
-																			);
-																		resolve
-																			(
-																				updatedResponse );
-																	} else {
-																		resolve
-																			(
-																				response )
-																	}
-																}
-															)
-															.catch(
-																() => {
-																	resolve
-																		(
-																			response );
-																}
-															);
-
-													}
-												)
-												.catch(
-													( err ) => {
-														return response;
-													}
-												);
-										} else {
-											return response;
-										}
-
-									} else {
-										return response;
-									}
-
-								} else {
-									return null;
-								}
-							}
-						)
-						.then(
-							( response ) => {
-								if ( response ) {
-									return response;
-								} else {
-									return fetch( event.request.clone() )
-										.then(
-											( response ) => {
-
-												if ( response.status <
-													400 ) {
-													if ( ~
-														SUPPORTED_METHODS
-														.indexOf( event
-															.request
-															.method ) &&
-														!isBlacklisted(
-															event
-															.request.url
-														) ) {
-														cache.put( event
-															.request,
-															response
-															.clone()
-														);
-													}
-													return response;
-												} else {
-													return caches.open(
-															CACHE_VERSIONS
-															.notFound )
-														.then( (
-															cache ) => {
-															return cache
-																.match(
-																	NOT_FOUND_PAGE
-																);
-														} )
-												}
-											}
-										)
-										.then( ( response ) => {
-											if ( response ) {
-												return response;
-											}
-										} )
-										.catch(
-											() => {
-
-												return caches.open(
-														CACHE_VERSIONS
-														.offline )
-													.then(
-														(
-															offlineCache ) => {
-															return offlineCache
-																.match(
-																	OFFLINE_PAGE
-																)
-														}
-													)
-
-											}
-										);
-								}
-							}
-						)
-						.catch(
-							( error ) => {
-								console.error(
-									'  Error in fetch handler:',
-									error );
-								throw error;
-							}
-						);
-				}
-			)
-		);
-
-	}
-);
-
-
-self.addEventListener( 'message', ( event ) => {
-
-	if (
-		typeof event.data === 'object' &&
-		typeof event.data.action === 'string'
-	) {
-		switch ( event.data.action ) {
-		case 'cache':
-			precacheUrl( event.data.url );
-			break;
-		default:
-			console.log( 'Unknown action: ' + event.data.action );
-			break;
-		}
-	}
-
-} );
+  });
+})();
