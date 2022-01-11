@@ -1,0 +1,19 @@
+{{-  with $.Site.Params.analytics.ackee -}}
+{{- if and (ne .endPoint "") (ne .siteID "") -}}
+{{- /* Include Ackee */ -}}
+<script src="https://unpkg.com/ackee-tracker-consent/dist/ackee-tracker-consent.min.js" crossorigin="anonymous">
+</script>
+<style>
+  #consent-axkeg5u7 {
+    left: calc((100vw - 375px)/2) !important;
+    position: sticky !important;
+    text-align: center !important;
+  }
+  @media only screen and (max-width:768px) {
+    div#consent-axkeg5u7 {
+      border-radius: 0!important;
+    }
+  }
+</style>
+{{- end -}}
+{{- end -}}

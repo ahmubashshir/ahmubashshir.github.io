@@ -37,6 +37,14 @@ Content = "Student, bookworm, Linux Enthusiast, Otaku ;)"
 [analytics.google]
 SiteVerificationTag = "1AayfMJ_TLCrPwoK12kv_LhdWrH1tARYKK6oHPBjOh0"
 
+[analytics.ackee]
+endPoint = 'https://ahm-ackee.netlify.app'
+siteID = 'fe30c6bd-fb45-4d64-97c3-8843886de98b'
+
+[analytics.ackee.dialog]
+text = 'I collect anonymized data for statistics, please accept it so that I get a cool stat.'
+moreInfoLebel = 'More Info.'
+
 [[socialIcons]]
 name = 'GitHub'
 url = 'https://github.com/ahmubashshir'

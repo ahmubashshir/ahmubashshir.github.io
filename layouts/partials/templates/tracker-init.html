@@ -1,0 +1,21 @@
+{{- /* Ackee Init (with consent) */ -}}
+{{-  with $.Site.Params.analytics.ackee -}}
+{{- if and (ne .endPoint "") (ne .siteID "") -}}
+<!-- ackee init -->
+<script defer>
+AckeeTrackerOptIn.consent('{{- .endPoint | relURL -}}',
+  '{{- .siteID | plainify -}}',
+  {{- with .dialog -}}
+  {
+    {{- with .text -}}text: '{{- . | safeHTML -}}',{{- end -}}
+    {{- with .btnAcceptLabel -}}acceptButtonLabel: '{{- . | safeHTML -}}',{{- end -}}
+    {{- with .btnRejectLabel -}}rejectButtonLabel: '{{- . | safeHTML -}}',{{- end -}}
+    {{- with .moreInfoLebel -}}moreInformationLabel: '{{- . | safeHTML -}}',{{- end -}}
+    {{- with .moreInfoURL -}}moreInformationLink: '{{- . | relURL -}}',{{- end -}}
+    {{- with .shadow -}}shadow: {{- . | jsonify -}},{{- end -}}
+    position: 'bottom-left'
+  });
+  {{- end -}}
+</script>
+{{- end -}}
+{{- end -}}
