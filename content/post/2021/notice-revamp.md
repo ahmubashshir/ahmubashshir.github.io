@@ -1,9 +1,14 @@
 ---
-layout: post
-title:  "বিশেষ বিজ্ঞপ্তি :P"
-date:   2021-12-14 14:52:17+06:00
-categories: notice
-tags: [todo, revamp]
+title: "বিশেষ বিজ্ঞপ্তি :P"
+date: 2021-12-14T14:52:17+06:00
+categories:
+- Notice
+tags:
+- TODO
+- Revamp
+- Notice
+series: 
+- Notice Board
 ---
 
 [@fahimscirex] এর ব্লগের পেপারমড থিমটা ভাল্লাগছে... এইজন্য ভাবতেছি আগামী বছরে জেকিল থেকে হিউগোতে সুইচ করব।
@@ -14,4 +19,7 @@ tags: [todo, revamp]
 
 [@fahimscirex]: https://github.com/fahimscirex
 
-Estimated date: after 2021/12/20, before 2021/12/25
+~~Estimated date: after 2021/12/20, before 2021/12/25~~
+Estimated date: after 2022/01/08, before 2022/01/15
+
+Update: মাইগ্রেট করা শেষ \[২০২২-০১-১১ তারিখে]

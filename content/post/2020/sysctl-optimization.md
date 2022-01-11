@@ -1,28 +1,35 @@
 ---
-layout: post
-title:  "sysctl অপটিমাইজেশন"
-date:   2020-11-07T20:26:00+0600
-categories: linux
-tags: [sysctl, tweaks]
+title: "sysctl অপটিমাইজেশন"
+date:  2020-11-07T20:26:00+0600
+categories:
+- Linux
+- kernel tweaks
+tags:
+- sysctl
+- Tweaks
+- Linux
+series:
+- Linux Newbie
 ---
 
 আমার তেমন লেখালেখির অভ্যাস নাই.... তো কাজের কথা শুরু করি।
+এই পোস্টের বিষয় হল sysctl টুল দিয়ে কিভাবে কার্নেলের মেমরি/আই.ও. রিলেটেড প্যারামিটার অপ্টিমাইজ করা যায় তা দেখানো। 
 
 ## `vm.swappiness`
 এই অপশন এর ভ্যালু কমায় দিলে কার্নেল যখন তখন সোয়াপ করবে না[^1]। এইটার ডিফল্ট ভ্যালু 60 থাকে... তো যেইটা করতে হবে:
-```sh
+{{% highlight sh %}}
 # /etc/sysctl.d/10-vm-swap.conf
 vm.swappiness = 10
-```
+{{% /highlight %}}
 `vm.swappiness` 0 করলে কার্নেল একবারে বিপদে না পড়লে সোয়াপ করবে না।
 
 ## `vm.vfs_cache_pressure`
 এই অপশন এর ভ্যালু ১০০ এর বেশি সেট করলে কার্নেল যত দ্রুত সম্ভব আইনোড ক্যাশ ক্লিয়ার করবে[^2]। তবে এইটা বেশি দিলে সফটওয়্যার স্টার্ট নিতে সময় বেশি লাগতে পারে।
 ১০০০ এর উপরে সেট না করাই ভালো।
-```sh
+{{% highlight sh %}}
 # /etc/sysctl.d/10-vm-cache.conf
 vm.vfs_cache_pressure = 150
-```
+{{% /highlight %}}
 
 ## `vm.dirty_*`
 এইটা আসলে একটা অপশন না। অপশন গুলা হচ্ছে
@@ -35,19 +42,19 @@ vm.vfs_cache_pressure = 150
 আর `vm.dirty_writeback_centisecs` এ সেট করা সময় পর পর কার্নেল বাফারে যা আছে সব ডিস্কে রাইট করে, `vm.dirty_expire_centisecs` এ সেট করা সময় পর পর
 বাফার ফ্লাশ করে। আমার মতে `vm.dirty_background_bytes` ২ এমবি আর `vm.dirty_bytes` ৪ এমবি দিলেই যথেষ্ট।<br /> আর `vm.dirty_writeback_centisecs` এ ২০ মানে
 0.2 সেকেন্ড পর পর বাফারের ডাটা ডিস্কে রাইট হবে, ফলে ডাটা হারানোর সম্ভাবনা কমবে।
-```sh
+{{% highlight sh %}}
 # /etc/sysctl.d/70-dirty-bytes.conf
 vm.dirty_bytes = 4194304
 vm.dirty_background_bytes = 2097152
 vm.dirty_expire_centisecs = 80
 vm.dirty_writeback_centisecs = 20
-```
+{{% /highlight %}}
 
-# `kernel.nmi_watchdog`
+## `kernel.nmi_watchdog`
 এই অপশন কার্নেলের নন মাস্কেবল ইন্টারাপ্ট ওয়াচডগ কন্ট্রোল করে[^8]। ডেস্কটপ হ্যাং হলে যেহেতু ফোর্স রিবুট করা যায় এই জন্য আমাদের এইটা দরকার নাই যদিও এইটা ডিফল্ট এনাবল থাকে[^9]।
-```sh
+{{% highlight sh %}}
 kernel.nmi_watchdog = 0
-```
+{{% /highlight %}}
 
 [^1]: https://sysctl-explorer.net/vm/swappiness/
 [^2]: https://sysctl-explorer.net/vm/vfs_cache_pressure/

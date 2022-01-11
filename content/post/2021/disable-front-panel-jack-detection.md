@@ -1,9 +1,15 @@
 ---
-layout: post
-title:  "লিনাক্সে ফ্রন্ট প্যানেলের ইন/আউট জ্যাক ডিটেকশন বন্ধ করা"
-date:   2021-02-13 23:20:31 +0600
-categories: linux
-tags: [snd-hda-intel, front-audio-jack-detection, hw-fix]
+title: "লিনাক্সে ফ্রন্ট প্যানেলের ইন/আউট জ্যাক ডিটেকশন বন্ধ করা"
+date: 2021-02-13T23:20:31+06:00
+series:
+- Linux Newbie
+tags:
+- snd-hda-intel
+- Front Panel Jack
+- Disable Jack Detection
+- Hardware Tweaks
+categories:
+- Linux 
 ---
 
 আমি নিজেও এই ফ্রন্ট প্যানেলের জ্যাক ডিটেকশন নিয়ে ঝামেলায় ছিলাম, উইন্ডোজে তো রিয়েলটেক এর ড্রাইভার এর ইউআই দিয়ে ফিক্স করতাম, লিনাক্সে কেমনে...

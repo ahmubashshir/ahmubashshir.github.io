@@ -1,9 +1,14 @@
 ---
-layout: post
 title: "নিক্স র‍্যান্ট"
-date: 2021-09-26 21:24:55 +0600
-categories: rants
-tags: [nixos, rant, others]
+date: 2021-09-26T21:24:55+0600
+categories: 
+- collected
+tags: 
+- nixos
+- rant
+- others
+series:
+- rants
 ---
 
 এই র‍্যান্ট টা আসলে আমার না :smirk_cat: <br />

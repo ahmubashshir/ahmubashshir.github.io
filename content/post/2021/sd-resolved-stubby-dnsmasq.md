@@ -1,9 +1,13 @@
 ---
-layout: post
-title:  systemd-resolved + stubby + dnsmasq
-date:   2021-04-12 20:44:34 +0600
-categories: network
-tags: [dns, stubby, systemd-resolved]
+title: systemd-resolved + stubby + dnsmasq
+date: 2021-04-12T20:44:34+06:00
+categories:
+- networking
+- dns resolver
+tags:
+- dns
+- stubby
+- systemd-resolved
 ---
 আমি কয়েক মাস ধরে ডিএনএস রিসলভার হিসাবে systemd-resolved ইউজ করলাম... এইটা বেসিক রিসলভার হিসাবে ভাল হইলেও কিছু ডিফল্ট ডিএনএস কনফিগ ফলো করে না।
 
