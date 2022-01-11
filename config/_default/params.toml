@@ -1,4 +1,3 @@
-env = 'production'
 description = 'Evidence of my terrible writing skills.'
 keywords = [
 	'blog', 'linux',
@@ -16,6 +15,7 @@ ShowShareButtons = true
 ShowPostNavLinks = true
 ShowBreadCrumbs = true
 ShowCodeCopyButtons = true
+enableGitInfo = true
 disableSpecial1stPost = true
 disableScrollToTop = false
 comments = true

@@ -1,4 +1,4 @@
-const CACHE_VERSION = 1;
+const CACHE_VERSION = '{{ .GitInfo.Hash }}';
 
 const BASE_CACHE_FILES = [
     '/assets/css/stylesheet.min.css',
@@ -27,10 +27,10 @@ const OFFLINE_PAGE = '/offline/index.html';
 const NOT_FOUND_PAGE = '/404.html';
 
 const CACHE_VERSIONS = {
-	assets: 'assets-v' + CACHE_VERSION,
-	content: 'content-v' + CACHE_VERSION,
-	offline: 'offline-v' + CACHE_VERSION,
-	notFound: '404-v' + CACHE_VERSION,
+	assets: 'assets-sha-' + CACHE_VERSION,
+	content: 'content-sha-' + CACHE_VERSION,
+	offline: 'offline-sha-' + CACHE_VERSION,
+	notFound: '404-sha-' + CACHE_VERSION,
 };
 
 // Define MAX_TTL's in SECONDS for specific file extensions
@@ -43,9 +43,12 @@ const MAX_TTL = {
 };
 
 const CACHE_BLACKLIST = [
-    //(str) => {
-    //    return !str.startsWith('http://localhost') && !str.startsWith('https://gohugohq.com');
-    //},
+    ( str ) => {
+		return str.startsWith( 'https://ahm-ackee.netlify.app' );
+	},
+    ( str ) => {
+		return str.startsWith( 'https://api.github.com' );
+	},
 ];
 
 const SUPPORTED_METHODS = [
@@ -58,13 +61,12 @@ const SUPPORTED_METHODS = [
  * @returns {boolean}
  */
 function isBlacklisted( url ) {
-	return ( CACHE_BLACKLIST.length > 0 ) ? !CACHE_BLACKLIST.filter( ( rule ) => {
+	return CACHE_BLACKLIST.some( ( rule ) => {
 		if ( typeof rule === 'function' ) {
-			return !rule( url );
-		} else {
-			return false;
+			return rule( url ) === true;
 		}
-	} ).length : false
+		return false;
+	} );
 }
 
 /**
@@ -258,7 +260,8 @@ self.addEventListener(
 
 								if ( response ) {
 
-									let headers = response.headers.entries();
+									let headers = response.headers
+										.entries();
 									let date = null;
 
 									for ( let pair of headers ) {
@@ -268,28 +271,49 @@ self.addEventListener(
 									}
 
 									if ( date ) {
-										let age = parseInt( ( new Date().getTime() - date.getTime() ) / 1000 );
-										let ttl = getTTL( event.request.url );
+										let age = parseInt( ( new Date()
+											.getTime() - date
+											.getTime() ) / 1000 );
+										let ttl = getTTL( event.request
+											.url );
 
 										if ( ttl && age > ttl ) {
 
 											return new Promise(
 													( resolve ) => {
 
-														return fetch( event.request.clone() )
+														return fetch(
+																event
+																.request
+																.clone()
+															)
 															.then(
-																( updatedResponse ) => {
-																	if ( updatedResponse ) {
-																		cache.put( event.request, updatedResponse.clone() );
-																		resolve( updatedResponse );
+																(
+																	updatedResponse ) => {
+																	if (
+																		updatedResponse ) {
+																		cache
+																			.put(
+																				event
+																				.request,
+																				updatedResponse
+																				.clone()
+																			);
+																		resolve
+																			(
+																				updatedResponse );
 																	} else {
-																		resolve( response )
+																		resolve
+																			(
+																				response )
 																	}
 																}
 															)
 															.catch(
 																() => {
-																	resolve( response );
+																	resolve
+																		(
+																			response );
 																}
 															);
 
@@ -322,15 +346,35 @@ self.addEventListener(
 										.then(
 											( response ) => {
 
-												if ( response.status < 400 ) {
-													if ( ~SUPPORTED_METHODS.indexOf( event.request.method ) && !isBlacklisted( event.request.url ) ) {
-														cache.put( event.request, response.clone() );
+												if ( response.status <
+													400 ) {
+													if ( ~
+														SUPPORTED_METHODS
+														.indexOf( event
+															.request
+															.method ) &&
+														!isBlacklisted(
+															event
+															.request.url
+														) ) {
+														cache.put( event
+															.request,
+															response
+															.clone()
+														);
 													}
 													return response;
 												} else {
-													return caches.open( CACHE_VERSIONS.notFound ).then( ( cache ) => {
-														return cache.match( NOT_FOUND_PAGE );
-													} )
+													return caches.open(
+															CACHE_VERSIONS
+															.notFound )
+														.then( (
+															cache ) => {
+															return cache
+																.match(
+																	NOT_FOUND_PAGE
+																);
+														} )
 												}
 											}
 										)
@@ -342,10 +386,16 @@ self.addEventListener(
 										.catch(
 											() => {
 
-												return caches.open( CACHE_VERSIONS.offline )
+												return caches.open(
+														CACHE_VERSIONS
+														.offline )
 													.then(
-														( offlineCache ) => {
-															return offlineCache.match( OFFLINE_PAGE )
+														(
+															offlineCache ) => {
+															return offlineCache
+																.match(
+																	OFFLINE_PAGE
+																)
 														}
 													)
 
@@ -356,7 +406,9 @@ self.addEventListener(
 						)
 						.catch(
 							( error ) => {
-								console.error( '  Error in fetch handler:', error );
+								console.error(
+									'  Error in fetch handler:',
+									error );
 								throw error;
 							}
 						);
