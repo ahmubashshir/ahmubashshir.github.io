@@ -1,4 +1,3 @@
-name: Generate Static Site
 on:
   push:
     branches:
