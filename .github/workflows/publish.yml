@@ -39,13 +39,8 @@ jobs:
           key: ${{ runner.os }}-npm-${{ hashFiles('helper/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-npm-
-      - name: init-badgemaker(npm)
-        run: npm install --prefix helper
-
-      - name: build(helper/badge)
-        run: npm run badge --prefix helper
       - name: build(site)
-        run: hugo --environment production --minify --log --verboseLog
+        run: source helper/build.sh
 #      - name: prepare archive
 #        run: tar --dereference --hard-dereference --directory public -cvf artifact.tar .
 #      - name: upload archive

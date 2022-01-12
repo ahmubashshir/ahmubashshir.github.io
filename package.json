@@ -1,10 +1,8 @@
 {
-  "name": "",
+  "name": "helper",
   "type": "module",
   "scripts": {
-    "badge": "node badge/badger.js",
-    "build": "npm start",
-    "start": "npm run badge"
+    "badge": "node helper/badger.js"
   },
   "dependencies": {
     "badge-maker": "^3.3.1",
