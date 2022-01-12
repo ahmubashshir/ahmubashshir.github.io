@@ -5,7 +5,7 @@ on:
       - master
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
@@ -14,42 +14,39 @@ jobs:
           submodules: true
           fetch-depth: 0
 
-      - name: disable(git-config/core.quotePath)
-        run: git config core.quotePath false
-
       - name: prepare(hugo)
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: 'latest'
-      - name: init-cache(hugo)
-        uses: actions/cache@v2
-        with:
-          path: /tmp/hugo_cache
-          key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
-          restore-keys: |
-            ${{ runner.os }}-hugomod-
       - name: prepare(node)
         uses: actions/setup-node@v2
         with:
           node-version: '16'
+
+      - name: init-cache(hugo)
+        uses: actions/cache@v2
+        with:
+          path: /tmp/hugo_cache
+          key: ${{ runner.os }}-hugomod-${{ hashFiles('go.sum') }}
+          restore-keys: |
+            ${{ runner.os }}-hugomod-
       - name: init-cache(node)
         uses: actions/cache@v2
         with:
-          path: ./helper/node_modules
-          key: ${{ runner.os }}-npm-${{ hashFiles('helper/package-lock.json') }}
+          path: ./node_modules
+          key: ${{ runner.os }}-npm-${{ hashFiles('package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-npm-
       - name: build(site)
-        run: source helper/build.sh
-#      - name: prepare archive
-#        run: tar --dereference --hard-dereference --directory public -cvf artifact.tar .
+        run: . helper/build.sh
+        shell: sh
 #      - name: upload archive
 #        uses: actions/upload-artifact@main
 #        with:
 #          name: github-pages
 #          path: ./artifact.tar
 #          if-no-files-found: warn
-      - name: deploy(site)
+      - name: push(site)
         uses: peaceiris/actions-gh-pages@v3
 #        uses: actions/deploy-pages@v1-beta
         with:
