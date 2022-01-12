@@ -30,9 +30,34 @@ text = "‍"
 icon = "/assets/image/favicon-32x32.png"
 iconHeight = 32
 
-[homeInfoParams]
+[profileMode]
+enabled = true
 Title = "Ahmad Hasan Mubashshir"
-Content = "Student, bookworm, Linux Enthusiast, Otaku ;)"
+Subtitle = "Student, bookworm, Linux Enthusiast, Otaku ;)"
+imageUrl = "/assets/image/apple-touch-icon-precomposed.png"
+imageTitle = 'avatar'
+imageWidth = '180'
+imageHeight = '180'
+
+[[profileMode.buttons]]
+name = 'Posts'
+url	 = 'post'
+
+[[profileMode.buttons]]
+name = 'Archive'
+url = 'archives'
+
+[[profileMode.buttons]]
+name = 'Series'
+url = 'series'
+
+[[profileMode.buttons]]
+name = 'Collected Quotes'
+url = 'quotes'
+
+[[profileMode.buttons]]
+name = 'About Me'
+url = 'about'
 
 [analytics.google]
 SiteVerificationTag = "1AayfMJ_TLCrPwoK12kv_LhdWrH1tARYKK6oHPBjOh0"
@@ -45,36 +70,46 @@ siteID = 'fe30c6bd-fb45-4d64-97c3-8843886de98b'
 text = 'I collect anonymized data for statistics, please accept it so that I get a cool stat.'
 moreInfoLebel = 'More Info.'
 
+# DevSocial
 [[socialIcons]]
 name = 'GitHub'
 url = 'https://github.com/ahmubashshir'
 [[socialIcons]]
+name = 'GitLab'
+url = 'https://gitlab.com/ahmubashshir'
+[[socialIcons]]
 name = 'StackOverflow'
 url = 'https://stackoverflow.com/users/9123082'
-
+# IM
 [[socialIcons]]
 name = 'Telegram'
 url = 'https://t.me/ahmubashshir'
-
+[[socialIcons]]
+name = 'Matrix'
+url = 'https://matrix.to/#/@ahm:feneas.org'
+[[socialIcons]]
+name = 'Discord'
+url = 'https://discord.com/users/600271127411032065'
+#Social
 [[socialIcons]]
 name = 'Reddit'
 url = 'https://reddit.com/u/ahmubashshir'
-
 [[socialIcons]]
 name = 'Twitter'
 url = 'https://twitter.com/ahmubashshir'
-
+[[socialIcons]]
+name = 'Last.fm'
+url = 'https://www.last.fm/user/ahmubashshir'
+[[socialIcons]]
+name = 'Goodreads'
+url = 'https://www.goodreads.com/ahmubashshir'
+#Misc
 [[socialIcons]]
 name = 'Email'
 url = 'mailto:ahmubashshir@gmail.com'
-
 [[socialIcons]]
 name = 'RSS'
 url = 'index.xml'
-
-[[socialIcons]]
-name = 'Quotes'
-url = 'quotes'
 
 [editPost]
 URL = "https://github.com/ahmubashshir/ahmubashshir.github.io/tree/master/content/posts"

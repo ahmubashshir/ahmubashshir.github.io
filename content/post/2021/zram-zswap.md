@@ -1,13 +1,11 @@
 ---
 title: "zram আর zswap"
 date: 2021-04-07T18:06:56+06:00
-categories:
-- Linux
-- system tweaks
 tags:
 - Tweaks
 - Swap
 - Ram
+- System Tweaks
 - Linux
 series:
 - Linux Newbie

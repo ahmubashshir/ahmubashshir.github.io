@@ -1,14 +1,11 @@
 ---
 title: "নিক্স র‍্যান্ট"
 date: 2021-09-26T21:24:55+0600
-categories: 
-- collected
 tags: 
-- nixos
-- rant
-- others
-series:
-- rants
+- NixOS
+- Rant
+- Others
+- Collected
 ---
 
 এই র‍্যান্ট টা আসলে আমার না :smirk_cat: <br />

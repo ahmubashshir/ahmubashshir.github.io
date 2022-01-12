@@ -1,8 +1,6 @@
 ---
 title: আর্চলিনাক্সে রিফ্লেক্টর আর র‍্যাঙ্কমিরর
 date: 2021-04-20T19:18:59+06:00
-categories:
-- ArchLinux
 tags:
 - ArchLinux
 - Rankmirror

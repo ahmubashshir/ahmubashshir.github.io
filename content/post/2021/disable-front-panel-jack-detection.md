@@ -8,7 +8,6 @@ tags:
 - Front Panel Jack
 - Disable Jack Detection
 - Hardware Tweaks
-categories:
 - Linux 
 ---
 

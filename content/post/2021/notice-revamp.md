@@ -1,8 +1,6 @@
 ---
 title: "বিশেষ বিজ্ঞপ্তি :P"
 date: 2021-12-14T14:52:17+06:00
-categories:
-- Notice
 tags:
 - TODO
 - Revamp

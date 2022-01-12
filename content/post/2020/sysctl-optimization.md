@@ -1,13 +1,11 @@
 ---
 title: "sysctl অপটিমাইজেশন"
 date:  2020-11-07T20:26:00+0600
-categories:
-- Linux
-- kernel tweaks
 tags:
 - sysctl
 - Tweaks
 - Linux
+- kernel tweaks
 series:
 - Linux Newbie
 ---

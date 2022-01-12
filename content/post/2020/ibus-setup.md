@@ -1,8 +1,6 @@
 ---
 title: আইবাস সেটআপ
 date: 2020-11-24T20:25:00+0600
-categories:
-- Linux
 tags:
 - IBus
 - Setup

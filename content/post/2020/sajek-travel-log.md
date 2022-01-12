@@ -1,9 +1,5 @@
 ---
 title: সাজেক উপত্যকায় তোলা ছবি
-categories:
-- Nature Photography
-- Hobby
-- Gallery
 tags:
 - Sajek Valley
 - Travel
