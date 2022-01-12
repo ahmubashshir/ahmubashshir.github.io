@@ -13,33 +13,34 @@ tags:
 এইজন্য আমি systemd-resolved কে resolve.conf ম্যানেজার হিসাবে ইউজ করে stubby কে রিসলভার আর dnsmasq কে ডিএনএস ক্যাশ হিসাবে কনফিগার করলাম...
 
 1. stubby config: `/etc/stubby/stubby.yml`
-	1. প্রথমে নিজের ইচ্ছা মত আপস্ট্রিম ডিএনএস সার্ভার কনফিগার করেন।[^1]
-	2. এরপরে `listen_addresses` কীর ডিফল্ট এর বদলে নিচের কনফিগ সেট করেন। [^2]
-```yaml
- listen_addresses:
- - 127.0.0.1@53000
- -  0::1@53000
-```
+   1. প্রথমে নিজের ইচ্ছা মত আপস্ট্রিম ডিএনএস সার্ভার কনফিগার করেন।[^1]
+   2. এরপরে `listen_addresses` কীর ডিফল্ট এর বদলে নিচের কনফিগ সেট করেন। [^2]
+      {{<highlight yaml>}}
+listen_addresses:
+- 127.0.0.1@53000
+- 0::1@53000{{</highlight>}}
 	
-	3. `sudo systemctl enable --now stubby`
+   3. `sudo systemctl enable --now stubby`
 2. dnsmasq config: /etc/dnsmasq.conf
-	1. dnsmasq কনফিগ ফাইলের ডিফল্ট সেটিং চেঞ্জ না করে ফাইলের একবারে শেষে নিচের কনফিগ লিখে সেভ করেন। [^3]
-```
+   1. dnsmasq কনফিগ ফাইলের ডিফল্ট সেটিং চেঞ্জ না করে ফাইলের একবারে শেষে নিচের কনফিগ লিখে সেভ করেন।[^3]
+      {{<highlight ini>}}
 no-resolv
 proxy-dnssec
 server=::1#53000
 server=127.0.0.1#53000
-listen-address=::1,127.0.0.1
-```
-	2. `sudo systemctl enable --now dnsmasq`
+listen-address=::1,127.0.0.1{{</highlight>}}
+   2. `sudo systemctl enable --now dnsmasq`
 3. systemd-resolved: (drop-in config)
-	1. `/etc/systemd/resolved.conf.d` ফোল্ডার না থাকলে `sudo mkdir -p /etc/systemd/resolved.conf.d` রান করেন।
-	2. `/etc/systemd/resolved.conf.d/98-servers.conf` ফাইলে নিচের কনফিগ লিখে সেভ করেন।
-```ini
+   1. `/etc/systemd/resolved.conf.d` ফোল্ডার না থাকলে `sudo mkdir -p /etc/systemd/resolved.conf.d` রান করেন।
+   2. নিচের কনফিগ লিখে সেভ করেন।
+	   {{<highlight ini>}}
+# /etc/systemd/resolved.conf.d/98-servers.conf
 [Resolve]
-DNS=127.0.0.1
-```
-	3. `sudo systemctl enable --now systemd-resolved;sudo systemctl restart systemd-resolved`
+DNS=127.0.0.1{{</highlight>}}
+	3. নিচের কমান্ড দুইটা রান করেন।
+	   {{<highlight sh>}}
+sudo systemctl enable --now systemd-resolved
+sudo systemctl restart systemd-resolved{{</highlight>}}
 
 কাজ শেষ।
 
