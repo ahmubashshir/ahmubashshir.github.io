@@ -1,3 +1,4 @@
+name: pages-build
 on:
   push:
     branches:
