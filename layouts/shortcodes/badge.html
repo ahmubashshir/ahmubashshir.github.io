@@ -1,0 +1,9 @@
+{{- $badge := .Get 0 -}}
+{{- $url   := .Get 1 | default "" -}}
+{{- $target:= .Get 2 | default "blank" -}}
+{{- $size := index $.Site.Data.badge $badge  -}}
+{{- $style := "display: inline-block;height: 28px;margin: 0 1px 0px 1px !important;" -}}
+<!-- {{ $badge }} -->
+{{- if ne $url "" -}}<a rel="noreferrer" {{ printf "href=%q" ($url | relURL) | safeHTMLAttr }} target="_{{- $target -}}">{{- end -}}
+<img height="{{- $size.height -}}" width="{{- $size.width -}}" alt="{{ $badge }}" src="/assets/badges/{{ $badge }}.svg" {{- printf "style=%q" $style | safeHTMLAttr -}} />
+{{- if ne $url "" -}}</a>{{- end -}}

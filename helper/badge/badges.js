@@ -1,3 +1,4 @@
+export default
 [
   {
     "name":"anilist",
@@ -52,5 +53,9 @@
     "name": "irc",
     "color": "00AC47",
     "icon": "livechat"
+  },
+  {
+    "name": "goodreads",
+    "color": "372213"
   }
 ]

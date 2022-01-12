@@ -18,3 +18,7 @@
 !/data
 !/layouts
 !/static
+!/helper
+!/helper/**
+/static/assets/badges
+/helper/node_modules

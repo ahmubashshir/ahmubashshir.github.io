@@ -40,11 +40,6 @@ url: /about
       #contacts {
         margin-top: 10px;
       }
-      #contacts img {
-        display: inline-block;
-        height: 28px;
-        margin: 0 !important;
-      }
       #contacts a {
         text-decoration: none;
         box-shadow: none;
@@ -61,61 +56,23 @@ url: /about
         transform: scale(1.035);
       }
     </style>
-    <!-- github -->
-    <a rel="noreferrer" href="https://github.com/ahmubashshir" target="_blank">
-      <img width="93" alt="github" src="/assets/badges/github.svg" style="margin-bottom: 5px;"/>
-    </a>
-    <!-- stackoverflow -->
-    <a rel="noreferrer" href="https://stackoverflow.com/users/9123082" target="_blank">
-      <img width="163"  alt="stackoverflow" src="/assets/badges/stackoverflow.svg" style="margin-bottom: 5px;"/>
-    </a>
-    <!-- pgp -->
-    <a rel="noreferrer" href="https://keys.openpgp.org/vks/v1/by-fingerprint/916961EE198832DD70B628B356DB0538F60D951C" target="_blank">
-      <img width="65" alt="pgp public key" src="/assets/badges/pgp.svg" style="margin-bottom: 5px;"/>
-    </a>
+    {{% badge "github" "https://github.com/ahmubashshir" %}}
+    {{% badge "stackoverflow" "https://stackoverflow.com/users/9123082" %}}
+    {{% badge "pgp" "https://keys.openpgp.org/vks/v1/by-fingerprint/916961EE198832DD70B628B356DB0538F60D951C" %}}
     <br/>
-    <!-- twitter -->
-    <a rel="noreferrer" href="https://twitter.com/ahmubashshir" target="_blank">
-      <img width="103" alt="twitter" src="/assets/badges/twitter.svg" style="margin-bottom: 5px;"/>
-    </a>
-    <!-- reddit -->
-    <a rel="noreferrer" href="https://reddit.com/u/ahmubashshir" target="_blank">
-      <img width="93" alt="reddit" src="/assets/badges/reddit.svg" style="margin-bottom: 5px;"/>
-    </a>
+    {{% badge "twitter" "https://twitter.com/ahmubashshir" %}}
+    {{% badge "reddit" "https://reddit.com/u/ahmubashshir" %}}
+    {{% badge "goodreads" "https://reddit.com/u/ahmubashshir" %}}
     <br/>
-    <!-- telegram -->
-    <a rel="noreferrer" href="https://t.me/ahmubashshir" target="_blank">
-      <img width="113" alt="telegram" src="/assets/badges/telegram.svg" style="margin-bottom: 5px;"/>
-    </a>
-    <!-- discord -->
-    <a rel="noreferrer" href="https://discord.com/users/ahmubashshir#3527" target="_blank">
-      <img width="105" alt="discord" src="/assets/badges/discord.svg" style="margin-bottom: 5px;"/>
-    </a>
-    <!-- matrix -->
-    <a rel="noreferrer" href="https://matrix.to/#/@ahm:feneas.org" target="_blank">
-      <img width="93" alt="matrix" src="/assets/badges/matrix.svg" style="margin-bottom: 5px;"/>
-    </a>
-    <!-- irc -->
-    <a rel="noreferrer" href="/irc.txt" target="_blank">
-      <img width="63" alt="irc" src="/assets/badges/irc.svg" style="margin-bottom: 5px;"/>
-    </a>
+    {{% badge "telegram" "https://t.me/ahmubashshir" %}}
+    {{% badge "discord" "https://discord.com/users/ahmubashshir#3527" %}}
+    {{% badge "matrix" "https://matrix.to/#/@ahm:feneas.org" %}}
+    {{% badge "irc" "/irc.txt" "self" %}}
     <br/>
-    <!-- trakt -->
-    <a rel="noreferrer" href="https://trakt.tv/users/ahmubashshir" target="_blank">
-      <img width="85" alt="trakt" src="/assets/badges/trakt.svg" style="margin-bottom: 5px;"/>
-    </a>
-    <!-- anilist -->
-    <a rel="noreferrer" href="https://anilist.co/user/ahmubashshir" target="_blank">
-      <img width="97" alt="anilist" src="/assets/badges/anilist.svg" style="margin-bottom: 5px;"/>
-    </a>
-    <!-- kitsu -->
-    <a rel="noreferrer" href="https://kitsu.io/users/ahmubashshir" target="_blank">
-      <img width="83" alt="kitsu" src="/assets/badges/kitsu.svg" style="margin-bottom: 5px;"/>
-    </a>
-    <!-- myanimelist -->
-    <a rel="noreferrer" href="https://myanimelist.net/profile/ahmubashshir" target="_blank">
-      <img width="137" alt="myanimelist" src="/assets/badges/myanimelist.svg" style="margin-bottom: 5px;"/>
-    </a>
+    {{% badge "trakt" "https://trakt.tv/users/ahmubashshir" %}}
+    {{% badge "anilist" "https://anilist.co/user/ahmubashshir" %}}
+    {{% badge "kitsu" "https://kitsu.io/users/ahmubashshir" %}}
+    {{% badge "myanimelist" "https://myanimelist.net/profile/ahmubashshir" %}}
     </div>
   </details>
   <details>

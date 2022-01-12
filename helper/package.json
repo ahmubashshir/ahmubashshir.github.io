@@ -1,0 +1,15 @@
+{
+  "name": "",
+  "type": "module",
+  "scripts": {
+    "badge": "node badge/badger.js",
+    "build": "npm start",
+    "start": "npm run badge"
+  },
+  "dependencies": {
+    "badge-maker": "^3.3.1",
+    "is-docker": "^3.0.0",
+    "simple-icons": "^5.16.0",
+    "svgo": "^2.7.0"
+  }
+}
