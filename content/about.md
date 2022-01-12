@@ -1,6 +1,6 @@
 ---
 title: About Me
-Layout: page
+layout: page
 url: /about
 ---
 #### Hi, I'm Mubashshir!

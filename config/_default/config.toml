@@ -55,7 +55,7 @@ disableInlineCSS = true
 disableInlineCSS = true
 
 [permalinks]
-post = '/:section/:year/:month/:day/:filename'
+post = '/:section/:year/:month/:day/:filename/'
 page = '/:filename'
 
 [[module.imports]]

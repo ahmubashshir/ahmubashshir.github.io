@@ -9,11 +9,7 @@ import path from 'path';
 import docker from 'is-docker'
 const noop = () => {}
 const root = '.'
-const dir = path.join(
-	root,
-	docker() ? 'public' : 'static',
-	'/assets/badges'
-);
+const dir = path.join( root, 'static/assets/badges' );
 
 let badgeInfo = {};
 console.log( dir )

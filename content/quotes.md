@@ -1,7 +1,6 @@
 ---
 title: My Favorite Quotes
-layout: post
-comments: false
+layout: page
 permalink: /quotes
 ---
 > বিশ্বাস বড়ই আজব জিনিস। বুঝে করলে অনেক শাঁস, নাইলে পুরাই বাঁশ।<br />

@@ -22,6 +22,8 @@ with a few additional edits borrowed from Filament Group's. (https://www.filamen
     '/assets/image/favicon-32x32.png',
     '/assets/image/apple-touch-icon.png',
     '/assets/image/safari-pinned-tab.svg',
+    '/search/',
+    '/index.json',
     '/offline/',
     '/404.html'
   ];
@@ -32,6 +34,13 @@ with a few additional edits borrowed from Filament Group's. (https://www.filamen
     .then(cache => {
       return cache.addAll(staticAssets.map(url => new Request(url, {credentials: 'include'})));
     });
+  }
+
+  function getCacheForPath(path) {
+    if (staticAssets.includes(path) === true || path.indexOf('/assets/') === 0) {
+      return staticCacheName;
+    }
+    return pagesCacheName;
   }
 
   function stashInCache(cacheName, request, response) {
@@ -114,7 +123,7 @@ with a few additional edits borrowed from Filament Group's. (https://www.filamen
         // NETWORK
         // Stash a copy of this page in the pages cache
         const copy = response.clone();
-        stashInCache(staticCacheName, request, copy);
+        stashInCache(getCacheForPath(url.pathname), request, copy);
         return response;
       })
       .catch(() => {

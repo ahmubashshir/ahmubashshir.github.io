@@ -1,6 +1,6 @@
 ---
 title: Offline
-Layout: page
+layout: page
 url: /offline
 ---
 
