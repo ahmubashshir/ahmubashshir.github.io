@@ -2,57 +2,58 @@ name: pages-build
 on:
   push:
     branches:
-      - master
+    - master
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout
-        uses: actions/checkout@v2
-        with:
-          submodules: true
-          fetch-depth: 0
+    - name: checkout
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+        submodules: true
 
-      - name: prepare(hugo)
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: 'latest'
-      - name: prepare(node)
-        uses: actions/setup-node@v2
-        with:
-          node-version: '16'
+    - name: prepare(hugo)
+      uses: peaceiris/actions-hugo@v2
+      with:
+        hugo-version: latest
 
-      - name: init-cache(hugo)
-        uses: actions/cache@v2
-        with:
-          path: /tmp/hugo_cache
-          key: ${{ runner.os }}-hugomod-${{ hashFiles('go.sum') }}
-          restore-keys: |
-            ${{ runner.os }}-hugomod-
-      - name: init-cache(node)
-        uses: actions/cache@v2
-        with:
-          path: ./node_modules
-          key: ${{ runner.os }}-npm-${{ hashFiles('package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-npm-
-      - name: build(site)
-        run: . helper/build.sh
-        shell: sh
-#      - name: upload archive
-#        uses: actions/upload-artifact@main
-#        with:
-#          name: github-pages
-#          path: ./artifact.tar
-#          if-no-files-found: warn
-      - name: push(site)
-        uses: peaceiris/actions-gh-pages@v3
-#        uses: actions/deploy-pages@v1-beta
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
-          #token: ${{ secrets.GITHUB_TOKEN }}
-          #timeout: 600000
-          #error_count: 10
-          #reporting_interval: 1000
+    - name: prepare(node)
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'
+
+    - name: init-cache(hugo)
+      uses: actions/cache@v2
+      with:
+        key: ${{ runner.os }}-hugomod-${{ hashFiles('go.sum') }}
+        path: /tmp/hugo_cache
+        restore-keys: ${{ runner.os }}-hugomod-
+
+    - name: init-cache(node)
+      uses: actions/cache@v2
+      with:
+        key: ${{ runner.os }}-npm-${{ hashFiles('package-lock.json') }}
+        path: ./node_modules
+        restore-keys: ${{ runner.os }}-npm-
+
+    - name: build(site)
+      run: . helper/build.sh
+      shell: sh
+#    - name: upload archive
+#      uses: actions/upload-artifact@main
+#      with:
+#        name: github-pages
+#        path: ./artifact.tar
+#        if-no-files-found: warn
+    - name: push(site)
+      uses: peaceiris/actions-gh-pages@v3
+#      uses: actions/deploy-pages@v1-beta
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./public
+#        token: ${{ secrets.GITHUB_TOKEN }}
+#        timeout: 600000
+#        error_count: 10
+#        reporting_interval: 1000
