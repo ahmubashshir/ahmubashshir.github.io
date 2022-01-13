@@ -1,0 +1,77 @@
+name: build-deploy
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+        submodules: true
+
+    - name: prepare(hugo)
+      uses: peaceiris/actions-hugo@v2
+      with:
+        hugo-version: latest
+
+    - name: prepare(node)
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'
+
+    - name: init-cache(hugo)
+      uses: actions/cache@v2
+      with:
+        key: ${{ runner.os }}-hugomod-${{ hashFiles('go.sum') }}
+        path: /tmp/hugo_cache
+        restore-keys: ${{ runner.os }}-hugomod-
+
+    - name: init-cache(node)
+      uses: actions/cache@v2
+      with:
+        key: ${{ runner.os }}-npm-${{ hashFiles('package-lock.json') }}
+        path: ./node_modules
+        restore-keys: ${{ runner.os }}-npm-
+
+    - name: build(site)
+      run: . helper/build.sh
+      shell: sh
+    - name: archive(site)
+      run: exec tar --dereference --hard-dereference --directory public -cvf artifact.tar .
+      shell: sh
+
+    - name: push(site)
+      uses: actions/upload-artifact@main
+      with:
+        name: github-pages
+        path: ./artifact.tar
+        if-no-files-found: warn
+
+    - name: push(log)
+      uses: actions/upload-artifact@main
+      with:
+        name: build.log
+        path: ./build.log
+        if-no-files-found: warn
+
+  deploy:
+    runs-on: ubuntu-latest
+    environment: github-pages
+    needs: build
+    permissions:
+      id-token: write
+      contents: read
+      pages: write
+    steps:
+    - name: deploy(site)
+      uses: actions/deploy-pages@master
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        timeout: 600000
+        error_count: 10
+        reporting_interval: 1000
