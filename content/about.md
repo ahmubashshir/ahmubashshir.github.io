@@ -13,20 +13,20 @@ url: /about
 <div align="center">
   <style>
     details.drawer:first-of-type > summary {
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
+      border-top-left-radius: var(--radius);
+      border-top-right-radius: var(--radius);
     }
     details.drawer:last-of-type > summary {
-      border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px;
+      border-bottom-left-radius: var(--radius);
+      border-bottom-right-radius: var(--radius);
     }
     details.drawer[open]:not(:last-of-type) > summary {
-      border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px;
+      border-bottom-left-radius: var(--radius);
+      border-bottom-right-radius: var(--radius);
     }
     details.drawer[open] + details.drawer > summary {
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
+      border-top-left-radius: var(--radius);
+      border-top-right-radius: var(--radius);
     }
     details.drawer[open] > summary {
       font-style: oblique;
@@ -61,12 +61,6 @@ url: /about
       transform: scale(1.035);
     }
   </style>
-  <details class="drawer">
-    <summary><b>Last.FM</b></summary>
-    <figure>
-      <embed style="margin-top: 5px;" src="https://lastfm-recently-played.vercel.app/api?user=ahmubashshir&amp;count=4&amp;width=600" width="99%" />
-    </figure>
-  </details>
   <details open class="drawer">
     <summary><b>My Skill Set</b></summary>
     <div style="display: inline-grid !important;grid-template-columns: auto auto auto auto;">
@@ -88,6 +82,7 @@ url: /about
     <summary><b>Connect with me</b></summary>
     <div id="contacts">
     {{% badge "github" "https://github.com/ahmubashshir" %}}
+    {{% badge "gitlab" "https://gitlab.com/ahmubashshir" %}}
     {{% badge "stackoverflow" "https://stackoverflow.com/users/9123082" %}}
     {{% badge "pgp" "https://keys.openpgp.org/vks/v1/by-fingerprint/916961EE198832DD70B628B356DB0538F60D951C" %}}
     <br/>
@@ -95,12 +90,14 @@ url: /about
     {{% badge "reddit" "https://reddit.com/u/ahmubashshir" %}}
     {{% badge "goodreads" "https://reddit.com/u/ahmubashshir" %}}
     <br/>
+    {{% badge "mail" "mailto:ahmubashshir@gmail.com" %}}
     {{% badge "telegram" "https://t.me/ahmubashshir" %}}
     {{% badge "discord" "https://discord.com/users/ahmubashshir#3527" %}}
     {{% badge "matrix" "https://matrix.to/#/@ahm:feneas.org" %}}
     {{% badge "irc" "/irc.txt" "self" %}}
     <br/>
     {{% badge "trakt" "https://trakt.tv/users/ahmubashshir" %}}
+    {{% badge "lastfm" "https://last.fm/user/ahmubashshir" %}}
     {{% badge "anilist" "https://anilist.co/user/ahmubashshir" %}}
     {{% badge "kitsu" "https://kitsu.io/users/ahmubashshir" %}}
     {{% badge "myanimelist" "https://myanimelist.net/profile/ahmubashshir" %}}
@@ -119,7 +116,7 @@ url: /about
   </details>
   <details open class="drawer">
     <summary><b>Github Statistics</b></summary>
-    <figure>
+    <figure style="margin-top: var(--radius);">
       <embed type="image/svg+xml" src="https://github-readme-stats.vercel.app/api?theme=dark&amp;title_color=2EB398&amp;bg_color=1B2224&amp;text_color=C6CDCB&amp;username=ahmubashshir&amp;count_private=true&amp;show_icons=true" width="100%"/>
       <embed type="image/svg+xml" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ahmubashshir&amp;theme=github_dark" width="100%"/>
       <embed type="image/svg+xml" src="https://github-readme-streak-stats.herokuapp.com?user=ahmubashshir&amp;theme=dark&amp;hide_border=true&amp;background=1B2224&amp;stroke=718F97&amp;ring=2EB398&amp;fire=2EB398&amp;currStreakNum=C6CDCB&amp;sideNums=C6CDCB&amp;currStreakLabel=2EB398&amp;sideLabels=C6CDCB" width="100%"/>
@@ -132,7 +129,12 @@ url: /about
       <embed type="image/svg+xml" src="https://wakatime.com/share/@ahmubashshir/81737ad2-cea9-4af0-be8a-997e71b04068.svg"/>
       <embed type="image/svg+xml" src="https://wakatime.com/share/@ahmubashshir/cd96bdc4-82c9-4438-b759-2c3db01e2f50.svg"/>
     </figure>
-    
+  </details>
+  <details class="drawer">
+    <summary><b>Last.FM Statistics</b></summary>
+    <figure>
+      <embed style="margin-top: 5px;" src="https://lastfm-recently-played.vercel.app/api?user=ahmubashshir&amp;count=4&amp;width=600" width="99%" />
+    </figure>
   </details>
 </div>
 <br />

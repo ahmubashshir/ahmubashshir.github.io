@@ -56,5 +56,19 @@ export default [
 	{
 		"name": "goodreads",
 		"color": "372213"
+  },
+	{
+		"name": "gitlab",
+		"color": "FCA121"
+  },
+	{
+		"name": "lastfm",
+		"color": "D51007",
+		"icon": "lastdotfm"
+  },
+	{
+		"name": "mail",
+		"color": "30B980",
+		"icon": "maildotru"
   }
 ]
