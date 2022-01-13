@@ -124,7 +124,7 @@ relative = false
 
 [assets]
 disableFingerprinting = true
-favicon = "/assets/image/favicon.ico"
+favicon = "/favicon.ico"
 favicon16x16 = "/assets/image/favicon-16x16.png"
 favicon32x32 = "/assets/image/favicon-32x32.png"
 apple_touch_icon = "/assets/image/apple-touch-icon.png"

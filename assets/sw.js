@@ -17,7 +17,7 @@ with a few additional edits borrowed from Filament Group's. (https://www.filamen
     '/assets/js/highlight.min.js',
     '/assets/js/search.min.js',
     '/assets/js/tracker.ackee.min.js',
-    '/assets/image/favicon.ico',
+    '/favicon.ico',
     '/assets/image/favicon-16x16.png',
     '/assets/image/favicon-32x32.png',
     '/assets/image/apple-touch-icon.png',
