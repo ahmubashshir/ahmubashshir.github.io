@@ -2,7 +2,9 @@
   "name": "helper",
   "type": "module",
   "scripts": {
-    "badge": "node helper/badger.js"
+    "badge": "node helper/badger.js",
+    "build": "npm run badge",
+    "start": "npm run build && hugo serve --environment production"
   },
   "dependencies": {
     "badge-maker": "^3.3.1",

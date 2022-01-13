@@ -40,24 +40,24 @@ imageWidth = '180'
 imageHeight = '180'
 
 [[profileMode.buttons]]
-name = 'Posts'
-url	 = 'post/'
+name = 'About Me'
+url = 'about/'
 
 [[profileMode.buttons]]
-name = 'Archive'
-url = 'archives/'
+name = 'Posts'
+url	 = 'post/'
 
 [[profileMode.buttons]]
 name = 'Series'
 url = 'series/'
 
 [[profileMode.buttons]]
-name = 'Collected Quotes'
-url = 'quotes/'
+name = 'Archive'
+url = 'archives/'
 
 [[profileMode.buttons]]
-name = 'About Me'
-url = 'about/'
+name = 'Collected Quotes'
+url = 'quotes/'
 
 [analytics.google]
 SiteVerificationTag = "1AayfMJ_TLCrPwoK12kv_LhdWrH1tARYKK6oHPBjOh0"
