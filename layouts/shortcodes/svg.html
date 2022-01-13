@@ -14,6 +14,12 @@
 {{- end -}}
 
 {{- else -}}
+
+{{- if hasPrefix $svg "/assets/" -}}
+<img src="{{ $svg | relURL }}" {{- $alt -}} />
+{{- else -}}
 {{- $svg := resources.Get $svg -}}
 <img src="{{ $svg.RelPermalink }}" {{- $alt -}} />
+{{- end -}}
+
 {{- end -}}

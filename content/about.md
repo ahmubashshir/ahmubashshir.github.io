@@ -141,7 +141,7 @@ url: /about
 {{</raw>}}
 ##### Site Statistics
 {{<raw>}}
-{{% svg "https://pagespeed-insights.herokuapp.com/?url=https://ahmubashshir.github.io" "Pagespeed Insight" %}}
+{{% svg "/assets/svg/pagespeed-insights.svg" "Pagespeed Insight" %}}
 {{</raw>}}
 <!--
 vim: ts=2:et:ft=markdown:

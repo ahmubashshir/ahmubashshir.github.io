@@ -4,6 +4,7 @@
   "scripts": {
     "badge": "node helper/badger.js",
     "build": "npm run badge",
+    "svg": "npm exec svgo static/assets/svg",
     "start": "npm run build && hugo serve --environment production"
   },
   "dependencies": {
