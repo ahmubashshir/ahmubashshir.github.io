@@ -1,0 +1,12 @@
+{{- $svg := .Get 0 -}}
+{{- $alt := .Get 1 | default "" -}}
+{{- $alt := printf "alt=%q" $alt | safeHTMLAttr -}}
+{{- if hasPrefix $svg "https://" -}}
+{{- $name := printf "assets/image/%s.svg" (md5 $svg) -}}
+{{- $svg := resources.GetRemote $svg -}}
+{{- $svg := slice $svg | resources.Concat $name | minify -}}
+<img src="{{ $svg.RelPermalink }}" {{- $alt -}} />
+{{- else -}}
+{{- $svg := resources.Get $svg -}}
+<img src="{{ $svg.RelPermalink }}" {{- $alt -}} />
+{{- end -}}

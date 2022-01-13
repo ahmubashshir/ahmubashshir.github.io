@@ -3,3 +3,7 @@
 /.hugo_build.lock
 /data/badge.json
 /static/assets/badges
+!/config
+!/config/**
+!/layouts
+!/layouts/**

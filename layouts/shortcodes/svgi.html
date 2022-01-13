@@ -1,0 +1,15 @@
+{{- $src := .Get 0 -}}
+{{- $cors := .Get 1 | default "" -}}
+<script svg="{{- $src -}}">
+  ((el) => {
+    fetch("{{- if eq $cors "cors" -}}https://cors.eu.org/{{- end -}}" + el.attributes.svg.nodeValue)
+      .then(r => r.text())
+      .then(text => {
+        let div = document.createElement('div');
+        div.innerHTML = text;
+        console.log(div.firstElementChild);
+        el.parentElement.replaceChild(div.firstElementChild, el);
+      })
+      .catch(console.error.bind(console));
+  })(document.currentScript);
+</script>
