@@ -24,6 +24,7 @@ hideSummary = false
 showtoc = true
 tocopen = false
 images = ['/assets/cover/home.png']
+hideFooter = true
 
 [label]
 text = "‍"

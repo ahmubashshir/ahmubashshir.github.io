@@ -1,0 +1,13 @@
+<footer class="footer">
+    <span>
+    &copy; {{ now.Year }} <a href="{{ "license" | absLangURL }}">{{ .Param "author" }}</a>
+    {{- if gt (.RelPermalink | findRE `^/post/\d+/` | len) 0 }}
+    <a style="border-bottom: none!important;overflow: hidden;" rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img style="display: inline-block;margin: 0 !important;position:fixed; bottom:0px; right:0px;" alt="Creative Commons License" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>
+    {{- end -}}
+    </span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>

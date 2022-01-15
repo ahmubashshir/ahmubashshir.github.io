@@ -1,3 +1,4 @@
+{{- template "partials/templates/footer.html" . }}
 {{- if hugo.IsProduction | or (eq .Site.Params.env "production") }}
 {{- template "partials/templates/tracker-init.html" . }}
 {{- template "partials/templates/sw.html" . }}
