@@ -81,7 +81,23 @@ url = 'https://gitlab.com/ahmubashshir'
 [[socialIcons]]
 name = 'StackOverflow'
 url = 'https://stackoverflow.com/users/9123082'
-# IM
+# NormSocial
+[[socialIcons]]
+name = 'Reddit'
+url = 'https://reddit.com/u/ahmubashshir'
+[[socialIcons]]
+name = 'Twitter'
+url = 'https://twitter.com/ahmubashshir'
+[[socialIcons]]
+name = 'Goodreads'
+url = 'https://www.goodreads.com/ahmubashshir'
+[[socialIcons]]
+name = 'Lastfm'
+url = 'https://www.last.fm/user/ahmubashshir'
+# Contacts
+[[socialIcons]]
+name = 'Email'
+url = 'mailto:ahmubashshir@gmail.com'
 [[socialIcons]]
 name = 'Telegram'
 url = 'https://t.me/ahmubashshir'
@@ -91,26 +107,6 @@ url = 'https://matrix.to/#/@ahm:feneas.org'
 [[socialIcons]]
 name = 'Discord'
 url = 'https://discord.com/users/600271127411032065'
-#Social
-[[socialIcons]]
-name = 'Reddit'
-url = 'https://reddit.com/u/ahmubashshir'
-[[socialIcons]]
-name = 'Twitter'
-url = 'https://twitter.com/ahmubashshir'
-[[socialIcons]]
-name = 'Lastfm'
-url = 'https://www.last.fm/user/ahmubashshir'
-[[socialIcons]]
-name = 'Goodreads'
-url = 'https://www.goodreads.com/ahmubashshir'
-#Misc
-[[socialIcons]]
-name = 'Email'
-url = 'mailto:ahmubashshir@gmail.com'
-[[socialIcons]]
-name = 'RSS'
-url = 'index.xml'
 
 [editPost]
 URL = "https://github.com/ahmubashshir/ahmubashshir.github.io/tree/master/content/posts"

@@ -101,7 +101,7 @@
         </div>
         {{- $currentPage := . }}
         <ul id="menu">
-            {{- if gt (.RelPermalink | findRE `^/(tags|series)/[a-z0-9-]+/` | len) 0 }}
+            {{- if or (gt (.RelPermalink | findRE `^/(tags|series)/[a-z0-9-]+/` | len) 0) (eq .RelPermalink "/") }}
             <li>
                 <span class="social-icons">
                     <style>
