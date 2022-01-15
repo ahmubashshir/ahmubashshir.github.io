@@ -24,23 +24,45 @@ url: /about
       border-bottom-left-radius: var(--radius);
       border-bottom-right-radius: var(--radius);
     }
+    details.drawer:not([open]):not(:last-of-type) > summary {
+      border-bottom:  1px solid var(--secondary);
+    }
+
     details.drawer[open] + details.drawer > summary {
       border-top-left-radius: var(--radius);
       border-top-right-radius: var(--radius);
     }
     details.drawer[open] > summary {
-      font-style: oblique;
+      font-weight: bolder;
     }
-
+    details.drawer:not([open]) > summary {
+      font-weight: lighter;
+    }
+    details.drawer[open] > summary::before {
+      content: "\0025BC"; /* - */
+    }
+    details.drawer:not([open]) > summary::before {
+      content: "\0025B6"; /* + */
+    }
+    details.drawer > summary::before {
+      float: left;
+      margin-left: 0.75em;
+      font-weight: normal;
+    }
     details.drawer > summary {
       padding: 2px 6px;
       width:   100%;
       background-color: var(--tertiary);
       border: none;
-      box-shadow: 3px 3px 4px var(--entry);
+      box-shadow: 3px 3px 4px var(--secondary);
       cursor: pointer;
       list-style: none;
       border-radius: 0px;
+      font-family: Hack, Ubuntu Mono, monospace;
+    }
+
+    details.drawer[open] + details.drawer > summary {
+      border-top: 1px solid var(--secondary);
     }
     #contacts {
       margin-top: 10px;
