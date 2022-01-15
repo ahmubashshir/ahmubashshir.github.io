@@ -1,0 +1,75 @@
+[
+    {
+        "color": "02A9FF",
+        "name": "anilist"
+    },
+    {
+        "color": "7289DA",
+        "name": "discord"
+    },
+    {
+        "color": "181717",
+        "name": "github"
+    },
+    {
+        "color": "0093DD",
+        "icon": "gnuprivacyguard",
+        "name": "pgp"
+    },
+    {
+        "color": "FD755C",
+        "name": "kitsu"
+    },
+    {
+        "color": "000000",
+        "name": "matrix"
+    },
+    {
+        "color": "2E51A2",
+        "name": "myanimelist"
+    },
+    {
+        "color": "FF4500",
+        "name": "reddit"
+    },
+    {
+        "color": "F58025",
+        "name": "stackoverflow"
+    },
+    {
+        "color": "26A5E4",
+        "name": "telegram"
+    },
+    {
+        "color": "ED1C24",
+        "name": "trakt"
+    },
+    {
+        "color": "1DA1F2",
+        "name": "twitter"
+    },
+    {
+        "color": "00AC47",
+        "icon": "livechat",
+        "name": "irc"
+    },
+    {
+        "color": "372213",
+        "name": "goodreads"
+    },
+    {
+        "color": "FCA121",
+        "name": "gitlab"
+    },
+    {
+        "color": "D51007",
+        "icon": "lastdotfm",
+        "name": "lastfm"
+    },
+    {
+        "color": "30B980",
+        "icon": "maildotru",
+        "name": "mail"
+    }
+]
+

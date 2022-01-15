@@ -1,15 +1,12 @@
 {
-  "name": "helper",
-  "type": "module",
   "scripts": {
-    "badge": "node helper/badger.js",
+    "badge": "node helper/badges.js",
     "build": "npm run badge",
     "svg": "npm exec svgo static/assets/svg",
     "start": "npm run build && hugo serve --environment production"
   },
   "dependencies": {
     "badge-maker": "^3.3.1",
-    "is-docker": "^3.0.0",
     "simple-icons": "^5.16.0",
     "svgo": "^2.7.0"
   }
