@@ -31,18 +31,22 @@ permalink: /quotes
 > \- [@fazlerabbi37]
 
 > When freedom is outlawed, only outlaws will be free.<br />
-> \- Tom Robbins
+> \- [Tom Robbins]
 
 > Intelligence is the ability to avoid doing work, yet getting the work done.<br />
 > \- [@torvalds]
 
 > Everything we hear is an opinion, not a fact. Everything we see is a perspective,
 > not the truth.<br />
-> \- Marcus Aurelius
+> \- [Marcus Aurelius]
 
 > Any fool can write code that a computer can understand.
 > Good programmers write code that humans can understand.<br />
-> \- Martin Fowler
+> \- [Martin Fowler]
+
+> Give someone a program, frustrate them for a day,
+> teach them how to program, frustrate them for a lifetime.<br />
+> \- [David Leinweber]
 
 > Dreams are like polite crypto miners, stealing your cpu cycles when you're idle.<br />
 > \- [@bdeshi]
@@ -53,3 +57,8 @@ permalink: /quotes
 [@torvalds]: https://github.com/torvalds
 [@tasauf1980]: https://github.com/tasauf1980
 [@nr072]: https://github.com/nr072
+<!-- wiki -->
+[David Leinweber]: https://en.wikipedia.org/wiki/David_Leinweber
+[Martin Fowler]: https://en.wikipedia.org/wiki/Martin_Fowler_(software_engineer)
+[Marcus Aurelius]: https://en.wikipedia.org/wiki/Marcus_Aurelius
+[Tom Robbins]: https://en.wikipedia.org/wiki/Tom_Robbins
