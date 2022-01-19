@@ -6,6 +6,8 @@ tags:
 - Rant
 - Others
 - Collected
+series:
+- Rants
 ---
 
 এই র‍্যান্ট টা আসলে আমার না :smirk_cat: <br />
