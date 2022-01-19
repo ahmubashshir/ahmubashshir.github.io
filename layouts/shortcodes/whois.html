@@ -1,0 +1,39 @@
+{{- $site := .Get 1 | default "gh" -}}
+{{- $user := .Get 0 -}}
+{{- $url := "" -}}
+
+{{- if or (eq $site "gh") (eq $site "github") -}}
+	{{ $url = "github.com" }}
+{{- else if or (eq $site "gl") (eq $site "gitlab") -}}
+	{{ $url = "gitlab.com" }}
+{{- else if or (eq $site "so") (eq $site "stackoverflow") -}}
+	{{ $url = "stackoverflow.com/users" }}
+
+{{- else if eq $site "twitter" -}}
+	{{ $url = "twitter.com" }}
+{{- else if eq $site "reddit" -}}
+	{{ $url = "reddit.com/u" }}
+{{- else if or (eq $site "sub") (eq $site "subreddit") -}}
+	{{ $url = "reddit.com/r" }}
+{{- else if or (eq $site "gr") (eq $site "goodreads") -}}
+	{{ $url = "www.goodreads.com" }}
+{{- else if or (eq $site "tg") (eq $site "telegram") -}}
+	{{ $url = "t.me" }}
+
+{{- else if or (eq $site "mal") (eq $site "myanimelist") -}}
+	{{ $url = "myanimelist.net/profile" }}
+{{- else if or (eq $site "kitsu") (eq $site "kit") -}}
+	{{ $url = "kitsu.io/users" }}
+{{- else if or (eq $site "al") (eq $site "anilist") -}}
+	{{ $url = "anilist.co/user" }}
+{{- else if or (eq $site "lastfm") -}}
+	{{ $url = "www.last.fm/user" }}
+{{- else if or (eq $site "trakt") -}}
+	{{ $url = "trakt.tv/users" }}
+{{- end -}}
+
+{{- if and (ne $url "") (ne $user "") -}}
+{{- printf "https://%s/%s" $url $user -}}
+{{- else -}}
+{{- printf "#site-not-supported-%s-%s" $site $user -}}
+{{- end -}}
