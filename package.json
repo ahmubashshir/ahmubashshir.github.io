@@ -3,7 +3,10 @@
     "badge": "node helper/badges.js",
     "build": "npm run badge",
     "svg": "npm exec svgo static/assets/svg",
-    "start": "npm run build && hugo serve --environment production"
+    "serve": "hugo serve --environment production",
+    "hugo": "hugo --minify --environment production --logFile build.log",
+    "test": "npm run build && npm run serve",
+    "start": "npm run build && npm run hugo"
   },
   "dependencies": {
     "badge-maker": "^3.3.1",
