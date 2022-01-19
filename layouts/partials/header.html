@@ -109,11 +109,11 @@
                             margin-bottom: calc(-0.1*var(--header-height));
                         }
                     </style>
-                    {{- $rss := "" -}}
-                    {{ if ne .Layout `posts` -}}
-                        {{- $rss = .RelPermalink -}}
+                    {{- $rss := "/index.xml" -}}
+                    {{- if ne .Layout `posts` -}}
+                        {{ with .OutputFormats.Get "RSS" }}{{ $rss = .RelPermalink }}{{ end }}
                     {{- end -}}
-                    <a href="{{- $rss | absLangURL | plainify -}} index.xml" style="display:inline-block;margin:auto;">
+                    <a href="{{- $rss | relLangURL -}}" style="display:inline-block;margin:auto;">
                     {{- partial "svg.html" ( "name = \"rss\"" | transform.Unmarshal) -}}
                     </a>
                 </span>
@@ -136,4 +136,7 @@
             {{- end }}
         </ul>
     </nav>
+    {{- if and (eq .Kind "page") (eq .Layout "") ( .Params.ccbysa | default true) }}
+    <span><a style="border-bottom: none!important;overflow: hidden;" rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img style="display: inline-block;margin: 0 !important;position:fixed; bottom:0px; right:0px;" alt="Creative Commons License" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a></span>
+    {{- end -}}
 </header>
