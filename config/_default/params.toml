@@ -46,7 +46,7 @@ url = 'about/'
 
 [[profileMode.buttons]]
 name = 'Posts'
-url	 = 'post/'
+url	 = 'posts/'
 
 [[profileMode.buttons]]
 name = 'Series'

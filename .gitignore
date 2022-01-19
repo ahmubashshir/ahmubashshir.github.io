@@ -1,9 +1,8 @@
 # whitelist
-!/config
 !/config/**
-!/layouts
 !/layouts/**
 !/static/**
+!/content/**
 # blacklist
 /public
 /node_modules

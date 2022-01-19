@@ -101,7 +101,7 @@
         </div>
         {{- $currentPage := . }}
         <ul id="menu">
-            {{- if or (gt (.RelPermalink | findRE `^/(tags|series)/[a-z0-9-]+/` | len) 0) (eq .RelPermalink "/") }}
+            {{- if or (eq .Kind "term") (eq .Kind "section") }}
             <li>
                 <span class="social-icons">
                     <style>
@@ -109,7 +109,11 @@
                             margin-bottom: calc(-0.1*var(--header-height));
                         }
                     </style>
-                    <a href="index.xml" style="display:inline-block;margin:auto;">
+                    {{- $rss := "" -}}
+                    {{ if ne .Layout `posts` -}}
+                        {{- $rss = .RelPermalink -}}
+                    {{- end -}}
+                    <a href="{{- $rss | absLangURL | plainify -}} index.xml" style="display:inline-block;margin:auto;">
                     {{- partial "svg.html" ( "name = \"rss\"" | transform.Unmarshal) -}}
                     </a>
                 </span>
