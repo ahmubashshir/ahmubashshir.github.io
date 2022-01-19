@@ -109,7 +109,7 @@ name = 'Discord'
 url = 'https://discord.com/users/600271127411032065'
 
 [editPost]
-URL = "https://github.com/ahmubashshir/ahmubashshir.github.io/tree/master/content/posts"
+URL = "https://github.com/ahmubashshir/ahmubashshir.github.io/tree/master/content/"
 Text = "Suggest Changes" # edit text
 appendFilePath = true # to append file path to Edit link
 
