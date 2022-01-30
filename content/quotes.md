@@ -62,3 +62,4 @@ permalink: /quotes
 [Martin Fowler]: https://en.wikipedia.org/wiki/Martin_Fowler_(software_engineer)
 [Marcus Aurelius]: https://en.wikipedia.org/wiki/Marcus_Aurelius
 [Tom Robbins]: https://en.wikipedia.org/wiki/Tom_Robbins
+[Koro-sensei]: https://ansatsukyoshitsu.fandom.com/wiki/Korosensei
