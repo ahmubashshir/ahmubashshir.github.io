@@ -1,4 +1,4 @@
-# Articles
+### Articles
 
 All the files inside `content` directory are licensed under [CC BY-SA 4.0].
 The attribution requirement is only met when:
@@ -14,7 +14,7 @@ The attribution requirement is only met when:
    2. You may not apply any terms or measures that legally restricts others from doing anything the license permits.
 
 
-# Images
+### Images
 
 1. `static/favicon.ico` and files inside `static/assets/image` are property of [Bandai Namco Entertainment](https://www.bandainamcoent.com/).
    so their licensing terms are applicable to these files.
@@ -24,14 +24,14 @@ The attribution requirement is only met when:
 4. Files under `static/assets/badges` are generated using [simple-icons](simpleicons.org/) and are property of the respective owners. 
 5. Images captured by me and published on [imgur](https://imgur.com) are available under [CC BY-SA 4.0].
 
-# Logos
+### Logos
 
 All the files inside `static/assets/badges` directory are copyrighted to their respective companies.
 
 The Arch Linux name and logo are recognized [trademarks](https://wiki.archlinux.org/index.php/DeveloperWiki:TrademarkPolicy).
 Some rights reserved to Judd Vinet and Aaron Griffin.
 
-# Layouts/Assets
+### Layouts/Assets
 1. `figure.html`, `gallery.html`, `photoswipe.html` files in layouts/shortcodes,
    `assets/css/hugo-easy-gallery.css` and `assets/js/photoswipe.js` are
    taken from [@liwenyip/hugo-easy-gallery/](https://github.com/liwenyip/hugo-easy-gallery/)
@@ -43,7 +43,7 @@ Some rights reserved to Judd Vinet and Aaron Griffin.
    [@adityatelange/hugo-PaperMod](https://github.com/adityatelange/hugo-PaperMod/)
    and available under MIT License.
 
-# Other files
+### Other files
 
 Files not mentioned in previous paragraphs are licensed under [GPL 2.0 or later].
 

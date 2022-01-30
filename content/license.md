@@ -1,7 +1,6 @@
 ---
 layout: page
-url: /license
-title: LICENSE
+url: /license/
+title: License notice
+Layout: license
 ---
-
-{{% license %}}

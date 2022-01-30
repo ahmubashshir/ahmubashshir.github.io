@@ -1,0 +1,26 @@
+{{- define "main" }}
+
+<article class="post-single">
+   <header class="post-header">
+      {{ partial "breadcrumbs.html" . }}
+      <h1 class="post-title">
+         {{ .Title }}
+      </h1>
+   </header>
+   <div class="post-content">
+      {{- readFile "/LICENSE.md" | markdownify -}}
+
+      {{- "### License Notice" | markdownify }}
+      <pre style="overflow: scroll">
+ Copyright (C) {{
+         printf "%s %s %s"
+            (now.Format "2006")
+            .Site.Params.author
+            "<ahmubashshir@gmail.com>"
+      }}
+
+   {{ readFile "/LICENSE.notice" | default "" -}}
+      </pre>
+   </div>
+</article>
+{{- end }}{{/* end main */}}
