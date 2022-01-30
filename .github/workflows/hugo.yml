@@ -1,4 +1,4 @@
-name: hugo-build-deployment
+name: gohugo.io
 on:
   workflow_dispatch:
   push:
