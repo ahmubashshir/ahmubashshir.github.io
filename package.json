@@ -4,7 +4,7 @@
     "build": "npm run badge",
     "svg": "npm exec svgo static/assets/svg",
     "serve": "hugo serve --environment production",
-    "hugo": "mkdir -p public;hugo --minify --environment production --logFile public/build.log",
+    "hugo": "hugo --minify --environment production",
     "test": "npm run build && npm run serve",
     "start": "npm run build && npm run hugo"
   },
