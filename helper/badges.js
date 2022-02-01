@@ -33,7 +33,7 @@ badges.forEach(
 	( badge, idx, arr ) => {
 		let _start = Date.now();
 		let _path = path.join( dir, badge.name + '.svg' );
-		let logo = simpleIcons.get( badge.icon || badge.name );
+		let logo = simpleIcons.Get( badge.icon || badge.name );
 		console.log( `${badge.name}:` );
 
 		let badgeData = {
