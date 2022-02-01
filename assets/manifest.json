@@ -6,17 +6,15 @@
     "start_url": "/",
     "scope": "/",
     "icons": [
+        {{- $url := $.Site.Data.pwaIcons.url -}}
+        {{- range $.Site.Data.pwaIcons.icons }}
         {
-            "src": "/assets/image/android-chrome-192x192.png?v={{ $.Site.Params.assets.vtag }}",
-            "sizes": "192x192",
-            "type": "image/png"
+            "src": "{{- printf $url .size -}}?v={{- $.Site.Params.assets.vtag -}}",
+            "sizes": "{{- .size -}}",
+            "type": "{{- .type -}}",
+            "purpose": "{{ .purpose | default "any" }}"
         },
-        {
-            "src": "/assets/image/android-chrome-512x512.png?v={{ $.Site.Params.assets.vtag }}",
-            "sizes": "512x512",
-            "type": "image/png",
-            "purpose": "any maskable"
-        }
+        {{- end }}
     ],
     "theme_color": "{{ $.Site.Params.pwa.color }}",
     "orientation": "{{ $.Site.Params.pwa.orientation }}",

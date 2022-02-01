@@ -1,4 +1,5 @@
+{{- partialCached "partials/head/apple-touch-icons.html" . }}
 {{- if hugo.IsProduction | or (eq .Site.Params.env "production") }}
-{{- template "partials/templates/pwa.html" . }}
-{{- template "partials/templates/tracker.html" . }}
+{{- partialCached "partials/head/pwa.html" . }}
+{{- partialCached "partials/head/tracker.html" . }}
 {{- end -}}

@@ -28,14 +28,14 @@ hideFooter = true
 
 [label]
 text = "‍"
-icon = "/assets/image/favicon-32x32.png"
+icon = "/assets/icons/favicon/32x32.png"
 iconHeight = 32
 
 [profileMode]
 enabled = true
 Title = "Ahmad Hasan Mubashshir"
 Subtitle = "Student, bookworm, Linux Enthusiast, Otaku ;)"
-imageUrl = "/assets/image/apple-touch-icon-precomposed.png"
+imageUrl = "/assets/icons/apple/base.png"
 imageTitle = 'avatar'
 imageWidth = '180'
 imageHeight = '180'
@@ -121,11 +121,11 @@ relative = false
 
 [assets]
 disableFingerprinting = true
-favicon = "/favicon.ico"
-favicon16x16 = "/assets/image/favicon-16x16.png"
-favicon32x32 = "/assets/image/favicon-32x32.png"
-apple_touch_icon = "/assets/image/apple-touch-icon.png"
-safari_pinned_tab = "/assets/image/safari-pinned-tab.svg"
+favicon = "/assets/icons/favicon/48x48.png"
+favicon16x16 = "/assets/icons/favicon/16x16.png"
+favicon32x32 = "/assets/icons/favicon/32x32.png"
+apple_touch_icon = '/assets/icons/apple/base.png'
+safari_pinned_tab = "/assets/icons/apple/tab.svg"
 msTileColor = "#1d1e20"
 vtag = '8jl4JnrGke'
 

@@ -1,5 +1,5 @@
-{{- template "partials/templates/footer.html" . }}
+{{- partialCached "partials/footer/footer.html" . }}
 {{- if hugo.IsProduction | or (eq .Site.Params.env "production") }}
-{{- template "partials/templates/tracker-init.html" . }}
-{{- template "partials/templates/sw.html" . }}
+{{- partialCached "partials/footer/tracker-init.html" . }}
+{{- partialCached "partials/footer/sw.html" . }}
 {{- end -}}
