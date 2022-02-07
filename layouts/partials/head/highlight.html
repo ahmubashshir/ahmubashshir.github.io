@@ -1,0 +1,9 @@
+{{- if .HasShortcode "highlight" -}}
+{{- $hlcss := (slice (resources.Get "css/style.css")) | resources.Concat "assets/css/highlight.css" | minify -}}
+{{- if not .Site.Params.assets.disableFingerprinting -}}
+{{- $hlcss := $hlcss | fingerprint -}}
+<link rel="stylesheet" href="{{ $hlcss.RelPermalink }}" integrity="{{ $hlcss.Data.Integrity }}" />
+{{- else -}}
+<link rel="stylesheet" href="{{ $hlcss.RelPermalink }}" />
+{{- end -}}
+{{- end -}}

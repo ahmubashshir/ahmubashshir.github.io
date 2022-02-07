@@ -67,5 +67,3 @@ series:
 {{<figure src="https://i.imgur.com/BQUMtIx.jpg" caption="2020-11-05 06:08:09 1">}}
 {{<figure src="https://i.imgur.com/f0GJ93j.jpg" caption="2020-11-05 06:08:09 2">}}
 {{</gallery>}}
-
-{{% photoswipe %}}

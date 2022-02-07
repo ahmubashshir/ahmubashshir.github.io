@@ -32,7 +32,8 @@ The Arch Linux name and logo are recognized [trademarks](https://wiki.archlinux.
 Some rights reserved to Judd Vinet and Aaron Griffin.
 
 ### Layouts/Assets
-1. `figure.html`, `gallery.html`, `photoswipe.html` files in layouts/shortcodes,
+1. `figure.html` and`gallery.html` files in layouts/shortcodes,
+   `photoswipe.html` in layouts/partials/{head,footer},
    `assets/css/hugo-easy-gallery.css` and `assets/js/photoswipe.js` are
    taken from [@liwenyip/hugo-easy-gallery/](https://github.com/liwenyip/hugo-easy-gallery/)
    and patched to fullfil my needs and are available under MIT License.
