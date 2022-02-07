@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language }}" dir="{{ .Language.LanguageDirection | default "auto" }}">
+{{ if and (ne .Lang ((index .Site.Languages 0).Lang | default "en")) (ne .Kind `page`) (eq .Layout ``) -}}
+<head>
+    {{- $default_content_url := replace .RelPermalink .Site.LanguagePrefix "" 1 | absURL -}}
+    <title>{{- $default_content_url -}}</title>
+    <link rel="canonical" href="{{- $default_content_url -}}">
+    <meta name="robots" content="noindex">
+    <meta charset="utf-8">
+    <meta http-equiv="refresh" content="0; url={{ $default_content_url }}">
+</head>
+{{- else -}}
+<head>
+    {{- partial "head.html" . }}
+</head>
+
+<body class="
+{{- if (or (ne .Kind `page` ) (eq .Layout `archives`) (eq .Layout `search`)) -}}
+{{- print "list" -}}
+{{- end -}}
+{{- if eq $.Site.Params.defaultTheme `dark` -}}
+{{- print " dark" }}
+{{- end -}}
+" id="top">
+    {{- partialCached "header.html" . .Page -}}
+    <main class="main">
+        {{- block "main" . }}{{ end }}
+    </main>
+    {{ partialCached "footer.html" . .Layout .Kind (.Param "hideFooter") (.Param "ShowCodeCopyButtons") -}}
+</body>
+
+{{- end -}}
+</html>

@@ -10,6 +10,15 @@ buildFuture = false
 buildExpired = false
 enableEmoji = true
 enableGitInfo = true
+defaultContentLanguage = 'bn'
+
+[languages.bn]
+weight = 1
+LanguageName = ':bangladesh:'
+
+[languages.en]
+weight = 2
+LanguageName = ':us:'
 
 [minify]
 disableXML = false
@@ -25,10 +34,11 @@ tag = 'tags'
 series = 'series'
 
 [markup.highlight]
-anchorLineNos = true
+anchorLineNos = false
 codeFences = true
+noClasses = false
 guessSyntax = true
-lineNos = true
+lineNos = false
 style = 'dracula'
 
 [markup.goldmark.renderer]

@@ -1,0 +1,6 @@
+title = "en | @ahmubashshir's blog"
+
+[outputs]
+home = ["HTML", "RSS"]
+section = ["HTML", "RSS"]
+

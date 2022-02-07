@@ -16,6 +16,7 @@ ShowPostNavLinks = true
 ShowBreadCrumbs = true
 ShowCodeCopyButtons = true
 enableGitInfo = true
+displayFullLangName = true
 disableSpecial1stPost = true
 disableScrollToTop = false
 comments = true
@@ -42,23 +43,23 @@ imageHeight = '180'
 
 [[profileMode.buttons]]
 name = 'About Me'
-url = 'about/'
+url = '/about/'
 
 [[profileMode.buttons]]
 name = 'Posts'
-url	 = 'posts/'
+url	 = '/posts/'
 
 [[profileMode.buttons]]
 name = 'Series'
-url = 'series/'
+url = '/series/'
 
 [[profileMode.buttons]]
 name = 'Archive'
-url = 'archives/'
+url = '/archives/'
 
 [[profileMode.buttons]]
 name = 'Collected Quotes'
-url = 'quotes/'
+url = '/quotes/'
 
 [analytics.google]
 SiteVerificationTag = "1AayfMJ_TLCrPwoK12kv_LhdWrH1tARYKK6oHPBjOh0"
