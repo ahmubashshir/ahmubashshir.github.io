@@ -1,0 +1,32 @@
+{{- $title := "Diagram" -}}
+{{- $type  := "dot" -}}
+{{- $content  := "" -}}
+
+{{- if .IsNamedParams -}}
+  {{- with .Get "title" -}}
+    {{- $title = . -}}
+  {{- end -}}
+  {{- with .Get "type" -}}
+    {{- $type = . -}}
+  {{- end -}}
+  {{- with .Get "file" -}}
+    {{- with $.Page.Resources.GetMatch . -}}
+      {{- $content = .Content -}}
+    {{- end -}}
+  {{- end -}}
+{{- else -}}
+  {{- with .Get 0 -}}
+    {{- $title = . -}}
+  {{- end -}}
+  {{- with .Get 1 -}}
+    {{- $type = . -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if eq $content `` -}}
+{{- $content = .Inner -}}
+{{- end -}}
+<figure style="border: 1px dotted var(--secondary);border-radius: var(--radius);">
+  <pre style="overflow: auto;margin: 2px;text-align: center;background: var(--code-bg) !important;"><code class="nohighlight" data-diagram="{{ $type }}">{{- trim ($content|safeHTML) "\n\r" -}}</code></pre>
+  <figcaption style="text-align:center">{{ $title  | markdownify }}</figcaption>
+</figure>
