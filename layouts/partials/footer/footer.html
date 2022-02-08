@@ -1,10 +1,7 @@
-<footer class="footer">
-    <span>
-    &copy; {{ now.Year }} <a href="{{ "license" | absLangURL }}">{{ .Param "author" }}</a>
-    </span>
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
-    </span>
-</footer>
+<span>
+&copy; {{ now.Year }} <a href="{{ `/license/` | absURL }}">{{- .Param "author" -}}</a></span>{{- "" -}}
+<span>
+    Powered by
+    <a href="https://gohugo.io/" title="{{ printf `%v:v%v-%v` hugo.Environment hugo.Version (hugo.CommitHash|default `tag`) }}" rel="noopener noreferrer" target="_blank">Hugo</a> &
+    <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+</span>
