@@ -5,28 +5,39 @@ with a few additional edits borrowed from Filament Group's. (https://www.filamen
 */
 
 ( function () {
-	const version = '{{ slicestr ((.GitInfo.AuthorDate | time.AsTime).Unix | sha1) 0 7 }}';
-	const cacheName = version + '::blog:';
+	const version = '{{ slicestr ((.Lastmod | time.AsTime).Unix | sha1) 0 7 }}';
+	const cacheName = version + '::blog::';
 
 	const staticCacheName = cacheName + 'static';
+	const remoteCacheName = cacheName + 'remote';
 	const pagesCacheName = cacheName + 'pages';
 
 	const staticAssets = [
-    '/',
-    '/assets/css/stylesheet.min.css',
-    '/assets/js/highlight.min.js',
-    '/assets/js/search.min.js',
-    '/assets/js/tracker.ackee.min.js',
-    '/assets/icons/favicon/16x16.png',
-	'/assets/icons/favicon/32x32.png',
-	'/assets/icons/favicon/48x48.png',
-    '/assets/icons/apple/base.png',
-    '/assets/icons/apple/tab.svg',
-    '/search/',
-    '/index.json',
-    '/offline/',
-    '/404.html'
-  ];
+		'/',
+		"/assets/css/gallery.min.css",
+		"/assets/js/graphviz.min.js",
+		"/assets/css/highlight.min.css",
+		"/assets/js/highlight.min.js",
+		"/assets/js/photoswipe.min.js",
+		"/assets/js/search.min.js",
+		"/assets/css/stylesheet.min.css",
+		"/assets/js/tracker.ackee.min.js",
+		'/assets/icons/favicon/16x16.png',
+		'/assets/icons/favicon/32x32.png',
+		'/assets/icons/favicon/48x48.png',
+		'/assets/icons/apple/base.png',
+		'/assets/icons/apple/tab.svg',
+		'/search/',
+		'/index.json',
+		'/offline/',
+		'/404.html'
+	];
+	const whitelist = [
+		'cdnjs.cloudflare.com',
+		'code.jquery.com', 'unpkg.com',
+		'i.creativecommons.org',
+		'i.imgur.com'
+	];
 
 	function updateStaticCache() {
 		// These items must be cached for the Service Worker to complete installation
@@ -38,11 +49,14 @@ with a few additional edits borrowed from Filament Group's. (https://www.filamen
 			} );
 	}
 
-	function getCacheForPath( path ) {
-		if ( staticAssets.includes( path ) === true || path.indexOf( '/assets/' ) === 0 ) {
+	function getCacheForPath( path, domain ) {
+		if ( ( staticAssets.includes( path ) || path.startsWith( '/assets/' ) ) === true ) {
 			return staticCacheName;
+		} else if ( whitelist.includes( domain ) === true ) {
+			return remoteCacheName;
+		} else {
+			return pagesCacheName;
 		}
-		return pagesCacheName;
 	}
 
 	function stashInCache( cacheName, request, response ) {
@@ -104,7 +118,7 @@ with a few additional edits borrowed from Filament Group's. (https://www.filamen
 		const request = event.request;
 		const url = new URL( request.url );
 
-		if ( url.href.indexOf( '{{ $.Site.BaseURL }}' ) !== 0 ) {
+		if ( !( url.href.startsWith( '{{ $.Site.BaseURL }}' ) || whitelist.includes( url.hostname ) ) ) {
 			return;
 		}
 
@@ -113,7 +127,7 @@ with a few additional edits borrowed from Filament Group's. (https://www.filamen
 			return;
 		}
 
-		// Ignore query-stringâ€™d requests
+		// Ignore query-string'd requests
 		if ( url.href.indexOf( '?' ) !== -1 ) {
 			return;
 		}
@@ -125,7 +139,7 @@ with a few additional edits borrowed from Filament Group's. (https://www.filamen
 				// NETWORK
 				// Stash a copy of this page in the pages cache
 				const copy = response.clone();
-				stashInCache( getCacheForPath( url.pathname ), request, copy );
+				stashInCache( getCacheForPath( url.pathname, url.hostname ), request, copy );
 				return response;
 			} )
 			.catch( () => {
