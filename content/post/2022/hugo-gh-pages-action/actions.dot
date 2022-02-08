@@ -1,0 +1,42 @@
+digraph "Deploying to gh-pages with hugo" {
+	subgraph "Traditional" {
+		lebel = "Traditional";
+		subgraph "action:build" {
+			lebel = "action:build";
+			"on:push(main)"       -> "step:checkout(main)" [color="blue"];
+			"step:checkout(main)" -> "step:build(hugo)"    [color="blue"];
+			"step:build(hugo)"    -> "step:push(gh-pages)" [color="blue"];
+			"step:push(gh-pages)" -> "step:cleanup"        [color="blue"];
+		}
+		subgraph "action:deploy" {
+			lebel = "action:deploy";
+			"step:push(gh-pages)"     -> "on:push(gh-pages)"       [color="blue"];
+			"on:push(gh-pages)"       -> "step:checkout(gh-pages)" [color="blue"];
+			"step:checkout(gh-pages)" -> "step:compress(artifact)" [color="blue"];
+			"step:compress(artifact)" -> "step:upload(artifact)"   [color="blue"];
+			"step:upload(artifact)"   -> "step:deploy"             [color="blue"];
+			"step:deploy"             -> "step:cleanup(deploy)"    [color="blue"];
+		}
+	}
+	subgraph "Single Action" {
+		lebel = "action:build and deploy";
+		subgraph "job:build" {
+			lebel = "job:build";
+			"on:push(main)"           -> "step:checkout(main)"      [color="palegreen3"];
+			"step:checkout(main)"     -> "step:build(hugo)"         [color="palegreen3"];
+			"step:build(hugo)"        ->  "step:compress(artifact)" [color="palegreen3"];
+			"step:compress(artifact)" ->"step:upload(artifact)"     [color="palegreen3"];
+			"step:upload(artifact)"   -> "step:cleanup"             [color="palegreen3"];
+		}
+		subgraph "job:deploy" {
+			lebel = "job:deploy";
+			"step:upload(artifact)" -> "on:success(job:build)" [color="palegreen3"];
+			"on:success(job:build)" -> "step:deploy"           [color="palegreen3"];
+			"step:deploy"           -> "step:cleanup(deploy)"  [color="palegreen3"];
+		}
+	}
+	start -> "on:push(main)";
+	"step:cleanup(deploy)" -> end;
+	start [shape=Diamond];
+	end [shape=Diamond];
+}
