@@ -3,10 +3,11 @@ var viz = new Viz();
 	const forEach = ( list, callback ) => {
 		Array.prototype.forEach.call( list, callback );
 	};
-	forEach( document.querySelectorAll( "[data-diagram]" ), code => {
+	forEach( document.querySelectorAll( "[data-diagram] code" ), code => {
 
-		let parent = code.parentNode;
-		let engine = code.getAttribute( "data-diagram" ) || "dot";
+		let parent = code.parentNode.parentNode;
+		console.log( parent );
+		let engine = parent.getAttribute( "data-diagram" ) || "dot";
 		let image;
 
 		viz.renderSVGElement( code.innerText )
@@ -23,7 +24,7 @@ var viz = new Viz();
 					stroke.removeAttribute( 'stroke' );
 					stroke.style.stroke = 'var(--content)';
 				} )
-				parent.insertBefore( image, code );
+				parent.insertBefore( image, code.parentNode );
 			} )
 			.catch( error => {
 				viz = new Viz();
@@ -35,7 +36,7 @@ var viz = new Viz();
 				console.error( error );
 			} )
 			.finally( () => {
-				code.style.display = 'none';
+				code.parentNode.style.display = 'none';
 				parent.scrollLeft = parent.scrollLeftMax / 2;
 			} )
 	} );

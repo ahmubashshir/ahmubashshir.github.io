@@ -27,8 +27,8 @@
 {{- $content = trim .Inner "\n\r" -}}
 {{- end -}}
 <figure style="border: 1px dotted var(--secondary);border-radius: var(--radius);">
-  <div class="nohighlight">
-  <pre class="chroma" style="overflow: auto;margin: 2px;text-align: center;background: var(--code-bg) !important;"><code data-lang="{{ $type }}" data-diagram="{{ $type }}">{{- $content | safeHTML -}}</code></pre>
+  <div class="nohighlight" style="text-align: center;border-radius: var(--radius);overflow: auto;margin: 2px;background: var(--code-bg) !important;">
+  <pre data-diagram="{{ $type }}" class="chroma" style="text-align: left;margin: 2px;"><code class="language-{{ $type }}" data-lang="{{ $type }}">{{- $content | safeHTML -}}</code></pre>
   </div>
   <figcaption style="text-align:center">{{ $title  | markdownify }}</figcaption>
 </figure>
