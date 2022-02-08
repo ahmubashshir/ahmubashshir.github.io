@@ -11,7 +11,7 @@
   {{- end -}}
   {{- with .Get "file" -}}
     {{- with $.Page.Resources.GetMatch . -}}
-      {{- $content = .Content -}}
+      {{- $content = trim .Content "\n\r" -}}
     {{- end -}}
   {{- end -}}
 {{- else -}}
@@ -24,9 +24,11 @@
 {{- end -}}
 
 {{- if eq $content `` -}}
-{{- $content = .Inner -}}
+{{- $content = trim .Inner "\n\r" -}}
 {{- end -}}
 <figure style="border: 1px dotted var(--secondary);border-radius: var(--radius);">
-  <pre style="overflow: auto;margin: 2px;text-align: center;background: var(--code-bg) !important;"><code class="nohighlight" data-diagram="{{ $type }}">{{- trim ($content|safeHTML) "\n\r" -}}</code></pre>
+  <div class="nohighlight">
+  <pre class="chroma" style="overflow: auto;margin: 2px;text-align: center;background: var(--code-bg) !important;"><code data-lang="{{ $type }}" data-diagram="{{ $type }}">{{- $content | safeHTML -}}</code></pre>
+  </div>
   <figcaption style="text-align:center">{{ $title  | markdownify }}</figcaption>
 </figure>
