@@ -65,6 +65,7 @@ disableInlineCSS = true
 
 [permalinks]
 post = '/post/:year/:month/:day/:filename/'
+rants = '/post/:year/:month/:day/:filename/'
 
 [[module.imports]]
 path = "cj.rs/gohugo-asciinema"
