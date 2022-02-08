@@ -4,11 +4,17 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    pull-request-branch-name:
+      separator: "_"
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
       interval: "daily"
+    pull-request-branch-name:
+      separator: "_"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "daily"
+    pull-request-branch-name:
+      separator: "_"
