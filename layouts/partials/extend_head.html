@@ -2,8 +2,8 @@
 {{- if hugo.IsProduction | or (eq .Site.Params.env "production") }}
 {{- partialCached "partials/head/pwa.html" . }}
 {{- partialCached "partials/head/tracker.html" . }}
-{{- partial "partials/head/photoswipe.html" . }}
-{{- partial "partials/head/highlight.html" . }}
-{{- partial "partials/head/graphviz.html" . }}
+{{- partial "partials/head/photoswipe.html" . .Page }}
+{{- partial "partials/head/highlight.html" . .Page }}
+{{- partial "partials/head/graphviz.html" . .Page }}
 {{- end -}}
 {{/* printf "%v" (.HasShortcode "highlight") */}}
