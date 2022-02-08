@@ -1,31 +1,9 @@
 {{- if hugo.IsProduction | or (eq .Site.Params.env "production") }}
 {{- partialCached "partials/footer/tracker-init.html" . }}
 {{- partialCached "partials/footer/sw.html" . }}
-{{- partialCached "partials/footer/photoswipe.html" .Page . }}
+{{- partialCached "partials/footer/photoswipe.html" . .Page }}
 {{- end -}}
 <footer class="footer">
 {{- partialCached "partials/footer/footer.html" . }}
-{{- if and (eq .Kind "page") (eq .Layout "") ( .Params.ccbysa | default true) -}}
-<span><style>
-/* {{- $fileID := printf `%.5s` .File.UniqueID -}} */
-#img-{{- $fileID -}} {
-	display: inline-block;
-	margin: 0 3px 3px 3px !important;
-	position: fixed;
-	bottom: 0px;
-	right: 0px;
-}
-@media only screen and (max-width:768px) {
-	#img-{{- $fileID -}} {
-		left: 0px;
-	}
-}
-#a-{{- $fileID -}} {
-	border-bottom: none!important;
-	overflow: hidden;
-}
-</style>
-<a id="a-{{- $fileID -}}" title="CreativeCommons Attribution-ShareAlike 4.0" rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
-<img id="img-{{- $fileID -}}" alt="Creative Commons License" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a></span>
-{{- end -}}
+{{- partialCached "partials/footer/ccbysa.html" . .Page }}
 </footer>
