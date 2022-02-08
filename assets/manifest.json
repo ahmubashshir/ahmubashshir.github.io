@@ -4,6 +4,7 @@
     "description": "{{ $.Site.Params.description }}",
     "short_name": "{{ $.Site.Title }}",
     "start_url": "/",
+    "lang": "en-US",
     "scope": "/",
     "icons": [
         {{- $url := $.Site.Data.pwaIcons.url -}}

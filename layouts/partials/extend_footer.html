@@ -1,7 +1,7 @@
 {{- if hugo.IsProduction | or (eq .Site.Params.env "production") }}
 {{- partialCached "partials/footer/tracker-init.html" . }}
 {{- partialCached "partials/footer/sw.html" . }}
-{{- partialCached "partials/footer/photoswipe.html" . .Page }}
+{{- partialCached "partials/footer/photoswipe.html" .Page . }}
 {{- end -}}
 <footer class="footer">
 {{- partialCached "partials/footer/footer.html" . }}
