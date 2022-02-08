@@ -10,8 +10,15 @@ with a few additional edits borrowed from Filament Group's. (https://www.filamen
 
 	const staticCacheName = cacheName + 'static';
 	const remoteCacheName = cacheName + 'remote';
+	const imagesCacheName = cacheName + 'images';
 	const pagesCacheName = cacheName + 'pages';
 
+	const trimLimit = {
+		static: 50,
+		remote: 50,
+		pages: 100,
+		images: 150
+	}
 	const staticAssets = [
 		'/',
 		"/assets/css/gallery.min.css",
@@ -32,12 +39,25 @@ with a few additional edits borrowed from Filament Group's. (https://www.filamen
 		'/offline/',
 		'/404.html'
 	];
-	const whitelist = [
-		'cdnjs.cloudflare.com',
-		'code.jquery.com', 'unpkg.com',
-		'i.creativecommons.org',
-		'i.imgur.com'
-	];
+	const whitelist = {
+		remote: [
+			'cdnjs.cloudflare.com',
+			'code.jquery.com', 'unpkg.com'
+		],
+		images: [
+			'i.creativecommons.org',
+			'i.imgur.com'
+		],
+		includes: ( domain ) => {
+			for ( let val of Object.values( whitelist ) ) {
+				if ( typeof ( val ) === 'function' ) continue;
+				if ( val.includes( domain ) ) {
+					return true;
+				}
+			}
+			return false;
+		}
+	}
 
 	function updateStaticCache() {
 		// These items must be cached for the Service Worker to complete installation
@@ -49,11 +69,23 @@ with a few additional edits borrowed from Filament Group's. (https://www.filamen
 			} );
 	}
 
+	function getCacheByDomain( domain ) {
+		let list = whitelist;
+		for ( let key of Object.keys( list ) ) {
+			if ( typeof ( list[ key ] ) === 'function' ) continue;
+			let cache = list[ key ];
+			if ( cache && cache.includes( domain ) ) {
+				return cacheName + key;
+			}
+		}
+		return cacheName + 'remote';
+	}
+
 	function getCacheForPath( path, domain ) {
 		if ( ( staticAssets.includes( path ) || path.startsWith( '/assets/' ) ) === true ) {
 			return staticCacheName;
 		} else if ( whitelist.includes( domain ) === true ) {
-			return remoteCacheName;
+			return getCacheByDomain( domain );
 		} else {
 			return pagesCacheName;
 		}
@@ -92,7 +124,9 @@ with a few additional edits borrowed from Filament Group's. (https://www.filamen
 	// Events!
 	self.addEventListener( 'message', event => {
 		if ( event.data.command === 'trimCaches' ) {
-			trimCache( pagesCacheName, 35 );
+			for ( let key of Object.keys( trimLimit ) ) {
+				trimCache( cacheName + key, trimLimit[ key ] );
+			}
 		}
 	} );
 
@@ -108,17 +142,11 @@ with a few additional edits borrowed from Filament Group's. (https://www.filamen
 		);
 	} );
 
-	self.addEventListener( 'message', event => {
-		if ( event.data.command === 'trimCaches' ) {
-			trimCache( pagesCacheName, 35 );
-		}
-	} );
-
 	self.addEventListener( 'fetch', event => {
 		const request = event.request;
 		const url = new URL( request.url );
 
-		if ( !( url.href.startsWith( '{{ $.Site.BaseURL }}' ) || whitelist.includes( url.hostname ) ) ) {
+		if ( ( url.href.startsWith( '{{ $.Site.BaseURL }}' ) || whitelist.includes( url.hostname ) ) === false ) {
 			return;
 		}
 
@@ -142,7 +170,8 @@ with a few additional edits borrowed from Filament Group's. (https://www.filamen
 				stashInCache( getCacheForPath( url.pathname, url.hostname ), request, copy );
 				return response;
 			} )
-			.catch( () => {
+			.catch( ( e ) => {
+				console.log( e )
 				// CACHE or FALLBACK
 				if ( request.headers.get( 'Accept' ).indexOf( 'text/html' ) !== -1 ) {
 					return caches.match( request )
