@@ -8,6 +8,11 @@ keywords = [
 author = "Mubashshir"
 defaultTheme = 'dark'
 
+mainSections = [
+	'post',
+	'rant'
+]
+
 disableThemeToggle = false
 ShowFullTextinRSS = true
 ShowReadingTime = true
