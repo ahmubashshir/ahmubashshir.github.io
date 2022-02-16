@@ -79,7 +79,8 @@
         </div>
         {{- $currentPage := . }}
         <ul id="menu">
-            {{- if or (eq .Kind "term") (eq .Kind "section") }}
+            {{- if ne .Kind "taxonomy" -}}
+            {{- with .OutputFormats.Get "RSS" -}}
             <li>
                 <span class="social-icons">
                     <style>
@@ -87,15 +88,12 @@
                             margin-bottom: calc(-0.1*var(--header-height));
                         }
                     </style>
-                    {{- $rss := "/index.xml" -}}
-                    {{- if ne .Layout `posts` -}}
-                        {{ with .OutputFormats.Get "RSS" }}{{ $rss = .RelPermalink }}{{ end }}
-                    {{- end -}}
-                    <a href="{{- $rss | relLangURL -}}" style="display:inline-block;margin:auto;">
-                    {{- partial "svg.html" ( "name = \"rss\"" | transform.Unmarshal) -}}
+                    <a href="{{- .RelPermalink -}}" style="display:inline-block;margin:auto;">
+                    {{- partial "svg.html" (dict "name" "rss") -}}
                     </a>
                 </span>
             </li>
+            {{- end -}}
             {{- end -}}
             {{- range .Site.Menus.main }}
             {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL) ) | absURL }}
