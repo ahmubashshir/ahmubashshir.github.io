@@ -28,6 +28,10 @@ minifyOutput = true
 home = ["HTML", "RSS", "JSON"]
 section = ['HTML', 'RSS']
 
+[outputFormats.RSS]
+mediatype = 'application/rss+xml'
+baseName = 'rss'
+
 [taxonomies]
 category = 'categories'
 tag = 'tags'
