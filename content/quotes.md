@@ -27,6 +27,12 @@ permalink: /quotes
 > Nowadays for some people, privacy is the new religion, Edward Snowden is the prophet.<br />
 > \- [@fazlerabbi37]
 
+> Mentee of a great mentor, travels the same road, a bit behind.<br />
+> \- [@fazlerabbi37]
+
+> In war the first casualty is always humanity.<br />
+> \- [@fazlerabbi37]
+
 > Bringing knife to gun fight and sonic canon to kill flies both are ineffective.<br />
 > \- [@fazlerabbi37]
 
