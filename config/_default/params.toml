@@ -13,7 +13,7 @@ mainSections = [
 	'rant'
 ]
 
-disableThemeToggle = false
+disableThemeToggle = true
 ShowFullTextinRSS = true
 ShowReadingTime = true
 ShowShareButtons = true
@@ -33,7 +33,7 @@ images = ['/assets/cover/home.png']
 hideFooter = true
 
 [label]
-text = "‍"
+text = "‍@ahmubashshir"
 icon = "/assets/icons/favicon/32x32.png"
 iconHeight = 32
 
