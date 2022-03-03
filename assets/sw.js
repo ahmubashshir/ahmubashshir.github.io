@@ -150,6 +150,11 @@ with a few additional edits borrowed from Filament Group's. (https://www.filamen
 			return;
 		}
 
+		// Ignore testing blog
+		if ( url.pathname.startsWith( '/blog/' ) === true ) {
+			return;
+		}
+
 		// Ignore non-GET requests
 		if ( request.method !== 'GET' ) {
 			return;
