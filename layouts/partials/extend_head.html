@@ -6,4 +6,11 @@
 {{- partial "partials/head/highlight.html" . .Page }}
 {{- partial "partials/head/graphviz.html" . .Page }}
 {{- end -}}
+<style>
+@media screen and (max-width: 435px) {
+  .nav {
+    justify-content:center;
+  }
+}
+</style>
 {{/* printf "%v" (.HasShortcode "highlight") */}}
