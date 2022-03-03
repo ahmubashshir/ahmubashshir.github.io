@@ -2,7 +2,7 @@
 {{- if and (ne .endPoint "") (ne .siteID "") -}}
 {{- /* Include Ackee */ -}}
 {{- $tracker := resources.GetRemote "https://unpkg.com/ackee-tracker-consent/dist/ackee-tracker-consent.min.js" -}}
-{{- $tracker := slice $tracker | resources.Concat "assets/js/tracker.ackee.js" | minify -}}
+{{- $tracker := slice $tracker | resources.Concat "assets/js/tracker.ackee.min.js" -}}
 {{- if not $.Site.Params.assets.disableFingerprinting -}}
 {{- $tracker := $tracker | fingerprint -}}
 <script crossorigin="anonymous" src="{{ $tracker.RelPermalink }}" integrity="{{ $tracker.Data.Integrity }}"></script>
