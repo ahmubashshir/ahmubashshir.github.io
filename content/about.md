@@ -153,9 +153,12 @@ url: /about
     </figure>
   </details>
   <details class="drawer">
-    <summary><b>Last.FM Statistics</b></summary>
+    <summary><b>Scrobbles</b></summary>
     <figure>
       <embed style="margin-top: 5px;" src="https://lastfm-recently-played.vercel.app/api?user=ahmubashshir&amp;count=4&amp;width=600" width="99%" />
+    </figure>
+    <figure>
+      <embed style="margin-top: 5px;" src="https://trakt-github-card.vercel.app/api/card?mode=watch&amp;username=ahmubashshir&amp;theme=dark"  width="400px" />
     </figure>
   </details>
 </div>
@@ -164,6 +167,17 @@ url: /about
 ##### Site Statistics
 {{<raw>}}
 {{% svg "/assets/svg/pagespeed-insights.svg" "Pagespeed Insight" %}}
+<script>
+  document.querySelectorAll('embed[data-reload][src]')
+    .forEach( e => {
+      console.log(setInterval(() => {
+        let u = new URL(e.src);
+        u.searchParams.set('t', Math.floor(Math.random() * 1000000000));
+        e.src = u.toString();
+        console.log(e);
+      }, Number(e.getAttribute('data-reload')) * 1000));
+    });
+</script>
 {{</raw>}}
 <!--
 vim: ts=2:et:ft=markdown:
