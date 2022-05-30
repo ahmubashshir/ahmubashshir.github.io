@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "badge-maker": "^3.3.1",
-    "simple-icons": "^6.20.0",
+    "simple-icons": "^7.0.0",
     "svgo": "^2.7.0"
   }
 }
