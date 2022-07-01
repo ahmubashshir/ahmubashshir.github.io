@@ -88,7 +88,7 @@
                             margin-bottom: calc(-0.1*var(--header-height));
                         }
                     </style>
-                    <a href="{{- .RelPermalink -}}" style="display:inline-block;margin:auto;">
+                    <a aria-label="RSS" href="{{- .RelPermalink -}}" style="display:inline-block;margin:auto;">
                     {{- partial "svg.html" (dict "name" "rss") -}}
                     </a>
                 </span>

@@ -155,10 +155,10 @@ url: /about
   <details class="drawer">
     <summary><b>Scrobbles</b></summary>
     <figure>
-      <embed style="margin-top: 5px;" src="https://lastfm-recently-played.vercel.app/api?user=ahmubashshir&amp;count=4&amp;width=600" width="99%" />
+      <embed style="margin-top: 5px;" src="https://trakt-github-card.vercel.app/api/card?mode=watch&amp;username=ahmubashshir&amp;theme=dark&amp;width=450" />
     </figure>
     <figure>
-      <embed style="margin-top: 5px;" src="https://trakt-github-card.vercel.app/api/card?mode=watch&amp;username=ahmubashshir&amp;theme=dark"  width="400px" />
+      <embed style="margin-top: 5px;" src="https://lastfm-recently-played.vercel.app/api?user=ahmubashshir&amp;count=4&amp;width=600" width="99%" />
     </figure>
   </details>
 </div>
