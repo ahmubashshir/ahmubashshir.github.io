@@ -102,7 +102,7 @@ url: /about
   </details>
   <details open class="drawer">
     <summary><b>Connect with me</b></summary>
-    <div id="contacts">
+    <div id="contacts" style="margin-top: 16px;">
     {{% badge "github" "https://github.com/ahmubashshir" %}}
     {{% badge "gitlab" "https://gitlab.com/ahmubashshir" %}}
     {{% badge "stackoverflow" "https://stackoverflow.com/users/9123082" %}}
@@ -137,29 +137,30 @@ url: /about
     </div>
   </details>
   <details open class="drawer">
-    <summary><b>Github Statistics</b></summary>
-    <figure style="margin-top: var(--radius);">
-      <embed type="image/svg+xml" src="https://github-readme-stats.vercel.app/api?theme=dark&amp;title_color=2EB398&amp;bg_color=1B2224&amp;text_color=C6CDCB&amp;username=ahmubashshir&amp;count_private=true&amp;show_icons=true" width="100%"/>
-      <embed type="image/svg+xml" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ahmubashshir&amp;theme=github_dark" width="100%"/>
-      <embed type="image/svg+xml" src="https://github-readme-streak-stats.herokuapp.com?user=ahmubashshir&amp;theme=dark&amp;hide_border=true&amp;background=1B2224&amp;stroke=718F97&amp;ring=2EB398&amp;fire=2EB398&amp;currStreakNum=C6CDCB&amp;sideNums=C6CDCB&amp;currStreakLabel=2EB398&amp;sideLabels=C6CDCB" width="100%"/>
-    </figure>
+    <summary><b>GitHub Statistics</b></summary>
+    <div style="margin-top: 16px;">
+    <figure style="margin-top: var(--radius);" aria-label="GitHub Scrobbles">
+      <embed aria-label="current stats" type="image/svg+xml" src="https://github-readme-stats.vercel.app/api?theme=dark&amp;title_color=2EB398&amp;bg_color=1B2224&amp;text_color=C6CDCB&amp;username=ahmubashshir&amp;count_private=true&amp;show_icons=true" width="95%" />
+      <embed aria-label="all-time stats" type="image/svg+xml" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ahmubashshir&amp;theme=github_dark" width="95%" />
+      <embed aria-label="streak" type="image/svg+xml" src="https://github-readme-streak-stats.herokuapp.com?user=ahmubashshir&amp;theme=dark&amp;hide_border=true&amp;background=1B2224&amp;stroke=718F97&amp;ring=2EB398&amp;fire=2EB398&amp;currStreakNum=C6CDCB&amp;sideNums=C6CDCB&amp;currStreakLabel=2EB398&amp;sideLabels=C6CDCB" width="95%" />
+    </figure></div>
   </details>
   <details class="drawer">
     <summary><b>Wakatime Statistics</b></summary>
-    <figure>
-      <embed type="image/svg+xml" src="https://wakatime.com/share/@ahmubashshir/70c52d47-c2a2-4cf9-a12d-570d993cbd00.svg"/>
-      <embed type="image/svg+xml" src="https://wakatime.com/share/@ahmubashshir/81737ad2-cea9-4af0-be8a-997e71b04068.svg"/>
-      <embed type="image/svg+xml" src="https://wakatime.com/share/@ahmubashshir/cd96bdc4-82c9-4438-b759-2c3db01e2f50.svg"/>
-    </figure>
+    <div style="margin-top: 16px;">
+    <figure aria-label="Wakatime Scrobbles">
+      <embed aria-label="wakatime: languages" type="image/svg+xml" src="https://wakatime.com/share/@ahmubashshir/70c52d47-c2a2-4cf9-a12d-570d993cbd00.svg" width="95%" />
+      <embed aria-label="wakatime: activity" type="image/svg+xml" src="https://wakatime.com/share/@ahmubashshir/81737ad2-cea9-4af0-be8a-997e71b04068.svg" width="95%" />
+      <embed aria-label="wakatime: text-editor" type="image/svg+xml" src="https://wakatime.com/share/@ahmubashshir/cd96bdc4-82c9-4438-b759-2c3db01e2f50.svg" width="95%" />
+    </figure></div>
   </details>
   <details class="drawer">
     <summary><b>Scrobbles</b></summary>
-    <figure>
-      <embed style="margin-top: 5px;" src="https://trakt-github-card.vercel.app/api/card?mode=watch&amp;username=ahmubashshir&amp;theme=dark&amp;width=450" />
-    </figure>
-    <figure>
-      <embed style="margin-top: 5px;" src="https://lastfm-recently-played.vercel.app/api?user=ahmubashshir&amp;count=4&amp;width=600" width="99%" />
-    </figure>
+    <div style="margin-top: 16px;">
+    <figure aria-label="All scrobbles">
+      <embed aria-label="Trakt.tv Scrobbles" style="margin-top: 5px;" src="https://trakt-github-card.vercel.app/api/card?mode=watch&amp;username=ahmubashshir&amp;theme=dark&amp;width=600" width="95%" />
+      <embed aria-label="Last.fm Scrobbles" style="margin-top: 5px;" src="https://lastfm-recently-played.vercel.app/api?user=ahmubashshir&amp;count=4&amp;width=600" width="95%" />
+    </figure></div>
   </details>
 </div>
 <br />
