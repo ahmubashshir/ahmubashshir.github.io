@@ -37,17 +37,6 @@ category = 'categories'
 tag = 'tags'
 series = 'series'
 
-[markup.highlight]
-anchorLineNos = false
-codeFences = true
-noClasses = false
-guessSyntax = true
-lineNos = false
-style = 'dracula'
-
-[markup.goldmark.renderer]
-unsafe = true
-
 [privacy.vimeo]
 disabled = false
 simple = true
@@ -66,13 +55,3 @@ privacyEnhanced = true
 disableInlineCSS = true
 [services.twitter]
 disableInlineCSS = true
-
-[permalinks]
-post = '/post/:year/:month/:day/:filename/'
-rant = '/post/:year/:month/:day/:filename/'
-
-[[module.imports]]
-path = "cj.rs/gohugo-asciinema"
-
-[[module.imports]]
-path = 'github.com/adityatelange/hugo-PaperMod'

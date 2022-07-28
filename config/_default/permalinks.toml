@@ -1,0 +1,2 @@
+post = '/post/:year/:month/:day/:filename/'
+rant = '/post/:year/:month/:day/:filename/'

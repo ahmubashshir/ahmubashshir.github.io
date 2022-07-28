@@ -1,0 +1,5 @@
+[[imports]]
+path = "cj.rs/gohugo-asciinema"
+
+[[imports]]
+path = 'github.com/adityatelange/hugo-PaperMod'
