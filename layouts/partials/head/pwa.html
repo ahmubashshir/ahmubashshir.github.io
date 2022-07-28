@@ -1,5 +1,5 @@
 {{- $webmanTemplate := resources.Get "manifest.json" -}}
-{{- $webmanConfig := $webmanTemplate | resources.ExecuteAsTemplate "manifest.json" . | minify -}}
+{{- $webmanConfig := $webmanTemplate | resources.ExecuteAsTemplate "blog.webmanifest" . | minify -}}
 <link rel="manifest" href="{{ $webmanConfig.RelPermalink }}">
 {{- $msappTemplate := resources.Get "browserconfig.xml" -}}
 {{- $msappConfig := $msappTemplate | resources.ExecuteAsTemplate "browserconfig.xml" . | minify -}}

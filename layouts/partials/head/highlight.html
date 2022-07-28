@@ -2,8 +2,8 @@
 {{- $hlcss := (slice (resources.Get "css/highlight.css")) | resources.Concat "assets/css/highlight.css" | minify -}}
 {{- if not .Site.Params.assets.disableFingerprinting -}}
 {{- $hlcss := $hlcss | fingerprint -}}
-<link rel="stylesheet" href="{{ $hlcss.RelPermalink }}" integrity="{{ $hlcss.Data.Integrity }}" />
+<link rel="stylesheet" href="{{ $hlcss.RelPermalink }}" integrity="{{ $hlcss.Data.Integrity }}" as="style"/>
 {{- else -}}
-<link rel="stylesheet" href="{{ $hlcss.RelPermalink }}" />
+<link rel="stylesheet" href="{{ $hlcss.RelPermalink }}" as="style"/>
 {{- end -}}
 {{- end -}}

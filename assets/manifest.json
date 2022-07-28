@@ -1,8 +1,7 @@
 {
-    "$schema": "https://json.schemastore.org/web-manifest-combined.json",
     "name": "{{ $.Site.Title }}",
     "description": "{{ $.Site.Params.description }}",
-    "short_name": "{{ $.Site.Title }}",
+    "short_name": "{{ $.Site.Params.shortName }}",
     "start_url": "/",
     "lang": "en-US",
     "scope": "/",

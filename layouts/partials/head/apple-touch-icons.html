@@ -1,7 +1,7 @@
 {{- $iconTemplate := $.Site.Data.appleIcons.normal -}}
 {{- $precTemplate := $.Site.Data.appleIcons.precomposed }}
-<link rel="apple-touch-icon-precomposed" href="{{ printf $precTemplate "base" | absURL }}">
+<link rel="apple-touch-icon-precomposed" href="{{ printf $precTemplate "base" | absURL }}" as="image">
 {{- range .Site.Data.appleIcons.sizes }}
-<link rel="apple-touch-icon" {{ "" -}}   sizes="{{- . -}}" href="{{ printf $iconTemplate . | absURL }}">
-<link rel="apple-touch-icon-precomposed" sizes="{{- . -}}" href="{{ printf $precTemplate . | absURL }}">
+<link rel="apple-touch-icon" {{ "" -}}   sizes="{{- . -}}" href="{{ printf $iconTemplate . | absURL }}" as="image">
+<link rel="apple-touch-icon-precomposed" sizes="{{- . -}}" href="{{ printf $precTemplate . | absURL }}" as="image">
 {{ end -}}

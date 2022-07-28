@@ -83,12 +83,7 @@
             {{- with .OutputFormats.Get "RSS" -}}
             <li>
                 <span class="social-icons">
-                    <style>
-                        svg {
-                            margin-bottom: calc(-0.1*var(--header-height));
-                        }
-                    </style>
-                    <a aria-label="RSS" href="{{- .RelPermalink -}}" style="display:inline-block;margin:auto;">
+                    <a aria-label="RSS" href="{{- .RelPermalink -}}" class="feed-button">
                     {{- partial "svg.html" (dict "name" "rss") -}}
                     </a>
                 </span>

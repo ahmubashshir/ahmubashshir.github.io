@@ -12,5 +12,16 @@
     justify-content:center;
   }
 }
+{{- if ne .Kind "taxonomy" -}}
+{{- with .OutputFormats.Get "RSS" -}}
+a.feed-button[aria-label="RSS"] {
+  display: inline-block;
+  margin: auto;
+}
+a.feed-button[aria-label="RSS"] svg {
+  margin-bottom: calc(-0.1*var(--header-height));
+}
+{{- end -}}
+{{- end -}}
 </style>
 {{/* printf "%v" (.HasShortcode "highlight") */}}
