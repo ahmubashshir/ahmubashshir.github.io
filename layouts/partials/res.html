@@ -1,0 +1,21 @@
+{{- $resources := slice -}}
+{{- range .resources -}}
+	{{- $resources = $resources | append (resources.Get .) -}}
+{{- end -}}
+
+{{- $resources := $resources | resources.Concat .target | minify -}}
+
+{{- if not .Site.Params.assets.disableFingerprinting -}}
+{{- $resources := $resources | fingerprint -}}
+{{- end -}}
+
+{{- if eq .type "style" -}}
+<link rel="stylesheet" href="{{ $resources.RelPermalink }}" {{ if not site.Params.assets.disableFingerprinting -}}
+integrity="{{ $resources.Data.Integrity }}" {{ end -}}
+as="style"/>
+{{- else if eq .type "script" -}}
+<script src="{{ $resources.RelPermalink }}" {{ if not site.Params.assets.disableFingerprinting -}}
+integrity="{{ $resources.Data.Integrity }}" {{ end -}}
+crossorigin="anonymous"></script>
+{{- end -}}
+

@@ -3,3 +3,15 @@ path = "cj.rs/gohugo-asciinema"
 
 [[imports]]
 path = 'github.com/adityatelange/hugo-PaperMod'
+
+[[mounts]]
+source = 'assets'
+target = 'assets'
+
+[[mounts]]
+source = 'node_modules/jquery/dist'
+target = 'assets/npm/jquery'
+
+[[mounts]]
+source = 'node_modules/photoswipe/dist'
+target = 'assets/npm/photoswipe'

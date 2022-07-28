@@ -21,11 +21,15 @@ with a few additional edits borrowed from Filament Group's. (https://www.filamen
 	}
 	const staticAssets = [
 		'/',
-		"/assets/css/gallery.min.css",
 		"/assets/js/graphviz.min.js",
 		"/assets/css/highlight.min.css",
 		"/assets/js/highlight.min.js",
+		"assets/js/jquery.min.js",
 		"/assets/js/photoswipe.min.js",
+		"/assets/css/photoswipe/default-skin.png",
+		"/assets/css/photoswipe/default-skin.svg",
+		"/assets/css/photoswipe/preloader.gif",
+		"/assets/css/photoswipe/style.min.css",
 		"/assets/js/search.min.js",
 		"/assets/css/stylesheet.min.css",
 		"/assets/js/tracker.ackee.min.js",
@@ -40,10 +44,7 @@ with a few additional edits borrowed from Filament Group's. (https://www.filamen
 		'/404.html'
 	];
 	const whitelist = {
-		remote: [
-			'cdnjs.cloudflare.com',
-			'code.jquery.com', 'unpkg.com'
-		],
+		remote: [ 'unpkg.com' ],
 		images: [
 			'i.creativecommons.org',
 			'i.imgur.com'
