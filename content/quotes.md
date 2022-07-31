@@ -30,6 +30,12 @@ permalink: /quotes
 > Mentee of a great mentor, travels the same road, a bit behind.<br />
 > \- [@fazlerabbi37]
 
+> Overengineering, just say no.
+> <!-- -->
+> (Or perhaps it might make more sense to say "overengineering the overengineering that someone else has overengineered, just say no!") ;-)
+> \- [Peter Sherman, Sep 30, 2005](https://web.archive.org/web/20180927070411/http://discuss.joelonsoftware.com/default.asp?joel.3.219431)
+
+
 > In war the first casualty is always humanity.<br />
 > \- [@fazlerabbi37]
 
