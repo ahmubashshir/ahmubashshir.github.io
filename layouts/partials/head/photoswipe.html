@@ -10,13 +10,18 @@
 -}}
 
 {{- range (slice "default-skin.png" "default-skin.svg" "preloader.gif") -}}
-  {{- $res := resources.Get (printf "npm/photoswipe/default-skin/%s" .) | resources.Copy (printf "assets/css/photoswipe/%s" .) -}}
-  <link rel="photoswipe-resource" href="{{ $res.RelPermalink }}" as="image">
+  {{- $img := printf "npm/photoswipe/default-skin/%s" . -}}
+  {{- partialCached "res.html" (dict
+      "resources" (slice $img)
+      "target" (printf "assets/css/photoswipe/%s" .)
+      "type" "image"
+    ) $img
+  -}}
 {{- end -}}
 
 {{- partialCached "res.html" (dict
-  "resources" (slice "npm/jquery/jquery.slim.js")
-  "type" "script" "target" "assets/js/jquery.js"
+    "resources" (slice "npm/jquery/jquery.slim.js")
+    "type" "script" "target" "assets/js/jquery.js"
   ) "assets/js/jquery.js"
 -}}
 

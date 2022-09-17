@@ -3,10 +3,13 @@
 	{{- $resources = $resources | append (resources.Get .) -}}
 {{- end -}}
 
-{{- $resources := $resources | resources.Concat .target | minify -}}
-
-{{- if not .Site.Params.assets.disableFingerprinting -}}
-{{- $resources := $resources | fingerprint -}}
+{{- if eq .type "image" -}}
+	{{- $resources = $resources | resources.Concat .target -}}
+{{- else -}}
+	{{- $resources = $resources | resources.Concat .target | minify -}}
+	{{- if not .Site.Params.assets.disableFingerprinting -}}
+		{{- $resources = $resources | fingerprint -}}
+	{{- end -}}
 {{- end -}}
 
 {{- if eq .type "style" -}}
@@ -17,5 +20,7 @@ as="style"/>
 <script src="{{ $resources.RelPermalink }}" {{ if not site.Params.assets.disableFingerprinting -}}
 integrity="{{ $resources.Data.Integrity }}" {{ end -}}
 crossorigin="anonymous"></script>
+{{- else if eq .type "image" -}}
+<link rel="page-resource" href="{{ $resources.RelPermalink }}" as="image">
 {{- end -}}
 
