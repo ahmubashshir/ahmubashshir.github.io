@@ -67,6 +67,14 @@
         "name": "lastfm"
     },
     {
+        "color": "2185D0",
+        "name": "codeberg"
+    },
+    {
+        "color": "67A4AC",
+        "name": "codersrank"
+    },
+    {
         "color": "30B980",
         "icon": "maildotru",
         "name": "mail"

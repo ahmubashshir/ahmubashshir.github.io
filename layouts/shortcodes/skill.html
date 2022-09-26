@@ -1,0 +1,12 @@
+{{- $alt    := .Get 0 -}}
+{{- $name   := .Get 1 -}}
+{{- $class  := "skill-logo" -}}
+{{- if .Get 2 | default false -}}
+	{{- $class = printf "%s invert" $class -}}
+{{- end -}}
+
+<img
+	{{- printf ` alt="%s" ` $alt | safeHTMLAttr -}}
+	{{- printf ` class="%s" ` $class | safeHTMLAttr -}}
+	{{- printf ` src="https://profilinator.rishav.dev/skills-assets/%s" ` $name | safeHTMLAttr -}}
+/>

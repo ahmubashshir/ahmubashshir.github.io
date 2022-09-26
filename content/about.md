@@ -82,22 +82,36 @@ url: /about
       filter: brightness(1);
       transform: scale(1.035);
     }
+    img.skill-logo {
+      margin: 10px;
+      width: 48px;
+    }
+    img.skill-logo.invert {
+      filter: invert(50%);
+    }
+    div.skill-logo {
+      display: inline-grid !important;
+      grid-template-columns: auto auto auto auto auto;
+    }
   </style>
   <details open class="drawer">
     <summary><b>My Skill Set</b></summary>
-    <div style="display: inline-grid !important;grid-template-columns: auto auto auto auto;">
-      <img style="margin: 10px; width: 48px;" src="https://profilinator.rishav.dev/skills-assets/c-original.svg" alt="C" height="50" />
-      <img style="margin: 10px; width: 48px;" src="https://profilinator.rishav.dev/skills-assets/cplusplus-original.svg" alt="C++" height="50" />
-      <img style="margin: 10px; width: 48px;" src="https://profilinator.rishav.dev/skills-assets/css3-original-wordmark.svg" alt="CSS3" height="50" />
-      <img style="margin: 10px; width: 48px;" src="https://profilinator.rishav.dev/skills-assets/html5-original-wordmark.svg" alt="HTML5" height="50" />
-      <img style="margin: 10px; width: 48px;" src="https://profilinator.rishav.dev/skills-assets/javascript-original.svg" alt="JavaScript" height="50" />
-      <img style="margin: 10px; width: 48px;" src="https://profilinator.rishav.dev/skills-assets/sass-original.svg" alt="Sass" height="50" />
-      <img style="margin: 10px; width: 48px;" src="https://profilinator.rishav.dev/skills-assets/python-original.svg" alt="Python" height="50" />
-      <img style="margin: 10px; width: 48px;" src="https://profilinator.rishav.dev/skills-assets/nginx-original.svg" alt="Nginx" height="50" />
-      <img style="margin: 10px; width: 48px;" src="https://profilinator.rishav.dev/skills-assets/linux-original.svg" alt="Linux" height="50" />
-      <img style="margin: 10px; width: 48px;" src="https://profilinator.rishav.dev/skills-assets/git-scm-icon.svg" alt="Git" height="50" />
-      <img style="margin: 10px; width: 48px;filter: invert(50%);" src="https://profilinator.rishav.dev/skills-assets/gnu_bash-icon.svg" alt="Bash" height="50" />
-      <img style="margin: 10px; width: 48px;" src="https://profilinator.rishav.dev/skills-assets/arduino.png" alt="Arduino" height="50" />
+    <div class="skill-logo">
+      {{% skill "C"           "c-original.svg"              %}}
+      {{% skill "C++"         "cplusplus-original.svg"      %}}
+      {{% skill "Ruby"        "ruby-original-wordmark.svg"  %}}
+      {{% skill "Python"      "python-original.svg"         %}}
+      {{% skill "Haskell"     "haskell.png"                 %}}
+      {{% skill "CSS3"        "css3-original-wordmark.svg"  %}}
+      {{% skill "HTML5"       "html5-original-wordmark.svg" %}}
+      {{% skill "JavaScript"  "javascript-original.svg"     %}}
+      {{% skill "TypeScript"  "typescript-original.svg"     %}}
+      {{% skill "Sass"        "sass-original.svg"           %}}
+      {{% skill "Linux"       "linux-original.svg"          %}}
+      {{% skill "Bash"        "gnu_bash-icon.svg" true      %}}
+      {{% skill "Git"         "git-scm-icon.svg"            %}}
+      {{% skill "Nginx"       "nginx-original.svg"          %}}
+      {{% skill "Docker"      "docker-original-wordmark.svg"%}}
     </div>
   </details>
   <details open class="drawer">
@@ -105,13 +119,15 @@ url: /about
     <div id="contacts" style="margin-top: 16px;">
     {{% badge "github" "https://github.com/ahmubashshir" %}}
     {{% badge "gitlab" "https://gitlab.com/ahmubashshir" %}}
+    {{% badge "codeberg" "https://codeberg.org/ahmubashshir" %}}
     {{% badge "stackoverflow" "https://stackoverflow.com/users/9123082" %}}
-    {{% badge "pgp" "https://keys.openpgp.org/vks/v1/by-fingerprint/916961EE198832DD70B628B356DB0538F60D951C" %}}
+    {{% badge "codersrank" "https://profile.codersrank.io/user/ahmubashshir" %}}
     <br/>
     {{% badge "twitter" "https://twitter.com/ahmubashshir" %}}
     {{% badge "reddit" "https://reddit.com/u/ahmubashshir" %}}
     {{% badge "goodreads" "https://reddit.com/u/ahmubashshir" %}}
     <br/>
+    {{% badge "pgp" "https://keys.openpgp.org/vks/v1/by-fingerprint/916961EE198832DD70B628B356DB0538F60D951C" %}}
     {{% badge "mail" "mailto:ahmubashshir@gmail.com" %}}
     {{% badge "telegram" "https://t.me/ahmubashshir" %}}
     {{% badge "discord" "https://discord.com/users/ahmubashshir#3527" %}}
@@ -123,17 +139,6 @@ url: /about
     {{% badge "anilist" "https://anilist.co/user/ahmubashshir" %}}
     {{% badge "kitsu" "https://kitsu.io/users/ahmubashshir" %}}
     {{% badge "myanimelist" "https://myanimelist.net/profile/ahmubashshir" %}}
-    </div>
-  </details>
-  <details class="drawer">
-    <summary><b>Crypto Wallets</b></summary>
-    <div>
-      <a rel="noreferrer" target="_blank" href="https://en.cryptobadges.io/donate/0x3d2821834B7B032185BDEcC21621D9Bd65611fCB">
-        <img alt="Donate with Ethereum" src="https://en.cryptobadges.io/badge/big/0x3d2821834B7B032185BDEcC21621D9Bd65611fCB" />
-      </a>
-      <a rel="noreferrer" target="_blank" href="https://en.cryptobadges.io/donate/48UDoxGhkXy6nMF5tKwyQsCieRWjiZuchUR4nCDgpzHX8vkfiGCNioBdk6DetcyCJbh1j32bpz3ZnDjDzqWUHmtdPx3iTRU">
-        <img alt="Donate with Monero" src="https://en.cryptobadges.io/badge/big/48UDoxGhkXy6nMF5tKwyQsCieRWjiZuchUR4nCDgpzHX8vkfiGCNioBdk6DetcyCJbh1j32bpz3ZnDjDzqWUHmtdPx3iTRU" />
-      </a>
     </div>
   </details>
   <details open class="drawer">
@@ -153,6 +158,17 @@ url: /about
       <embed aria-label="wakatime: activity" type="image/svg+xml" src="https://wakatime.com/share/@ahmubashshir/81737ad2-cea9-4af0-be8a-997e71b04068.svg" width="95%" />
       <embed aria-label="wakatime: text-editor" type="image/svg+xml" src="https://wakatime.com/share/@ahmubashshir/cd96bdc4-82c9-4438-b759-2c3db01e2f50.svg" width="95%" />
     </figure></div>
+  </details>
+  <details class="drawer">
+    <summary><b>Crypto Wallets</b></summary>
+    <div>
+      <a rel="noreferrer" target="_blank" href="https://en.cryptobadges.io/donate/0x3d2821834B7B032185BDEcC21621D9Bd65611fCB">
+        <img alt="Donate with Ethereum" src="https://en.cryptobadges.io/badge/big/0x3d2821834B7B032185BDEcC21621D9Bd65611fCB" />
+      </a>
+      <a rel="noreferrer" target="_blank" href="https://en.cryptobadges.io/donate/48UDoxGhkXy6nMF5tKwyQsCieRWjiZuchUR4nCDgpzHX8vkfiGCNioBdk6DetcyCJbh1j32bpz3ZnDjDzqWUHmtdPx3iTRU">
+        <img alt="Donate with Monero" src="https://en.cryptobadges.io/badge/big/48UDoxGhkXy6nMF5tKwyQsCieRWjiZuchUR4nCDgpzHX8vkfiGCNioBdk6DetcyCJbh1j32bpz3ZnDjDzqWUHmtdPx3iTRU" />
+      </a>
+    </div>
   </details>
   <details class="drawer">
     <summary><b>Scrobbles</b></summary>
