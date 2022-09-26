@@ -65,7 +65,7 @@ url: /about
       border-top: 1px solid var(--secondary);
     }
     #contacts {
-      margin-top: 10px;
+      margin-top: 16px;
     }
     #contacts a {
       text-decoration: none;
@@ -116,26 +116,31 @@ url: /about
   </details>
   <details open class="drawer">
     <summary><b>Connect with me</b></summary>
-    <div id="contacts" style="margin-top: 16px;">
+    <div id="contacts">
+    <hr/>
     {{% badge "github" "https://github.com/ahmubashshir" %}}
     {{% badge "gitlab" "https://gitlab.com/ahmubashshir" %}}
     {{% badge "codeberg" "https://codeberg.org/ahmubashshir" %}}
+    <br/>
     {{% badge "stackoverflow" "https://stackoverflow.com/users/9123082" %}}
     {{% badge "codersrank" "https://profile.codersrank.io/user/ahmubashshir" %}}
-    <br/>
+    <hr/>
     {{% badge "twitter" "https://twitter.com/ahmubashshir" %}}
     {{% badge "reddit" "https://reddit.com/u/ahmubashshir" %}}
     {{% badge "goodreads" "https://reddit.com/u/ahmubashshir" %}}
+    <hr/>
+    {{% badge "mail" "mailto:ahmubashshir@gmail.com" "self" %}}
+    {{% badge "telegram" "tg://resolve?domain=ahmubashshir" "self" %}}
+    {{% badge "discord" "https://discord.com/users/ahmubashshir#3527" %}}
     <br/>
     {{% badge "pgp" "https://keys.openpgp.org/vks/v1/by-fingerprint/916961EE198832DD70B628B356DB0538F60D951C" %}}
-    {{% badge "mail" "mailto:ahmubashshir@gmail.com" %}}
-    {{% badge "telegram" "https://t.me/ahmubashshir" %}}
-    {{% badge "discord" "https://discord.com/users/ahmubashshir#3527" %}}
     {{% badge "matrix" "https://matrix.to/#/@ahm:feneas.org" %}}
+    {{% badge "xmpp" "xmpp:ahm@sqli.io" "self" %}}
     {{% badge "irc" "/irc.txt" "self" %}}
-    <br/>
+    <hr/>
     {{% badge "trakt" "https://trakt.tv/users/ahmubashshir" %}}
     {{% badge "lastfm" "https://last.fm/user/ahmubashshir" %}}
+    <br/>
     {{% badge "anilist" "https://anilist.co/user/ahmubashshir" %}}
     {{% badge "kitsu" "https://kitsu.io/users/ahmubashshir" %}}
     {{% badge "myanimelist" "https://myanimelist.net/profile/ahmubashshir" %}}

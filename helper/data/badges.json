@@ -75,6 +75,10 @@
         "name": "codersrank"
     },
     {
+        "color": "002B5C",
+        "name":  "xmpp"
+    },
+    {
         "color": "30B980",
         "icon": "maildotru",
         "name": "mail"
