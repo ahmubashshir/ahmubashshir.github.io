@@ -3,7 +3,13 @@
 {{- $target:= .Get 2 | default "blank" -}}
 {{- $size := index $.Site.Data.badge $badge  -}}
 {{- $style := "display: inline-block;margin: 0 1px 0px 1px !important;" -}}
+{{- $url = $url | relURL| replaceRE "^/([[:alpha:]][[:alnum:].+-]*):(/)?" "$1:$2$2" -}}
 <!-- {{ $badge }} -->
-{{- if ne $url "" -}}<a style="overflow: hidden;" rel="noreferrer" {{ printf "href=%q" ($url | relURL) | safeHTMLAttr }} target="_{{- $target -}}">{{- end }}
-<img height="{{- $size.height -}}" width="{{- $size.width -}}" alt="{{ $badge }}" src="/assets/badges/{{ $badge }}.svg" {{- printf "style=%q" $style | safeHTMLAttr -}} />
+{{- if ne $url "" -}}
+	<a style="overflow: hidden;" rel="noreferrer"
+		{{- $url | printf ` href=%q ` | safeHTMLAttr -}}
+		target="_{{- $target -}}">
+{{- end -}}
+		<img height="{{- $size.height -}}" width="{{- $size.width -}}" alt="{{ $badge }}" src="/assets/badges/{{ $badge }}.svg"
+			{{- printf ` style=%q ` $style | safeHTMLAttr -}} />
 {{- if ne $url "" -}}</a>{{- end -}}
