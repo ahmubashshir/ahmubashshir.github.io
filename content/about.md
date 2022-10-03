@@ -134,7 +134,7 @@ url: /about
     {{% badge "discord" "https://discord.com/users/ahmubashshir#3527" %}}
     <br/>
     {{% badge "pgp" "https://keys.openpgp.org/vks/v1/by-fingerprint/916961EE198832DD70B628B356DB0538F60D951C" %}}
-    {{% badge "matrix" "https://matrix.to/#/@ahm:feneas.org" %}}
+    {{% badge "matrix" "https://matrix.to/#/@ahm:inetd.xyz" %}}
     {{% badge "xmpp" "xmpp:ahm@sqli.io" "self" %}}
     {{% badge "irc" "/irc.txt" "self" %}}
     <hr/>
