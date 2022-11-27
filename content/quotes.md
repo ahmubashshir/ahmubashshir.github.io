@@ -66,6 +66,10 @@ permalink: /quotes
 > and 90% "why the fuck is it not working damnit" then epic Google search journey.<br />
 > \- [@imahbub]
 
+> archlinux is like skyrim,
+> it always tries to kill you but if you can stay alive here you can survive anywhere.<br />
+> \- [@bdeshi]
+
 [@bdeshi]: https://github.com/bdeshi
 [@fazlerabbi37]: https://github.com/fazlerabbi37
 [@torvalds]: https://github.com/torvalds
