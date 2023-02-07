@@ -17,7 +17,7 @@
 integrity="{{ $resources.Data.Integrity }}" {{ end -}}
 as="style"/>
 {{- else if eq .type "script" -}}
-<script src="{{ $resources.RelPermalink }}" {{ if not site.Params.assets.disableFingerprinting -}}
+<script defer src="{{ $resources.RelPermalink }}" {{ if not site.Params.assets.disableFingerprinting -}}
 integrity="{{ $resources.Data.Integrity }}" {{ end -}}
 crossorigin="anonymous"></script>
 {{- else if eq .type "image" -}}

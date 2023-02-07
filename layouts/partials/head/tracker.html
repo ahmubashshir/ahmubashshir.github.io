@@ -5,9 +5,9 @@
 {{- $tracker := slice $tracker | resources.Concat "assets/js/tracker.ackee.min.js" -}}
 {{- if not $.Site.Params.assets.disableFingerprinting -}}
 {{- $tracker := $tracker | fingerprint -}}
-<script crossorigin="anonymous" src="{{ $tracker.RelPermalink }}" integrity="{{ $tracker.Data.Integrity }}"></script>
+<script defer crossorigin="anonymous" src="{{ $tracker.RelPermalink }}" integrity="{{ $tracker.Data.Integrity }}"></script>
 {{- else }}
-<script crossorigin="anonymous" src="{{ $tracker.RelPermalink }}"></script>
+<script defer crossorigin="anonymous" src="{{ $tracker.RelPermalink }}"></script>
 {{- end }}
 <style>
   #consent-axkeg5u7 {

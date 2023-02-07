@@ -1,6 +1,6 @@
 {{- if .HasShortcode "graphviz" -}}
-<script type="text/javascript" src="https://unpkg.com/viz.js"></script>
-<script type="text/javascript" src="https://unpkg.com/viz.js/full.render.js"></script>
+<script defer type="text/javascript" src="https://unpkg.com/viz.js"></script>
+<script defer type="text/javascript" src="https://unpkg.com/viz.js/full.render.js"></script>
 {{- $Viz := resources.Get "js/graphviz.js" | slice | resources.Concat "assets/js/graphviz.js" | minify -}}
 <script defer crossorigin="anonymous"
 {{- if not $.Site.Params.assets.disableFingerprinting -}}
@@ -10,6 +10,4 @@ src="{{ $Viz.RelPermalink }}" integrity="{{ $Viz.Data.Integrity }}"
 src="{{ $Viz.RelPermalink }}"
 {{- end }}
 ></script>
-
-
 {{- end -}}
