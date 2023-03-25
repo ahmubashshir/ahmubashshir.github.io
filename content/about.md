@@ -128,6 +128,7 @@ url: /about
     {{% badge "twitter" "https://twitter.com/ahmubashshir" %}}
     {{% badge "reddit" "https://reddit.com/u/ahmubashshir" %}}
     {{% badge "goodreads" "https://reddit.com/u/ahmubashshir" %}}
+    {{% badge "mastodon" "https://toot.io/@ahm" %}}
     <hr/>
     {{% badge "mail" "mailto:ahmubashshir@gmail.com" "self" %}}
     {{% badge "telegram" "tg://resolve?domain=ahmubashshir" "self" %}}

@@ -82,6 +82,9 @@
         "color": "30B980",
         "icon": "maildotru",
         "name": "mail"
+    },
+    {
+        "color": "6364FF",
+        "name": "mastodon"
     }
 ]
-

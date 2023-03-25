@@ -96,6 +96,9 @@ url = 'https://reddit.com/u/ahmubashshir'
 name = 'Twitter'
 url = 'https://twitter.com/ahmubashshir'
 [[socialIcons]]
+name = 'Mastodon'
+url = 'https://toot.io/@ahm'
+[[socialIcons]]
 name = 'Goodreads'
 url = 'https://www.goodreads.com/ahmubashshir'
 [[socialIcons]]
