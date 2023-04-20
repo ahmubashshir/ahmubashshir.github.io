@@ -8,7 +8,6 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    environment: github-pages
     permissions:
       id-token: write
       contents: read
@@ -47,21 +46,13 @@ jobs:
     - name: build(site)
       run: . helper/build.sh
       shell: sh
-    - name: archive(site)
-      run: exec tar --dereference --hard-dereference --directory public -cvf artifact.tar .
-      shell: sh
 
     - name: push(site)
-      uses: actions/upload-artifact@main
+      uses: actions/upload-pages-artifact@v1
       with:
         name: github-pages
-        path: ./artifact.tar
-        if-no-files-found: warn
+        path: ./public
+        retention-days: 1
 
     - name: deploy(site)
-      uses: actions/deploy-pages@master
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        timeout: 600000
-        error_count: 10
-        reporting_interval: 1000
+      uses: actions/deploy-pages@v2
