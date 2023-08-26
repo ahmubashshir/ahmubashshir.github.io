@@ -1,9 +1,9 @@
+{{- partialCached "partials/head/highlight.html" . }}
 {{- partialCached "partials/head/apple-touch-icons.html" . }}
 {{- if hugo.IsProduction | or (eq .Site.Params.env "production") }}
 {{- partialCached "partials/head/pwa.html" . }}
 {{- partialCached "partials/head/tracker.html" . }}
 {{- partial "partials/head/photoswipe.html" . .Page }}
-{{- partial "partials/head/highlight.html" . .Page }}
 {{- partial "partials/head/graphviz.html" . .Page }}
 {{- end -}}
 <style>

@@ -7,7 +7,7 @@
 	{{- $resources = $resources | resources.Concat .target -}}
 {{- else -}}
 	{{- $resources = $resources | resources.Concat .target | minify -}}
-	{{- if not .Site.Params.assets.disableFingerprinting -}}
+	{{- if not site.Params.assets.disableFingerprinting -}}
 		{{- $resources = $resources | fingerprint -}}
 	{{- end -}}
 {{- end -}}

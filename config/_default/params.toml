@@ -32,6 +32,7 @@ showtoc = true
 tocopen = false
 images = ['/assets/cover/home.png']
 hideFooter = true
+env = "production"
 
 [label]
 text = "‍@ahmubashshir"
@@ -138,6 +139,7 @@ apple_touch_icon = '/assets/icons/apple/base.png'
 safari_pinned_tab = "/assets/icons/apple/tab.svg"
 msTileColor = "#1d1e20"
 vtag = '8jl4JnrGke'
+disableHLJS = true
 
 [pwa]
 color = "#dadadb"
