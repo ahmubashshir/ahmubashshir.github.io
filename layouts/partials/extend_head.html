@@ -3,6 +3,7 @@
 {{- if hugo.IsProduction | or (eq .Site.Params.env "production") }}
 {{- partialCached "partials/head/pwa.html" . }}
 {{- partialCached "partials/head/tracker.html" . }}
+{{- partialCached "partials/head/shortcode.html" . }}
 {{- partial "partials/head/photoswipe.html" . .Page }}
 {{- partial "partials/head/graphviz.html" . .Page }}
 {{- end -}}
@@ -12,6 +13,31 @@
     justify-content:center;
   }
 }
+.spoiler::before {
+	border-radius: var(--radius);
+	height: calc(100% + 10px);
+	width: calc(100% + 5px);
+	margin-left: -5px;
+	background-image: linear-gradient(
+		to right top,
+		transparent 33%,
+		var(--entry) 33%,
+		var(--entry) 66%,
+		transparent 66%
+	);
+	transition: opacity .3s ease;
+	background-size: 3px 3px;
+}
+
+.spoiler:hover::before {
+	transition: opacity .7s ease;
+	transform: unset;
+}
+
+.spoiler {
+	cursor: none;
+}
+
 {{- if ne .Kind "taxonomy" -}}
 {{- with .OutputFormats.Get "RSS" -}}
 a.feed-button[aria-label="RSS"] {
@@ -24,4 +50,3 @@ a.feed-button[aria-label="RSS"] svg {
 {{- end -}}
 {{- end -}}
 </style>
-{{/* printf "%v" (.HasShortcode "highlight") */}}
