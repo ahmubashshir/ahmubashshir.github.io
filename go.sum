@@ -1,8 +1,8 @@
-cj.rs/gohugo-asciinema v0.0.0-20211219112355-2e27d65a0404 h1:xxH3QvjFw1chnHhmMQiGqbnmN+fyNuP6+m4BtoBeV9I=
-cj.rs/gohugo-asciinema v0.0.0-20211219112355-2e27d65a0404/go.mod h1:LOi9TNDxS4FX8P9N0PzCrqwvnksxP++9dsYbyNL0Fus=
 cj.rs/gohugo-asciinema v0.0.0-20220502112147-ce005446e97d h1:8LfjWEF4SXU+eA6AjfNonCH6jwAmsY9/0We32084KhQ=
 cj.rs/gohugo-asciinema v0.0.0-20220502112147-ce005446e97d/go.mod h1:LOi9TNDxS4FX8P9N0PzCrqwvnksxP++9dsYbyNL0Fus=
-github.com/adityatelange/hugo-PaperMod v0.0.0-20220109054912-72abf7440a07 h1:Cv2K3oWO1gG9lcyvllijhJ5CaBEMzGDA/DkeDx42A0A=
-github.com/adityatelange/hugo-PaperMod v0.0.0-20220109054912-72abf7440a07/go.mod h1:HCHxNMKYdGafUYjVV3ICiAqznZK2yH0iI53jqcDFDdQ=
+github.com/FortAwesome/Font-Awesome v0.0.0-20230802202706-f0c25837a3fe h1:cwDWPzhCWsiI5IyPOvt+6L7enrMUzZ8zaRVjK6cUYg4=
+github.com/FortAwesome/Font-Awesome v0.0.0-20230802202706-f0c25837a3fe/go.mod h1:IUgezN/MFpCDIlFezw3L8j83oeiIuYoj28Miwr/KUYo=
 github.com/adityatelange/hugo-PaperMod v0.0.0-20220903105945-3a0a4811cbc0 h1:jOgM4X1Y/Uxg7ncBtucLpnneEg+6yUK+jAKS3HUQYZk=
 github.com/adityatelange/hugo-PaperMod v0.0.0-20220903105945-3a0a4811cbc0/go.mod h1:HCHxNMKYdGafUYjVV3ICiAqznZK2yH0iI53jqcDFDdQ=
+github.com/tohn/hugo-shortcodes v0.1.4 h1:MV90Htb/fA6Tfztl0UBXJ8INC0ImGmW+gm660u5QtSQ=
+github.com/tohn/hugo-shortcodes v0.1.4/go.mod h1:7l046u3pSLjOVpZwHJ6hOyrXkBZaeDN4DfYXIIioL3M=

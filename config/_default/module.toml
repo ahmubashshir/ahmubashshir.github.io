@@ -1,12 +1,22 @@
+[[mounts]] # set default
+source = 'assets'
+target = 'assets'
+
 [[imports]]
 path = "cj.rs/gohugo-asciinema"
 
 [[imports]]
 path = 'github.com/adityatelange/hugo-PaperMod'
 
-[[mounts]]
-source = 'assets'
-target = 'assets'
+[[imports]]
+path = "github.com/FortAwesome/Font-Awesome"
+mounts = [
+	{ source = 'scss',		target = 'assets/css/fontawesome'	},
+	{ source = 'webfonts',	target = 'static/assets/fonts/fontawesome', includeFiles = ["/**.woff2", "/**.ttf"]	}
+]
+
+[[imports]]
+path = 'github.com/tohn/hugo-shortcodes'
 
 [[mounts]]
 source = 'node_modules/jquery/dist'

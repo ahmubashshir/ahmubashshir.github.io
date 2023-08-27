@@ -1,0 +1,9 @@
+{{ $tohn_hugo_shortcodes := resources.Get "css/tohn_hugo_shortcodes.scss" | toCSS }}
+{{ $css := slice $tohn_hugo_shortcodes | resources.Concat "assets/css/shortcodes.css" | minify }}
+
+{{- if not site.Params.assets.disableFingerprinting -}}
+{{- $css = $css | fingerprint -}}
+<link rel="stylesheet" href="{{ $css.Permalink }}" integrity="{{ $css.Data.Integrity }}">
+{{- else }}
+<link rel="stylesheet" href="{{ $css.Permalink }}">
+{{- end }}
