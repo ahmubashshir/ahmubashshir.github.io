@@ -1,0 +1,25 @@
+{{- if .Params.series -}}
+{{- range .GetTerms "series" -}}
+<div class="toc" style="margin-bottom: 2px;" >
+	<details>
+		<summary>
+			This is a post in the <strong><a href="{{.RelPermalink}}">{{- .Title -}}</a></strong> series.
+		</summary>
+		<div class="inner">
+			<ul>
+				{{- range .Pages.ByDate -}}
+					<li>
+						{{- if eq .RelPermalink $.Page.RelPermalink -}}
+							<strong>{{- .Title -}}</strong>
+						{{- else -}}
+							<a href="{{.RelPermalink}}">{{- .Title -}}</a>
+						{{- end -}}
+						<small style="color: var(--secondary);">&nbsp;&nbsp;{{- .Date | time.Format (default "January 2, 2006" site.Params.DateFormat) -}}</small>
+					</li>
+				{{- end -}}
+			</ul>
+		</div>
+	</details>
+</div>
+{{- end -}}
+{{- end -}}
