@@ -10,17 +10,30 @@
    <div class="post-content">
       {{- readFile "/LICENSE.md" | markdownify -}}
 
-      {{- "### License Notice" | markdownify }}
-      <pre style="overflow: scroll">
- Copyright (C) {{
-         printf "%s %s %s"
-            (now.Format "2006")
-            .Site.Params.author
-            "<ahmubashshir@gmail.com>"
-      }}
-
-   {{ readFile "/LICENSE.notice" | default "" -}}
-      </pre>
+      {{- with (readFile "/LICENSE.notice") -}}
+          <pre style="overflow: scroll;">
+              <code>
+                 {{-
+                    site.Params.author
+                    | printf "Copyright (c) %s %s\n" (now.Format "2006")
+                 -}}
+                 {{- range strings.Split . "\n" -}}
+                     {{- if eq . "" -}} {{- continue -}} {{- end -}}
+                     {{- printf "\n" -}}
+                     {{- if ne . "." -}}
+                        {{- printf "   %s" . -}}
+                     {{- end -}}
+                 {{- end -}}
+              </code>
+          </pre>
+     {{- else -}}
+         {{-
+            site.Params.author
+            | printf "### Copyright &copy; %s %s\n" (now.Format "2006")
+            | transform.HTMLUnescape
+            | markdownify
+         -}}
+     {{- end }}
    </div>
 </article>
 {{- end }}{{/* end main */}}
