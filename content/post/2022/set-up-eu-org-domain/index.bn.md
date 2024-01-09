@@ -66,15 +66,17 @@ $TTL	3h;
 {{</highlight>}}
 1. জোন একটিভেট করা
 {{<highlight named>}}
+// /etc/bind/named.conf.local
+
 zone "util.net.eu.org" {
 	type master;
-	file "/var/lib/bind/util.net.eu.org";
+	file "/var/lib/bind/domain.eu.org";
 	allow-update {localhost;};
 };
 
-zone "163.86.45.in-addr.arpa" {
+zone "3.2.1.in-addr.arpa" {
 	type master;
-	file "/etc/bind/zones/163.86.45.in-addr.arpa";
+	file "/etc/bind/zones/3.2.1.in-addr.arpa";
 };
 {{</highlight>}}
 
