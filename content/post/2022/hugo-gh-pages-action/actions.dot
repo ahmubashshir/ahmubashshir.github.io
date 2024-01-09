@@ -1,4 +1,5 @@
 digraph "Deploying to gh-pages with hugo" {
+	background = "transparent";
 	subgraph "Traditional" {
 		lebel = "Traditional";
 		subgraph "action:build" {
@@ -37,6 +38,6 @@ digraph "Deploying to gh-pages with hugo" {
 	}
 	start -> "on:push(main)";
 	"step:cleanup(deploy)" -> end;
-	start [shape=Diamond];
-	end [shape=Diamond];
+	start [shape=diamond];
+	end [shape=diamond];
 }
