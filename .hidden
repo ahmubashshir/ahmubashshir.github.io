@@ -1,0 +1,16 @@
+archetypes
+assets
+content
+data
+helper
+i18n
+layouts
+node_modules
+resources
+static
+- files -
+go.sum
+LICENSE
+LICENSE.md
+LICENSE.notice
+package-lock.json
