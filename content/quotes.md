@@ -70,6 +70,10 @@ permalink: /quotes
 > it always tries to kill you but if you can stay alive here you can survive anywhere.<br />
 > \- [@bdeshi]
 
+> ChatGPT doesn't give you information. It gives you information-shaped sentences. <br />
+> \- [Neil Gaiman]
+
+<!-- mentions -->
 [@bdeshi]: https://github.com/bdeshi
 [@fazlerabbi37]: https://github.com/fazlerabbi37
 [@torvalds]: https://github.com/torvalds
@@ -82,3 +86,4 @@ permalink: /quotes
 [Marcus Aurelius]: https://en.wikipedia.org/wiki/Marcus_Aurelius
 [Tom Robbins]: https://en.wikipedia.org/wiki/Tom_Robbins
 [Koro-sensei]: https://ansatsukyoshitsu.fandom.com/wiki/Korosensei
+[Neil Gaiman]: https://en.wikipedia.org/wiki/Neil_Gaiman
