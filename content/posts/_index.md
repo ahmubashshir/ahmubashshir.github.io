@@ -1,7 +1,7 @@
 ---
 title: Posts
 layout: posts
-Kind: posts
+Kind: section
 outputs:
 - HTML
 ---
