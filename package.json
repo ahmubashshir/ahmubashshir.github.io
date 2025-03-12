@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "ackee-tracker-consent": "^1.2.2",
-    "badge-maker": "^4.0.0",
+    "badge-maker": "^4.1.0",
     "jquery": "^3.7.1",
     "photoswipe": "^4.1.3",
     "simple-icons": "^13.10.0",
