@@ -25,3 +25,7 @@ target = 'assets/npm/jquery'
 [[mounts]]
 source = 'node_modules/photoswipe/dist'
 target = 'assets/npm/photoswipe'
+
+[[mounts]]
+source = 'node_modules/ackee-tracker-consent/dist'
+target = 'assets/npm/ackee-consent'

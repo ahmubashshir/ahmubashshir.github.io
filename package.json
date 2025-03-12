@@ -9,6 +9,7 @@
     "start": "npm run build && npm run hugo"
   },
   "dependencies": {
+    "ackee-tracker-consent": "^1.2.2",
     "badge-maker": "^4.0.0",
     "jquery": "^3.7.1",
     "photoswipe": "^4.1.3",
