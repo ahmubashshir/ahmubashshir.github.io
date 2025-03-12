@@ -125,7 +125,7 @@ url: /about
     {{% badge "stackoverflow" "https://stackoverflow.com/users/9123082" %}}
     {{% badge "codersrank" "https://profile.codersrank.io/user/ahmubashshir" %}}
     <hr/>
-    {{% badge "twitter" "https://twitter.com/ahmubashshir" %}}
+    {{% badge "x" "https://x.com/ahmubashshir" %}}
     {{% badge "reddit" "https://reddit.com/u/ahmubashshir" %}}
     {{% badge "goodreads" "https://reddit.com/u/ahmubashshir" %}}
     {{% badge "mastodon" "https://toot.io/@ahm" %}}

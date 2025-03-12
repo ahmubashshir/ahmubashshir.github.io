@@ -1,5 +1,4 @@
 title = "@ahmubashshir's blog"
-paginate = 6
 
 baseURL = 'https://ahmubashshir.github.io'
 theme = 'github.com/adityatelange/hugo-PaperMod'
@@ -11,6 +10,9 @@ buildExpired = false
 enableEmoji = true
 enableGitInfo = true
 defaultContentLanguage = 'bn'
+
+[pagination]
+pagerSize = 6
 
 [languages.bn]
 weight = 1
@@ -40,7 +42,7 @@ series = 'series'
 [privacy.vimeo]
 disabled = false
 simple = true
-[privacy.twitter]
+[privacy.x]
 disabled = false
 enableDNT = true
 simple = true
@@ -53,5 +55,5 @@ privacyEnhanced = true
 
 [services.instagram]
 disableInlineCSS = true
-[services.twitter]
+[services.x]
 disableInlineCSS = true

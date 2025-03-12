@@ -94,8 +94,8 @@ url = 'https://stackoverflow.com/users/9123082'
 name = 'Reddit'
 url = 'https://reddit.com/u/ahmubashshir'
 [[socialIcons]]
-name = 'Twitter'
-url = 'https://twitter.com/ahmubashshir'
+name = 'X'
+url = 'https://x.com/ahmubashshir'
 [[socialIcons]]
 name = 'Mastodon'
 url = 'https://toot.io/@ahm'
