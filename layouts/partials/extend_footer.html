@@ -1,9 +1,9 @@
 {{- if hugo.IsProduction | or (eq .Site.Params.env "production") }}
-{{- partialCached "partials/footer/tracker-init.html" . }}
-{{- partialCached "partials/footer/sw.html" . }}
-{{- partialCached "partials/footer/photoswipe.html" . .Page }}
+{{- partialCached "footer/tracker-init.html" . }}
+{{- partialCached "footer/sw.html" . }}
+{{- partialCached "footer/photoswipe.html" . .Page }}
 {{- end -}}
 <footer class="footer">
-{{- partialCached "partials/footer/footer.html" . }}
-{{- partialCached "partials/footer/ccbysa.html" . .Page }}
+{{- partialCached "footer/footer.html" . }}
+{{- partialCached "footer/ccbysa.html" . .Page }}
 </footer>

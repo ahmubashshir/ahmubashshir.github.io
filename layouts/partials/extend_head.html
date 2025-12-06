@@ -1,11 +1,11 @@
-{{- partialCached "partials/head/highlight.html" . }}
-{{- partialCached "partials/head/apple-touch-icons.html" . }}
+{{- partialCached "head/highlight.html" . }}
+{{- partialCached "head/apple-touch-icons.html" . }}
 {{- if hugo.IsProduction | or (eq .Site.Params.env "production") }}
-{{- partialCached "partials/head/pwa.html" . }}
-{{- partialCached "partials/head/tracker.html" . }}
-{{- partialCached "partials/head/shortcode.html" . }}
-{{- partial "partials/head/photoswipe.html" . .Page }}
-{{- partial "partials/head/graphviz.html" . .Page }}
+{{- partialCached "head/pwa.html" . }}
+{{- partialCached "head/tracker.html" . }}
+{{- partialCached "head/shortcode.html" . }}
+{{- partial "head/photoswipe.html" . .Page }}
+{{- partial "head/graphviz.html" . .Page }}
 {{- end -}}
 <style>
 @media screen and (max-width: 435px) {
