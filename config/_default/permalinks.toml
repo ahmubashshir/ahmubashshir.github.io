@@ -1,2 +1,2 @@
-post = '/post/:year/:month/:day/:filename/'
-rant = '/post/:year/:month/:day/:filename/'
+post = '/post/:year/:month/:day/:contentbasename/'
+rant = '/post/:year/:month/:day/:contentbasename/'

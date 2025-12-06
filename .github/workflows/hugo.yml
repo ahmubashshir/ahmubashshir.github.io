@@ -19,6 +19,11 @@ jobs:
         fetch-depth: 0
         submodules: true
 
+    - name: prepare(go)
+      uses: actions/setup-go@v6
+      with:
+        go-version: 'stable'
+
     - name: prepare(hugo)
       uses: peaceiris/actions-hugo@v3
       with:
