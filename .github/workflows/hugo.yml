@@ -54,7 +54,7 @@ jobs:
       shell: sh
 
     - name: push(site)
-      uses: actions/upload-pages-artifact@v3
+      uses: actions/upload-pages-artifact@v4
       with:
         name: github-pages
         path: ./public
