@@ -36,14 +36,14 @@ jobs:
         node-version: '16'
 
     - name: init-cache(hugo)
-      uses: actions/cache@v4
+      uses: actions/cache@v5
       with:
         key: ${{ runner.os }}-hugomod-${{ hashFiles('go.sum') }}
         path: /tmp/hugo_cache
         restore-keys: ${{ runner.os }}-hugomod-
 
     - name: init-cache(node)
-      uses: actions/cache@v4
+      uses: actions/cache@v5
       with:
         key: ${{ runner.os }}-npm-${{ hashFiles('package-lock.json') }}
         path: ./node_modules
