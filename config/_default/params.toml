@@ -7,14 +7,15 @@ keywords = [
 	'nature photography'
 ]
 author = "Mubashshir"
-defaultTheme = 'dark'
+defaultTheme = 'auto'
+disableThemeToggle = true
+disableLangToggle = true
 
 mainSections = [
 	'post',
 	'rant'
 ]
 
-disableThemeToggle = true
 ShowFullTextinRSS = true
 ShowReadingTime = true
 ShowShareButtons = true

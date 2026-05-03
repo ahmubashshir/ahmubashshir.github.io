@@ -16,11 +16,11 @@ pagerSize = 6
 
 [languages.bn]
 weight = 1
-LanguageName = ':bangladesh:'
+label = ':bangladesh:'
 
 [languages.en]
 weight = 2
-LanguageName = ':us:'
+label = ':us:'
 
 [minify]
 disableXML = false
